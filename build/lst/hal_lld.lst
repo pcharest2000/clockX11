@@ -1,0 +1,5149 @@
+GAS LISTING /tmp/ccEseu02.s 			page 1
+
+
+   1              		.file	"hal_lld.c"
+   2              		.text
+   3              	.Ltext0:
+   4              		.section	.rodata.hal_lld_init.str1.1,"aMS",@progbits,1
+   5              	.LC0:
+   6 0000 43686962 		.string	"ChibiOS/RT simulator (Linux)\n"
+   6      694F532F 
+   6      52542073 
+   6      696D756C 
+   6      61746F72 
+   7              		.section	.text.hal_lld_init,"ax",@progbits
+   8              		.p2align 4,,15
+   9              		.globl	hal_lld_init
+  10              		.type	hal_lld_init, @function
+  11              	hal_lld_init:
+  12              	.LFB232:
+  13              		.file 1 "../../../os/hal/ports/simulator/posix/hal_lld.c"
+  14              		.loc 1 57 25 view -0
+  15              		.cfi_startproc
+  16              		.loc 1 62 3 view .LVU1
+  17              		.loc 1 57 25 is_stmt 0 view .LVU2
+  18 0000 53       		pushl	%ebx
+  19              		.cfi_def_cfa_offset 8
+  20              		.cfi_offset 3, -8
+  21 0001 E8FCFFFF 		call	__x86.get_pc_thunk.bx
+  21      FF
+  22 0006 81C30200 		addl	$_GLOBAL_OFFSET_TABLE_, %ebx
+  22      0000
+  23 000c 83EC14   		subl	$20, %esp
+  24              		.cfi_def_cfa_offset 28
+  25              		.loc 1 62 3 view .LVU3
+  26 000f 8D830000 		leal	.LC0@GOTOFF(%ebx), %eax
+  26      0000
+  27 0015 50       		pushl	%eax
+  28              		.cfi_def_cfa_offset 32
+  29 0016 E8FCFFFF 		call	puts@PLT
+  29      FF
+  30              	.LVL0:
+  31              		.loc 1 64 3 is_stmt 1 view .LVU4
+  32 001b 58       		popl	%eax
+  33              		.cfi_def_cfa_offset 28
+  34 001c 8D830000 		leal	nextcnt@GOTOFF(%ebx), %eax
+  34      0000
+  35 0022 5A       		popl	%edx
+  36              		.cfi_def_cfa_offset 24
+  37 0023 6A00     		pushl	$0
+  38              		.cfi_def_cfa_offset 28
+  39 0025 50       		pushl	%eax
+  40              		.cfi_def_cfa_offset 32
+  41 0026 E8FCFFFF 		call	gettimeofday@PLT
+  41      FF
+  42              	.LVL1:
+  43              		.loc 1 65 3 view .LVU5
+  44              		.loc 1 65 3 view .LVU6
+  45 002b 8B830400 		movl	4+nextcnt@GOTOFF(%ebx), %eax
+  45      0000
+  46 0031 8B8B0000 		movl	nextcnt@GOTOFF(%ebx), %ecx
+GAS LISTING /tmp/ccEseu02.s 			page 2
+
+
+  46      0000
+  47              		.loc 1 65 3 view .LVU7
+  48 0037 83C410   		addl	$16, %esp
+  49              		.cfi_def_cfa_offset 16
+  50 003a 8D90F401 		leal	500(%eax), %edx
+  50      0000
+  51 0040 89930400 		movl	%edx, 4+nextcnt@GOTOFF(%ebx)
+  51      0000
+  52              		.loc 1 65 3 view .LVU8
+  53 0046 81FA3F42 		cmpl	$999999, %edx
+  53      0F00
+  54 004c 7E14     		jle	.L1
+  55              		.loc 1 65 3 discriminator 1 view .LVU9
+  56 004e 83C101   		addl	$1, %ecx
+  57 0051 2D4C400F 		subl	$999500, %eax
+  57      00
+  58 0056 898B0000 		movl	%ecx, nextcnt@GOTOFF(%ebx)
+  58      0000
+  59              		.loc 1 65 3 discriminator 1 view .LVU10
+  60 005c 89830400 		movl	%eax, 4+nextcnt@GOTOFF(%ebx)
+  60      0000
+  61              	.L1:
+  62              		.loc 1 66 1 is_stmt 0 view .LVU11
+  63 0062 83C408   		addl	$8, %esp
+  64              		.cfi_def_cfa_offset 8
+  65 0065 5B       		popl	%ebx
+  66              		.cfi_restore 3
+  67              		.cfi_def_cfa_offset 4
+  68 0066 C3       		ret
+  69              		.cfi_endproc
+  70              	.LFE232:
+  71              		.size	hal_lld_init, .-hal_lld_init
+  72              		.section	.text._sim_check_for_interrupts,"ax",@progbits
+  73              		.p2align 4,,15
+  74              		.globl	_sim_check_for_interrupts
+  75              		.type	_sim_check_for_interrupts, @function
+  76              	_sim_check_for_interrupts:
+  77              	.LFB233:
+  78              		.loc 1 71 38 is_stmt 1 view -0
+  79              		.cfi_startproc
+  80 0000 57       		pushl	%edi
+  81              		.cfi_def_cfa_offset 8
+  82              		.cfi_offset 7, -8
+  83 0001 56       		pushl	%esi
+  84              		.cfi_def_cfa_offset 12
+  85              		.cfi_offset 6, -12
+  86 0002 53       		pushl	%ebx
+  87              		.cfi_def_cfa_offset 16
+  88              		.cfi_offset 3, -16
+  89 0003 E8FCFFFF 		call	__x86.get_pc_thunk.bx
+  89      FF
+  90 0008 81C30200 		addl	$_GLOBAL_OFFSET_TABLE_, %ebx
+  90      0000
+  91 000e 83EC10   		subl	$16, %esp
+  92              		.cfi_def_cfa_offset 32
+  93              		.loc 1 71 38 is_stmt 0 view .LVU13
+  94 0011 65A11400 		movl	%gs:20, %eax
+GAS LISTING /tmp/ccEseu02.s 			page 3
+
+
+  94      0000
+  95 0017 8944240C 		movl	%eax, 12(%esp)
+  96 001b 31C0     		xorl	%eax, %eax
+  97              		.loc 1 72 3 is_stmt 1 view .LVU14
+  98              		.loc 1 73 3 view .LVU15
+  99              	.LVL2:
+ 100              		.loc 1 76 3 view .LVU16
+ 101              		.loc 1 76 7 is_stmt 0 view .LVU17
+ 102 001d E8FCFFFF 		call	sd_lld_interrupt_pending@PLT
+ 102      FF
+ 103              	.LVL3:
+ 104              		.loc 1 81 3 view .LVU18
+ 105 0022 83EC08   		subl	$8, %esp
+ 106              		.cfi_def_cfa_offset 40
+ 107 0025 6A00     		pushl	$0
+ 108              		.cfi_def_cfa_offset 44
+ 109              		.loc 1 76 7 view .LVU19
+ 110 0027 89C6     		movl	%eax, %esi
+ 111              	.LVL4:
+ 112              		.loc 1 81 3 is_stmt 1 view .LVU20
+ 113 0029 8D442410 		leal	16(%esp), %eax
+ 114              	.LVL5:
+ 115              		.loc 1 81 3 is_stmt 0 view .LVU21
+ 116 002d 50       		pushl	%eax
+ 117              		.cfi_def_cfa_offset 48
+ 118 002e E8FCFFFF 		call	gettimeofday@PLT
+ 118      FF
+ 119              	.LVL6:
+ 120              		.loc 1 82 3 is_stmt 1 view .LVU22
+ 121              		.loc 1 82 7 is_stmt 0 view .LVU23
+ 122 0033 8B542414 		movl	20(%esp), %edx
+ 123 0037 8B830000 		movl	nextcnt@GOTOFF(%ebx), %eax
+ 123      0000
+ 124 003d 83C410   		addl	$16, %esp
+ 125              		.cfi_def_cfa_offset 32
+ 126 0040 39C2     		cmpl	%eax, %edx
+ 127 0042 0F9DC1   		setge	%cl
+ 128 0045 750D     		jne	.L7
+ 129              		.loc 1 82 7 discriminator 1 view .LVU24
+ 130 0047 8BBB0400 		movl	4+nextcnt@GOTOFF(%ebx), %edi
+ 130      0000
+ 131 004d 397C2408 		cmpl	%edi, 8(%esp)
+ 132 0051 0F9DC1   		setge	%cl
+ 133              	.L7:
+ 134              		.loc 1 82 6 discriminator 4 view .LVU25
+ 135 0054 84C9     		testb	%cl, %cl
+ 136 0056 7478     		je	.L8
+ 137              		.loc 1 83 5 is_stmt 1 view .LVU26
+ 138              	.LVL7:
+ 139              		.loc 1 84 5 view .LVU27
+ 140              		.loc 1 84 5 view .LVU28
+ 141              		.loc 1 84 5 view .LVU29
+ 142 0058 8B930400 		movl	4+nextcnt@GOTOFF(%ebx), %edx
+ 142      0000
+ 143 005e 8D8AF401 		leal	500(%edx), %ecx
+ 143      0000
+ 144 0064 898B0400 		movl	%ecx, 4+nextcnt@GOTOFF(%ebx)
+GAS LISTING /tmp/ccEseu02.s 			page 4
+
+
+ 144      0000
+ 145              		.loc 1 84 5 view .LVU30
+ 146 006a 81F93F42 		cmpl	$999999, %ecx
+ 146      0F00
+ 147 0070 7F46     		jg	.L19
+ 148              	.L9:
+ 149              		.loc 1 86 5 view .LVU31
+ 150 0072 8BB30000 		movl	port_isr_context_flag@GOT(%ebx), %esi
+ 150      0000
+ 151              	.LBB14:
+ 152              	.LBB15:
+ 153              	.LBB16:
+ 154              		.file 2 "../../../os/common/ports/SIMIA32/chcore.h"
+ 155              		.loc 2 383 16 is_stmt 0 view .LVU32
+ 156 0078 8BBB0000 		movl	port_irq_sts@GOT(%ebx), %edi
+ 156      0000
+ 157              	.LBE16:
+ 158              	.LBE15:
+ 159              	.LBE14:
+ 160              		.loc 1 86 5 view .LVU33
+ 161 007e C60601   		movb	$1, (%esi)
+ 162              		.loc 1 86 5 is_stmt 1 view .LVU34
+ 163              		.loc 1 86 5 view .LVU35
+ 164              		.loc 1 86 5 view .LVU36
+ 165              		.loc 1 86 5 view .LVU37
+ 166              		.loc 1 86 5 view .LVU38
+ 167              		.loc 1 86 22 view .LVU39
+ 168              		.loc 1 88 5 view .LVU40
+ 169              	.LBB19:
+ 170              	.LBI14:
+ 171              		.file 3 "../../../os/rt/include/chsys.h"
+ 172              		.loc 3 393 20 view .LVU41
+ 173              	.LBE19:
+ 174              		.loc 3 395 3 view .LVU42
+ 175              	.LBB20:
+ 176              	.LBB18:
+ 177              	.LBI15:
+ 178              		.loc 2 381 20 view .LVU43
+ 179              	.LBB17:
+ 180              		.loc 2 383 3 view .LVU44
+ 181              		.loc 2 383 16 is_stmt 0 view .LVU45
+ 182 0081 C7070100 		movl	$1, (%edi)
+ 182      0000
+ 183              	.LBE17:
+ 184              	.LBE18:
+ 185              	.LBE20:
+ 186              		.loc 3 396 34 is_stmt 1 view .LVU46
+ 187              		.loc 3 397 29 view .LVU47
+ 188              		.loc 1 89 5 view .LVU48
+ 189 0087 E8FCFFFF 		call	chSysTimerHandlerI@PLT
+ 189      FF
+ 190              	.LVL8:
+ 191              		.loc 1 90 5 view .LVU49
+ 192              	.LBB21:
+ 193              	.LBI21:
+ 194              		.loc 3 413 20 view .LVU50
+ 195              	.LBE21:
+GAS LISTING /tmp/ccEseu02.s 			page 5
+
+
+ 196              		.loc 3 415 31 view .LVU51
+ 197              		.loc 3 416 33 view .LVU52
+ 198              		.loc 3 417 3 view .LVU53
+ 199              	.LBB24:
+ 200              	.LBB22:
+ 201              	.LBI22:
+ 202              		.loc 2 391 20 view .LVU54
+ 203              	.LBB23:
+ 204              		.loc 2 393 3 view .LVU55
+ 205              		.loc 2 393 16 is_stmt 0 view .LVU56
+ 206 008c C7070000 		movl	$0, (%edi)
+ 206      0000
+ 207              	.LBE23:
+ 208              	.LBE22:
+ 209              	.LBE24:
+ 210              		.loc 1 92 5 is_stmt 1 view .LVU57
+ 211              		.loc 1 92 5 view .LVU58
+ 212              		.loc 1 92 5 view .LVU59
+ 213              		.loc 1 92 5 view .LVU60
+ 214              		.loc 1 92 5 view .LVU61
+ 215 0092 C60600   		movb	$0, (%esi)
+ 216              		.loc 1 92 22 view .LVU62
+ 217              		.loc 1 95 3 view .LVU63
+ 218              		.loc 1 96 22 view .LVU64
+ 219              		.loc 1 97 5 view .LVU65
+ 220              		.loc 1 97 9 is_stmt 0 view .LVU66
+ 221 0095 E8FCFFFF 		call	chSchIsPreemptionRequired@PLT
+ 221      FF
+ 222              	.LVL9:
+ 223              		.loc 1 97 8 view .LVU67
+ 224 009a 84C0     		testb	%al, %al
+ 225 009c 7541     		jne	.L20
+ 226              	.LVL10:
+ 227              	.L5:
+ 228              		.loc 1 101 1 view .LVU68
+ 229 009e 8B44240C 		movl	12(%esp), %eax
+ 230 00a2 65330514 		xorl	%gs:20, %eax
+ 230      000000
+ 231 00a9 753B     		jne	.L21
+ 232 00ab 83C410   		addl	$16, %esp
+ 233              		.cfi_remember_state
+ 234              		.cfi_def_cfa_offset 16
+ 235 00ae 5B       		popl	%ebx
+ 236              		.cfi_restore 3
+ 237              		.cfi_def_cfa_offset 12
+ 238 00af 5E       		popl	%esi
+ 239              		.cfi_restore 6
+ 240              		.cfi_def_cfa_offset 8
+ 241 00b0 5F       		popl	%edi
+ 242              		.cfi_restore 7
+ 243              		.cfi_def_cfa_offset 4
+ 244 00b1 C3       		ret
+ 245              	.LVL11:
+ 246              		.p2align 4,,10
+ 247 00b2 8DB60000 		.p2align 3
+ 247      0000
+ 248              	.L19:
+GAS LISTING /tmp/ccEseu02.s 			page 6
+
+
+ 249              		.cfi_restore_state
+ 250              		.loc 1 84 5 is_stmt 1 discriminator 1 view .LVU69
+ 251 00b8 83C001   		addl	$1, %eax
+ 252 00bb 81EA4C40 		subl	$999500, %edx
+ 252      0F00
+ 253 00c1 89830000 		movl	%eax, nextcnt@GOTOFF(%ebx)
+ 253      0000
+ 254              		.loc 1 84 5 discriminator 1 view .LVU70
+ 255 00c7 89930400 		movl	%edx, 4+nextcnt@GOTOFF(%ebx)
+ 255      0000
+ 256 00cd EBA3     		jmp	.L9
+ 257              	.LVL12:
+ 258 00cf 90       		.p2align 4,,10
+ 259              		.p2align 3
+ 260              	.L8:
+ 261              		.loc 1 92 22 discriminator 1 view .LVU71
+ 262              		.loc 1 95 3 discriminator 1 view .LVU72
+ 263              		.loc 1 95 6 is_stmt 0 discriminator 1 view .LVU73
+ 264 00d0 89F0     		movl	%esi, %eax
+ 265 00d2 84C0     		testb	%al, %al
+ 266 00d4 74C8     		je	.L5
+ 267              	.LVL13:
+ 268              		.loc 1 96 22 is_stmt 1 view .LVU74
+ 269              		.loc 1 97 5 view .LVU75
+ 270              		.loc 1 97 9 is_stmt 0 view .LVU76
+ 271 00d6 E8FCFFFF 		call	chSchIsPreemptionRequired@PLT
+ 271      FF
+ 272              	.LVL14:
+ 273              		.loc 1 97 8 view .LVU77
+ 274 00db 84C0     		testb	%al, %al
+ 275 00dd 74BF     		je	.L5
+ 276              	.LVL15:
+ 277              	.L20:
+ 278              		.loc 1 98 7 is_stmt 1 view .LVU78
+ 279 00df E8FCFFFF 		call	chSchDoReschedule@PLT
+ 279      FF
+ 280              	.LVL16:
+ 281              		.loc 1 99 24 view .LVU79
+ 282              		.loc 1 101 1 is_stmt 0 view .LVU80
+ 283 00e4 EBB8     		jmp	.L5
+ 284              	.L21:
+ 285 00e6 E8FCFFFF 		call	__stack_chk_fail_local
+ 285      FF
+ 286              	.LVL17:
+ 287              		.cfi_endproc
+ 288              	.LFE233:
+ 289              		.size	_sim_check_for_interrupts, .-_sim_check_for_interrupts
+ 290              		.section	.bss.nextcnt,"aw",@nobits
+ 291              		.align 4
+ 292              		.type	nextcnt, @object
+ 293              		.size	nextcnt, 8
+ 294              	nextcnt:
+ 295 0000 00000000 		.zero	8
+ 295      00000000 
+ 296              		.section	.text.__x86.get_pc_thunk.bx,"axG",@progbits,__x86.get_pc_thunk.bx,comdat
+ 297              		.globl	__x86.get_pc_thunk.bx
+ 298              		.hidden	__x86.get_pc_thunk.bx
+GAS LISTING /tmp/ccEseu02.s 			page 7
+
+
+ 299              		.type	__x86.get_pc_thunk.bx, @function
+ 300              	__x86.get_pc_thunk.bx:
+ 301              	.LFB234:
+ 302              		.cfi_startproc
+ 303 0000 8B1C24   		movl	(%esp), %ebx
+ 304 0003 C3       		ret
+ 305              		.cfi_endproc
+ 306              	.LFE234:
+ 307              		.text
+ 308              	.Letext0:
+ 309              		.file 4 "/usr/lib/gcc/x86_64-linux-gnu/8/include/stddef.h"
+ 310              		.file 5 "/usr/include/i386-linux-gnu/bits/types.h"
+ 311              		.file 6 "/usr/include/i386-linux-gnu/bits/types/struct_FILE.h"
+ 312              		.file 7 "/usr/include/i386-linux-gnu/bits/types/FILE.h"
+ 313              		.file 8 "/usr/include/stdio.h"
+ 314              		.file 9 "/usr/include/i386-linux-gnu/bits/sys_errlist.h"
+ 315              		.file 10 "/usr/include/i386-linux-gnu/bits/stdint-intn.h"
+ 316              		.file 11 "/usr/include/i386-linux-gnu/bits/types/struct_timeval.h"
+ 317              		.file 12 "/usr/include/i386-linux-gnu/sys/time.h"
+ 318              		.file 13 "/usr/include/i386-linux-gnu/bits/stdint-uintn.h"
+ 319              		.file 14 "../../../os/common/ports/SIMIA32/compilers/GCC/chtypes.h"
+ 320              		.file 15 "../../../os/rt/include/chsystypes.h"
+ 321              		.file 16 "../../../os/rt/include/chschd.h"
+ 322              		.file 17 "../../../os/rt/include/chtime.h"
+ 323              		.file 18 "../../../os/rt/include/chtm.h"
+ 324              		.file 19 "../../../os/rt/include/chsem.h"
+ 325              		.file 20 "../../../os/rt/include/chmtx.h"
+ 326              		.file 21 "../../../os/rt/include/chregistry.h"
+ 327              		.file 22 "../../../os/rt/include/chevents.h"
+ 328              		.file 23 "../../../os/common/oslib/include/chmemcore.h"
+ 329              		.file 24 "../../../os/common/oslib/include/chmempools.h"
+ 330              		.file 25 "../../../os/common/oslib/include/chfactory.h"
+ 331              		.file 26 "/usr/include/netinet/in.h"
+ 332              		.file 27 "/usr/include/unistd.h"
+ 333              		.file 28 "/usr/include/i386-linux-gnu/bits/getopt_core.h"
+ 334              		.file 29 "../../../os/hal/include/hal_queues.h"
+ 335              		.file 30 "../../../os/hal/ports/simulator/hal_pal_lld.h"
+ 336              		.file 31 "../../../os/hal/include/hal_serial.h"
+ 337              		.file 32 "../../../os/hal/ports/simulator/posix/hal_serial_lld.h"
+ 338              		.section	.debug_info,"",@progbits
+ 339              	.Ldebug_info0:
+ 340 0000 A4130000 		.long	0x13a4
+ 341 0004 0400     		.value	0x4
+ 342 0006 00000000 		.long	.Ldebug_abbrev0
+ 343 000a 04       		.byte	0x4
+ 344 000b 01       		.uleb128 0x1
+ 345 000c 58060000 		.long	.LASF265
+ 346 0010 0C       		.byte	0xc
+ 347 0011 6A020000 		.long	.LASF266
+ 348 0015 39090000 		.long	.LASF267
+ 349 0019 50000000 		.long	.Ldebug_ranges0+0x50
+ 350 001d 00000000 		.long	0
+ 351 0021 00000000 		.long	.Ldebug_line0
+ 352 0025 02       		.uleb128 0x2
+ 353 0026 08000000 		.long	.LASF6
+ 354 002a 04       		.byte	0x4
+ 355 002b D8       		.byte	0xd8
+GAS LISTING /tmp/ccEseu02.s 			page 8
+
+
+ 356 002c 17       		.byte	0x17
+ 357 002d 36000000 		.long	0x36
+ 358 0031 03       		.uleb128 0x3
+ 359 0032 25000000 		.long	0x25
+ 360 0036 04       		.uleb128 0x4
+ 361 0037 04       		.byte	0x4
+ 362 0038 07       		.byte	0x7
+ 363 0039 0B070000 		.long	.LASF0
+ 364 003d 04       		.uleb128 0x4
+ 365 003e 01       		.byte	0x1
+ 366 003f 06       		.byte	0x6
+ 367 0040 48030000 		.long	.LASF1
+ 368 0044 05       		.uleb128 0x5
+ 369 0045 3D000000 		.long	0x3d
+ 370 0049 04       		.uleb128 0x4
+ 371 004a 01       		.byte	0x1
+ 372 004b 08       		.byte	0x8
+ 373 004c DA020000 		.long	.LASF2
+ 374 0050 04       		.uleb128 0x4
+ 375 0051 02       		.byte	0x2
+ 376 0052 07       		.byte	0x7
+ 377 0053 660B0000 		.long	.LASF3
+ 378 0057 04       		.uleb128 0x4
+ 379 0058 04       		.byte	0x4
+ 380 0059 07       		.byte	0x7
+ 381 005a AC040000 		.long	.LASF4
+ 382 005e 04       		.uleb128 0x4
+ 383 005f 01       		.byte	0x1
+ 384 0060 06       		.byte	0x6
+ 385 0061 46020000 		.long	.LASF5
+ 386 0065 02       		.uleb128 0x2
+ 387 0066 45010000 		.long	.LASF7
+ 388 006a 05       		.byte	0x5
+ 389 006b 26       		.byte	0x26
+ 390 006c 17       		.byte	0x17
+ 391 006d 49000000 		.long	0x49
+ 392 0071 04       		.uleb128 0x4
+ 393 0072 02       		.byte	0x2
+ 394 0073 05       		.byte	0x5
+ 395 0074 F1090000 		.long	.LASF8
+ 396 0078 02       		.uleb128 0x2
+ 397 0079 61030000 		.long	.LASF9
+ 398 007d 05       		.byte	0x5
+ 399 007e 28       		.byte	0x28
+ 400 007f 1C       		.byte	0x1c
+ 401 0080 50000000 		.long	0x50
+ 402 0084 02       		.uleb128 0x2
+ 403 0085 C30B0000 		.long	.LASF10
+ 404 0089 05       		.byte	0x5
+ 405 008a 29       		.byte	0x29
+ 406 008b 14       		.byte	0x14
+ 407 008c 90000000 		.long	0x90
+ 408 0090 06       		.uleb128 0x6
+ 409 0091 04       		.byte	0x4
+ 410 0092 05       		.byte	0x5
+ 411 0093 696E7400 		.string	"int"
+ 412 0097 02       		.uleb128 0x2
+GAS LISTING /tmp/ccEseu02.s 			page 9
+
+
+ 413 0098 BE050000 		.long	.LASF11
+ 414 009c 05       		.byte	0x5
+ 415 009d 2A       		.byte	0x2a
+ 416 009e 16       		.byte	0x16
+ 417 009f 36000000 		.long	0x36
+ 418 00a3 04       		.uleb128 0x4
+ 419 00a4 08       		.byte	0x8
+ 420 00a5 05       		.byte	0x5
+ 421 00a6 DC050000 		.long	.LASF12
+ 422 00aa 04       		.uleb128 0x4
+ 423 00ab 08       		.byte	0x8
+ 424 00ac 07       		.byte	0x7
+ 425 00ad 33080000 		.long	.LASF13
+ 426 00b1 02       		.uleb128 0x2
+ 427 00b2 34050000 		.long	.LASF14
+ 428 00b6 05       		.byte	0x5
+ 429 00b7 42       		.byte	0x42
+ 430 00b8 25       		.byte	0x25
+ 431 00b9 A3000000 		.long	0xa3
+ 432 00bd 02       		.uleb128 0x2
+ 433 00be 53080000 		.long	.LASF15
+ 434 00c2 05       		.byte	0x5
+ 435 00c3 98       		.byte	0x98
+ 436 00c4 19       		.byte	0x19
+ 437 00c5 C9000000 		.long	0xc9
+ 438 00c9 04       		.uleb128 0x4
+ 439 00ca 04       		.byte	0x4
+ 440 00cb 05       		.byte	0x5
+ 441 00cc 88010000 		.long	.LASF16
+ 442 00d0 02       		.uleb128 0x2
+ 443 00d1 82090000 		.long	.LASF17
+ 444 00d5 05       		.byte	0x5
+ 445 00d6 99       		.byte	0x99
+ 446 00d7 1B       		.byte	0x1b
+ 447 00d8 B1000000 		.long	0xb1
+ 448 00dc 02       		.uleb128 0x2
+ 449 00dd E1080000 		.long	.LASF18
+ 450 00e1 05       		.byte	0x5
+ 451 00e2 A0       		.byte	0xa0
+ 452 00e3 1A       		.byte	0x1a
+ 453 00e4 C9000000 		.long	0xc9
+ 454 00e8 02       		.uleb128 0x2
+ 455 00e9 3A070000 		.long	.LASF19
+ 456 00ed 05       		.byte	0x5
+ 457 00ee A2       		.byte	0xa2
+ 458 00ef 1F       		.byte	0x1f
+ 459 00f0 C9000000 		.long	0xc9
+ 460 00f4 07       		.uleb128 0x7
+ 461 00f5 04       		.byte	0x4
+ 462 00f6 08       		.uleb128 0x8
+ 463 00f7 04       		.byte	0x4
+ 464 00f8 3D000000 		.long	0x3d
+ 465 00fc 09       		.uleb128 0x9
+ 466 00fd 3D000000 		.long	0x3d
+ 467 0101 0C010000 		.long	0x10c
+ 468 0105 0A       		.uleb128 0xa
+ 469 0106 36000000 		.long	0x36
+GAS LISTING /tmp/ccEseu02.s 			page 10
+
+
+ 470 010a 03       		.byte	0x3
+ 471 010b 00       		.byte	0
+ 472 010c 0B       		.uleb128 0xb
+ 473 010d 61020000 		.long	.LASF59
+ 474 0111 94       		.byte	0x94
+ 475 0112 06       		.byte	0x6
+ 476 0113 31       		.byte	0x31
+ 477 0114 08       		.byte	0x8
+ 478 0115 93020000 		.long	0x293
+ 479 0119 0C       		.uleb128 0xc
+ 480 011a 50070000 		.long	.LASF20
+ 481 011e 06       		.byte	0x6
+ 482 011f 33       		.byte	0x33
+ 483 0120 07       		.byte	0x7
+ 484 0121 90000000 		.long	0x90
+ 485 0125 00       		.byte	0
+ 486 0126 0C       		.uleb128 0xc
+ 487 0127 A5030000 		.long	.LASF21
+ 488 012b 06       		.byte	0x6
+ 489 012c 36       		.byte	0x36
+ 490 012d 09       		.byte	0x9
+ 491 012e F6000000 		.long	0xf6
+ 492 0132 04       		.byte	0x4
+ 493 0133 0C       		.uleb128 0xc
+ 494 0134 C40A0000 		.long	.LASF22
+ 495 0138 06       		.byte	0x6
+ 496 0139 37       		.byte	0x37
+ 497 013a 09       		.byte	0x9
+ 498 013b F6000000 		.long	0xf6
+ 499 013f 08       		.byte	0x8
+ 500 0140 0C       		.uleb128 0xc
+ 501 0141 F0040000 		.long	.LASF23
+ 502 0145 06       		.byte	0x6
+ 503 0146 38       		.byte	0x38
+ 504 0147 09       		.byte	0x9
+ 505 0148 F6000000 		.long	0xf6
+ 506 014c 0C       		.byte	0xc
+ 507 014d 0C       		.uleb128 0xc
+ 508 014e D5000000 		.long	.LASF24
+ 509 0152 06       		.byte	0x6
+ 510 0153 39       		.byte	0x39
+ 511 0154 09       		.byte	0x9
+ 512 0155 F6000000 		.long	0xf6
+ 513 0159 10       		.byte	0x10
+ 514 015a 0C       		.uleb128 0xc
+ 515 015b 9D0B0000 		.long	.LASF25
+ 516 015f 06       		.byte	0x6
+ 517 0160 3A       		.byte	0x3a
+ 518 0161 09       		.byte	0x9
+ 519 0162 F6000000 		.long	0xf6
+ 520 0166 14       		.byte	0x14
+ 521 0167 0C       		.uleb128 0xc
+ 522 0168 24060000 		.long	.LASF26
+ 523 016c 06       		.byte	0x6
+ 524 016d 3B       		.byte	0x3b
+ 525 016e 09       		.byte	0x9
+ 526 016f F6000000 		.long	0xf6
+GAS LISTING /tmp/ccEseu02.s 			page 11
+
+
+ 527 0173 18       		.byte	0x18
+ 528 0174 0C       		.uleb128 0xc
+ 529 0175 F4060000 		.long	.LASF27
+ 530 0179 06       		.byte	0x6
+ 531 017a 3C       		.byte	0x3c
+ 532 017b 09       		.byte	0x9
+ 533 017c F6000000 		.long	0xf6
+ 534 0180 1C       		.byte	0x1c
+ 535 0181 0C       		.uleb128 0xc
+ 536 0182 B7090000 		.long	.LASF28
+ 537 0186 06       		.byte	0x6
+ 538 0187 3D       		.byte	0x3d
+ 539 0188 09       		.byte	0x9
+ 540 0189 F6000000 		.long	0xf6
+ 541 018d 20       		.byte	0x20
+ 542 018e 0C       		.uleb128 0xc
+ 543 018f FA000000 		.long	.LASF29
+ 544 0193 06       		.byte	0x6
+ 545 0194 40       		.byte	0x40
+ 546 0195 09       		.byte	0x9
+ 547 0196 F6000000 		.long	0xf6
+ 548 019a 24       		.byte	0x24
+ 549 019b 0C       		.uleb128 0xc
+ 550 019c FD080000 		.long	.LASF30
+ 551 01a0 06       		.byte	0x6
+ 552 01a1 41       		.byte	0x41
+ 553 01a2 09       		.byte	0x9
+ 554 01a3 F6000000 		.long	0xf6
+ 555 01a7 28       		.byte	0x28
+ 556 01a8 0C       		.uleb128 0xc
+ 557 01a9 80000000 		.long	.LASF31
+ 558 01ad 06       		.byte	0x6
+ 559 01ae 42       		.byte	0x42
+ 560 01af 09       		.byte	0x9
+ 561 01b0 F6000000 		.long	0xf6
+ 562 01b4 2C       		.byte	0x2c
+ 563 01b5 0C       		.uleb128 0xc
+ 564 01b6 F7030000 		.long	.LASF32
+ 565 01ba 06       		.byte	0x6
+ 566 01bb 44       		.byte	0x44
+ 567 01bc 16       		.byte	0x16
+ 568 01bd AC020000 		.long	0x2ac
+ 569 01c1 30       		.byte	0x30
+ 570 01c2 0C       		.uleb128 0xc
+ 571 01c3 1B010000 		.long	.LASF33
+ 572 01c7 06       		.byte	0x6
+ 573 01c8 46       		.byte	0x46
+ 574 01c9 14       		.byte	0x14
+ 575 01ca B2020000 		.long	0x2b2
+ 576 01ce 34       		.byte	0x34
+ 577 01cf 0C       		.uleb128 0xc
+ 578 01d0 150B0000 		.long	.LASF34
+ 579 01d4 06       		.byte	0x6
+ 580 01d5 48       		.byte	0x48
+ 581 01d6 07       		.byte	0x7
+ 582 01d7 90000000 		.long	0x90
+ 583 01db 38       		.byte	0x38
+GAS LISTING /tmp/ccEseu02.s 			page 12
+
+
+ 584 01dc 0C       		.uleb128 0xc
+ 585 01dd D1040000 		.long	.LASF35
+ 586 01e1 06       		.byte	0x6
+ 587 01e2 49       		.byte	0x49
+ 588 01e3 07       		.byte	0x7
+ 589 01e4 90000000 		.long	0x90
+ 590 01e8 3C       		.byte	0x3c
+ 591 01e9 0C       		.uleb128 0xc
+ 592 01ea A3050000 		.long	.LASF36
+ 593 01ee 06       		.byte	0x6
+ 594 01ef 4A       		.byte	0x4a
+ 595 01f0 0B       		.byte	0xb
+ 596 01f1 BD000000 		.long	0xbd
+ 597 01f5 40       		.byte	0x40
+ 598 01f6 0C       		.uleb128 0xc
+ 599 01f7 27010000 		.long	.LASF37
+ 600 01fb 06       		.byte	0x6
+ 601 01fc 4D       		.byte	0x4d
+ 602 01fd 12       		.byte	0x12
+ 603 01fe 50000000 		.long	0x50
+ 604 0202 44       		.byte	0x44
+ 605 0203 0C       		.uleb128 0xc
+ 606 0204 260A0000 		.long	.LASF38
+ 607 0208 06       		.byte	0x6
+ 608 0209 4E       		.byte	0x4e
+ 609 020a 0F       		.byte	0xf
+ 610 020b 5E000000 		.long	0x5e
+ 611 020f 46       		.byte	0x46
+ 612 0210 0C       		.uleb128 0xc
+ 613 0211 0D090000 		.long	.LASF39
+ 614 0215 06       		.byte	0x6
+ 615 0216 4F       		.byte	0x4f
+ 616 0217 08       		.byte	0x8
+ 617 0218 B8020000 		.long	0x2b8
+ 618 021c 47       		.byte	0x47
+ 619 021d 0C       		.uleb128 0xc
+ 620 021e EA000000 		.long	.LASF40
+ 621 0222 06       		.byte	0x6
+ 622 0223 51       		.byte	0x51
+ 623 0224 0F       		.byte	0xf
+ 624 0225 C8020000 		.long	0x2c8
+ 625 0229 48       		.byte	0x48
+ 626 022a 0C       		.uleb128 0xc
+ 627 022b 83040000 		.long	.LASF41
+ 628 022f 06       		.byte	0x6
+ 629 0230 59       		.byte	0x59
+ 630 0231 0D       		.byte	0xd
+ 631 0232 D0000000 		.long	0xd0
+ 632 0236 4C       		.byte	0x4c
+ 633 0237 0C       		.uleb128 0xc
+ 634 0238 7A070000 		.long	.LASF42
+ 635 023c 06       		.byte	0x6
+ 636 023d 5B       		.byte	0x5b
+ 637 023e 17       		.byte	0x17
+ 638 023f D3020000 		.long	0x2d3
+ 639 0243 54       		.byte	0x54
+ 640 0244 0C       		.uleb128 0xc
+GAS LISTING /tmp/ccEseu02.s 			page 13
+
+
+ 641 0245 360B0000 		.long	.LASF43
+ 642 0249 06       		.byte	0x6
+ 643 024a 5C       		.byte	0x5c
+ 644 024b 19       		.byte	0x19
+ 645 024c DE020000 		.long	0x2de
+ 646 0250 58       		.byte	0x58
+ 647 0251 0C       		.uleb128 0xc
+ 648 0252 EF020000 		.long	.LASF44
+ 649 0256 06       		.byte	0x6
+ 650 0257 5D       		.byte	0x5d
+ 651 0258 14       		.byte	0x14
+ 652 0259 B2020000 		.long	0x2b2
+ 653 025d 5C       		.byte	0x5c
+ 654 025e 0C       		.uleb128 0xc
+ 655 025f AD080000 		.long	.LASF45
+ 656 0263 06       		.byte	0x6
+ 657 0264 5E       		.byte	0x5e
+ 658 0265 09       		.byte	0x9
+ 659 0266 F4000000 		.long	0xf4
+ 660 026a 60       		.byte	0x60
+ 661 026b 0C       		.uleb128 0xc
+ 662 026c 33070000 		.long	.LASF46
+ 663 0270 06       		.byte	0x6
+ 664 0271 5F       		.byte	0x5f
+ 665 0272 0A       		.byte	0xa
+ 666 0273 25000000 		.long	0x25
+ 667 0277 64       		.byte	0x64
+ 668 0278 0C       		.uleb128 0xc
+ 669 0279 5E070000 		.long	.LASF47
+ 670 027d 06       		.byte	0x6
+ 671 027e 60       		.byte	0x60
+ 672 027f 07       		.byte	0x7
+ 673 0280 90000000 		.long	0x90
+ 674 0284 68       		.byte	0x68
+ 675 0285 0C       		.uleb128 0xc
+ 676 0286 2B050000 		.long	.LASF48
+ 677 028a 06       		.byte	0x6
+ 678 028b 62       		.byte	0x62
+ 679 028c 08       		.byte	0x8
+ 680 028d E4020000 		.long	0x2e4
+ 681 0291 6C       		.byte	0x6c
+ 682 0292 00       		.byte	0
+ 683 0293 02       		.uleb128 0x2
+ 684 0294 EB070000 		.long	.LASF49
+ 685 0298 07       		.byte	0x7
+ 686 0299 07       		.byte	0x7
+ 687 029a 19       		.byte	0x19
+ 688 029b 0C010000 		.long	0x10c
+ 689 029f 0D       		.uleb128 0xd
+ 690 02a0 56030000 		.long	.LASF268
+ 691 02a4 06       		.byte	0x6
+ 692 02a5 2B       		.byte	0x2b
+ 693 02a6 0E       		.byte	0xe
+ 694 02a7 0E       		.uleb128 0xe
+ 695 02a8 B8010000 		.long	.LASF50
+ 696 02ac 08       		.uleb128 0x8
+ 697 02ad 04       		.byte	0x4
+GAS LISTING /tmp/ccEseu02.s 			page 14
+
+
+ 698 02ae A7020000 		.long	0x2a7
+ 699 02b2 08       		.uleb128 0x8
+ 700 02b3 04       		.byte	0x4
+ 701 02b4 0C010000 		.long	0x10c
+ 702 02b8 09       		.uleb128 0x9
+ 703 02b9 3D000000 		.long	0x3d
+ 704 02bd C8020000 		.long	0x2c8
+ 705 02c1 0A       		.uleb128 0xa
+ 706 02c2 36000000 		.long	0x36
+ 707 02c6 00       		.byte	0
+ 708 02c7 00       		.byte	0
+ 709 02c8 08       		.uleb128 0x8
+ 710 02c9 04       		.byte	0x4
+ 711 02ca 9F020000 		.long	0x29f
+ 712 02ce 0E       		.uleb128 0xe
+ 713 02cf 5C000000 		.long	.LASF51
+ 714 02d3 08       		.uleb128 0x8
+ 715 02d4 04       		.byte	0x4
+ 716 02d5 CE020000 		.long	0x2ce
+ 717 02d9 0E       		.uleb128 0xe
+ 718 02da 9A020000 		.long	.LASF52
+ 719 02de 08       		.uleb128 0x8
+ 720 02df 04       		.byte	0x4
+ 721 02e0 D9020000 		.long	0x2d9
+ 722 02e4 09       		.uleb128 0x9
+ 723 02e5 3D000000 		.long	0x3d
+ 724 02e9 F4020000 		.long	0x2f4
+ 725 02ed 0A       		.uleb128 0xa
+ 726 02ee 36000000 		.long	0x36
+ 727 02f2 27       		.byte	0x27
+ 728 02f3 00       		.byte	0
+ 729 02f4 0F       		.uleb128 0xf
+ 730 02f5 BD030000 		.long	.LASF53
+ 731 02f9 08       		.byte	0x8
+ 732 02fa 89       		.byte	0x89
+ 733 02fb 0E       		.byte	0xe
+ 734 02fc 00030000 		.long	0x300
+ 735 0300 08       		.uleb128 0x8
+ 736 0301 04       		.byte	0x4
+ 737 0302 93020000 		.long	0x293
+ 738 0306 0F       		.uleb128 0xf
+ 739 0307 790B0000 		.long	.LASF54
+ 740 030b 08       		.byte	0x8
+ 741 030c 8A       		.byte	0x8a
+ 742 030d 0E       		.byte	0xe
+ 743 030e 00030000 		.long	0x300
+ 744 0312 0F       		.uleb128 0xf
+ 745 0313 EA090000 		.long	.LASF55
+ 746 0317 08       		.byte	0x8
+ 747 0318 8B       		.byte	0x8b
+ 748 0319 0E       		.byte	0xe
+ 749 031a 00030000 		.long	0x300
+ 750 031e 0F       		.uleb128 0xf
+ 751 031f 33010000 		.long	.LASF56
+ 752 0323 09       		.byte	0x9
+ 753 0324 1A       		.byte	0x1a
+ 754 0325 0C       		.byte	0xc
+GAS LISTING /tmp/ccEseu02.s 			page 15
+
+
+ 755 0326 90000000 		.long	0x90
+ 756 032a 09       		.uleb128 0x9
+ 757 032b 40030000 		.long	0x340
+ 758 032f 35030000 		.long	0x335
+ 759 0333 10       		.uleb128 0x10
+ 760 0334 00       		.byte	0
+ 761 0335 05       		.uleb128 0x5
+ 762 0336 2A030000 		.long	0x32a
+ 763 033a 08       		.uleb128 0x8
+ 764 033b 04       		.byte	0x4
+ 765 033c 44000000 		.long	0x44
+ 766 0340 05       		.uleb128 0x5
+ 767 0341 3A030000 		.long	0x33a
+ 768 0345 03       		.uleb128 0x3
+ 769 0346 3A030000 		.long	0x33a
+ 770 034a 0F       		.uleb128 0xf
+ 771 034b D2030000 		.long	.LASF57
+ 772 034f 09       		.byte	0x9
+ 773 0350 1B       		.byte	0x1b
+ 774 0351 1A       		.byte	0x1a
+ 775 0352 35030000 		.long	0x335
+ 776 0356 02       		.uleb128 0x2
+ 777 0357 68000000 		.long	.LASF58
+ 778 035b 0A       		.byte	0xa
+ 779 035c 1A       		.byte	0x1a
+ 780 035d 13       		.byte	0x13
+ 781 035e 84000000 		.long	0x84
+ 782 0362 0B       		.uleb128 0xb
+ 783 0363 78030000 		.long	.LASF60
+ 784 0367 08       		.byte	0x8
+ 785 0368 0B       		.byte	0xb
+ 786 0369 08       		.byte	0x8
+ 787 036a 08       		.byte	0x8
+ 788 036b 8A030000 		.long	0x38a
+ 789 036f 0C       		.uleb128 0xc
+ 790 0370 100C0000 		.long	.LASF61
+ 791 0374 0B       		.byte	0xb
+ 792 0375 0A       		.byte	0xa
+ 793 0376 0C       		.byte	0xc
+ 794 0377 DC000000 		.long	0xdc
+ 795 037b 00       		.byte	0
+ 796 037c 0C       		.uleb128 0xc
+ 797 037d 35040000 		.long	.LASF62
+ 798 0381 0B       		.byte	0xb
+ 799 0382 0B       		.byte	0xb
+ 800 0383 11       		.byte	0x11
+ 801 0384 E8000000 		.long	0xe8
+ 802 0388 04       		.byte	0x4
+ 803 0389 00       		.byte	0
+ 804 038a 09       		.uleb128 0x9
+ 805 038b 3D000000 		.long	0x3d
+ 806 038f 9A030000 		.long	0x39a
+ 807 0393 0A       		.uleb128 0xa
+ 808 0394 36000000 		.long	0x36
+ 809 0398 07       		.byte	0x7
+ 810 0399 00       		.byte	0
+ 811 039a 0B       		.uleb128 0xb
+GAS LISTING /tmp/ccEseu02.s 			page 16
+
+
+ 812 039b 8D030000 		.long	.LASF63
+ 813 039f 08       		.byte	0x8
+ 814 03a0 0C       		.byte	0xc
+ 815 03a1 34       		.byte	0x34
+ 816 03a2 08       		.byte	0x8
+ 817 03a3 C2030000 		.long	0x3c2
+ 818 03a7 0C       		.uleb128 0xc
+ 819 03a8 AF050000 		.long	.LASF64
+ 820 03ac 0C       		.byte	0xc
+ 821 03ad 36       		.byte	0x36
+ 822 03ae 09       		.byte	0x9
+ 823 03af 90000000 		.long	0x90
+ 824 03b3 00       		.byte	0
+ 825 03b4 0C       		.uleb128 0xc
+ 826 03b5 2B0B0000 		.long	.LASF65
+ 827 03b9 0C       		.byte	0xc
+ 828 03ba 37       		.byte	0x37
+ 829 03bb 09       		.byte	0x9
+ 830 03bc 90000000 		.long	0x90
+ 831 03c0 04       		.byte	0x4
+ 832 03c1 00       		.byte	0
+ 833 03c2 08       		.uleb128 0x8
+ 834 03c3 04       		.byte	0x4
+ 835 03c4 9A030000 		.long	0x39a
+ 836 03c8 11       		.uleb128 0x11
+ 837 03c9 C2030000 		.long	0x3c2
+ 838 03cd 04       		.uleb128 0x4
+ 839 03ce 0C       		.byte	0xc
+ 840 03cf 04       		.byte	0x4
+ 841 03d0 A2070000 		.long	.LASF66
+ 842 03d4 04       		.uleb128 0x4
+ 843 03d5 10       		.byte	0x10
+ 844 03d6 04       		.byte	0x4
+ 845 03d7 EC010000 		.long	.LASF67
+ 846 03db 02       		.uleb128 0x2
+ 847 03dc 59020000 		.long	.LASF68
+ 848 03e0 0D       		.byte	0xd
+ 849 03e1 18       		.byte	0x18
+ 850 03e2 13       		.byte	0x13
+ 851 03e3 65000000 		.long	0x65
+ 852 03e7 05       		.uleb128 0x5
+ 853 03e8 DB030000 		.long	0x3db
+ 854 03ec 02       		.uleb128 0x2
+ 855 03ed 4A080000 		.long	.LASF69
+ 856 03f1 0D       		.byte	0xd
+ 857 03f2 19       		.byte	0x19
+ 858 03f3 14       		.byte	0x14
+ 859 03f4 78000000 		.long	0x78
+ 860 03f8 02       		.uleb128 0x2
+ 861 03f9 FC0A0000 		.long	.LASF70
+ 862 03fd 0D       		.byte	0xd
+ 863 03fe 1A       		.byte	0x1a
+ 864 03ff 14       		.byte	0x14
+ 865 0400 97000000 		.long	0x97
+ 866 0404 02       		.uleb128 0x2
+ 867 0405 18070000 		.long	.LASF71
+ 868 0409 0E       		.byte	0xe
+GAS LISTING /tmp/ccEseu02.s 			page 17
+
+
+ 869 040a 45       		.byte	0x45
+ 870 040b 1D       		.byte	0x1d
+ 871 040c F8030000 		.long	0x3f8
+ 872 0410 02       		.uleb128 0x2
+ 873 0411 14030000 		.long	.LASF72
+ 874 0415 0E       		.byte	0xe
+ 875 0416 47       		.byte	0x47
+ 876 0417 1D       		.byte	0x1d
+ 877 0418 F8030000 		.long	0x3f8
+ 878 041c 02       		.uleb128 0x2
+ 879 041d 9C090000 		.long	.LASF73
+ 880 0421 0E       		.byte	0xe
+ 881 0422 48       		.byte	0x48
+ 882 0423 1D       		.byte	0x1d
+ 883 0424 DB030000 		.long	0x3db
+ 884 0428 02       		.uleb128 0x2
+ 885 0429 C3010000 		.long	.LASF74
+ 886 042d 0E       		.byte	0xe
+ 887 042e 49       		.byte	0x49
+ 888 042f 1D       		.byte	0x1d
+ 889 0430 DB030000 		.long	0x3db
+ 890 0434 02       		.uleb128 0x2
+ 891 0435 AF0A0000 		.long	.LASF75
+ 892 0439 0E       		.byte	0xe
+ 893 043a 4A       		.byte	0x4a
+ 894 043b 1D       		.byte	0x1d
+ 895 043c DB030000 		.long	0x3db
+ 896 0440 02       		.uleb128 0x2
+ 897 0441 42000000 		.long	.LASF76
+ 898 0445 0E       		.byte	0xe
+ 899 0446 4C       		.byte	0x4c
+ 900 0447 1D       		.byte	0x1d
+ 901 0448 F8030000 		.long	0x3f8
+ 902 044c 02       		.uleb128 0x2
+ 903 044d 64080000 		.long	.LASF77
+ 904 0451 0E       		.byte	0xe
+ 905 0452 4D       		.byte	0x4d
+ 906 0453 1D       		.byte	0x1d
+ 907 0454 56030000 		.long	0x356
+ 908 0458 02       		.uleb128 0x2
+ 909 0459 B5020000 		.long	.LASF78
+ 910 045d 0E       		.byte	0xe
+ 911 045e 4F       		.byte	0x4f
+ 912 045f 1D       		.byte	0x1d
+ 913 0460 F8030000 		.long	0x3f8
+ 914 0464 02       		.uleb128 0x2
+ 915 0465 7B080000 		.long	.LASF79
+ 916 0469 0E       		.byte	0xe
+ 917 046a 50       		.byte	0x50
+ 918 046b 1D       		.byte	0x1d
+ 919 046c F8030000 		.long	0x3f8
+ 920 0470 02       		.uleb128 0x2
+ 921 0471 2F040000 		.long	.LASF80
+ 922 0475 0E       		.byte	0xe
+ 923 0476 51       		.byte	0x51
+ 924 0477 1D       		.byte	0x1d
+ 925 0478 56030000 		.long	0x356
+GAS LISTING /tmp/ccEseu02.s 			page 18
+
+
+ 926 047c 02       		.uleb128 0x2
+ 927 047d 83050000 		.long	.LASF81
+ 928 0481 0E       		.byte	0xe
+ 929 0482 52       		.byte	0x52
+ 930 0483 1D       		.byte	0x1d
+ 931 0484 F8030000 		.long	0x3f8
+ 932 0488 02       		.uleb128 0x2
+ 933 0489 99070000 		.long	.LASF82
+ 934 048d 0F       		.byte	0xf
+ 935 048e 34       		.byte	0x34
+ 936 048f 1A       		.byte	0x1a
+ 937 0490 94040000 		.long	0x494
+ 938 0494 0B       		.uleb128 0xb
+ 939 0495 E6040000 		.long	.LASF83
+ 940 0499 44       		.byte	0x44
+ 941 049a 10       		.byte	0x10
+ 942 049b 8E       		.byte	0x8e
+ 943 049c 08       		.byte	0x8
+ 944 049d 84050000 		.long	0x584
+ 945 04a1 0C       		.uleb128 0xc
+ 946 04a2 BF080000 		.long	.LASF84
+ 947 04a6 10       		.byte	0x10
+ 948 04a7 8F       		.byte	0x8f
+ 949 04a8 19       		.byte	0x19
+ 950 04a9 BD050000 		.long	0x5bd
+ 951 04ad 00       		.byte	0
+ 952 04ae 0C       		.uleb128 0xc
+ 953 04af 22010000 		.long	.LASF85
+ 954 04b3 10       		.byte	0x10
+ 955 04b4 90       		.byte	0x90
+ 956 04b5 19       		.byte	0x19
+ 957 04b6 40040000 		.long	0x440
+ 958 04ba 08       		.byte	0x8
+ 959 04bb 12       		.uleb128 0x12
+ 960 04bc 63747800 		.string	"ctx"
+ 961 04c0 10       		.byte	0x10
+ 962 04c1 91       		.byte	0x91
+ 963 04c2 19       		.byte	0x19
+ 964 04c3 64080000 		.long	0x864
+ 965 04c7 0C       		.byte	0xc
+ 966 04c8 0C       		.uleb128 0xc
+ 967 04c9 EA0A0000 		.long	.LASF86
+ 968 04cd 10       		.byte	0x10
+ 969 04ce 93       		.byte	0x93
+ 970 04cf 1A       		.byte	0x1a
+ 971 04d0 90050000 		.long	0x590
+ 972 04d4 10       		.byte	0x10
+ 973 04d5 0C       		.uleb128 0xc
+ 974 04d6 64050000 		.long	.LASF87
+ 975 04da 10       		.byte	0x10
+ 976 04db 94       		.byte	0x94
+ 977 04dc 1A       		.byte	0x1a
+ 978 04dd 90050000 		.long	0x590
+ 979 04e1 14       		.byte	0x14
+ 980 04e2 0C       		.uleb128 0xc
+ 981 04e3 DC090000 		.long	.LASF88
+ 982 04e7 10       		.byte	0x10
+GAS LISTING /tmp/ccEseu02.s 			page 19
+
+
+ 983 04e8 9B       		.byte	0x9b
+ 984 04e9 1A       		.byte	0x1a
+ 985 04ea 3A030000 		.long	0x33a
+ 986 04ee 18       		.byte	0x18
+ 987 04ef 0C       		.uleb128 0xc
+ 988 04f0 17090000 		.long	.LASF89
+ 989 04f4 10       		.byte	0x10
+ 990 04f5 A4       		.byte	0xa4
+ 991 04f6 1A       		.byte	0x1a
+ 992 04f7 A2090000 		.long	0x9a2
+ 993 04fb 1C       		.byte	0x1c
+ 994 04fc 0C       		.uleb128 0xc
+ 995 04fd E4000000 		.long	.LASF90
+ 996 0501 10       		.byte	0x10
+ 997 0502 A9       		.byte	0xa9
+ 998 0503 19       		.byte	0x19
+ 999 0504 28040000 		.long	0x428
+ 1000 0508 20       		.byte	0x20
+ 1001 0509 0C       		.uleb128 0xc
+ 1002 050a 9F030000 		.long	.LASF91
+ 1003 050e 10       		.byte	0x10
+ 1004 050f AD       		.byte	0xad
+ 1005 0510 19       		.byte	0x19
+ 1006 0511 1C040000 		.long	0x41c
+ 1007 0515 21       		.byte	0x21
+ 1008 0516 0C       		.uleb128 0xc
+ 1009 0517 BA080000 		.long	.LASF92
+ 1010 051b 10       		.byte	0x10
+ 1011 051c B2       		.byte	0xb2
+ 1012 051d 19       		.byte	0x19
+ 1013 051e 34040000 		.long	0x434
+ 1014 0522 22       		.byte	0x22
+ 1015 0523 13       		.uleb128 0x13
+ 1016 0524 7500     		.string	"u"
+ 1017 0526 10       		.byte	0x10
+ 1018 0527 0301     		.value	0x103
+ 1019 0529 19       		.byte	0x19
+ 1020 052a C8080000 		.long	0x8c8
+ 1021 052e 24       		.byte	0x24
+ 1022 052f 14       		.uleb128 0x14
+ 1023 0530 910A0000 		.long	.LASF93
+ 1024 0534 10       		.byte	0x10
+ 1025 0535 0801     		.value	0x108
+ 1026 0537 19       		.byte	0x19
+ 1027 0538 96050000 		.long	0x596
+ 1028 053c 28       		.byte	0x28
+ 1029 053d 14       		.uleb128 0x14
+ 1030 053e 160A0000 		.long	.LASF94
+ 1031 0542 10       		.byte	0x10
+ 1032 0543 0E01     		.value	0x10e
+ 1033 0545 19       		.byte	0x19
+ 1034 0546 BD050000 		.long	0x5bd
+ 1035 054a 2C       		.byte	0x2c
+ 1036 054b 14       		.uleb128 0x14
+ 1037 054c CC010000 		.long	.LASF95
+ 1038 0550 10       		.byte	0x10
+ 1039 0551 1401     		.value	0x114
+GAS LISTING /tmp/ccEseu02.s 			page 20
+
+
+ 1040 0553 19       		.byte	0x19
+ 1041 0554 58040000 		.long	0x458
+ 1042 0558 34       		.byte	0x34
+ 1043 0559 14       		.uleb128 0x14
+ 1044 055a D4050000 		.long	.LASF96
+ 1045 055e 10       		.byte	0x10
+ 1046 055f 1B01     		.value	0x11b
+ 1047 0561 1A       		.byte	0x1a
+ 1048 0562 9C090000 		.long	0x99c
+ 1049 0566 38       		.byte	0x38
+ 1050 0567 14       		.uleb128 0x14
+ 1051 0568 7A050000 		.long	.LASF97
+ 1052 056c 10       		.byte	0x10
+ 1053 056d 1F01     		.value	0x11f
+ 1054 056f 19       		.byte	0x19
+ 1055 0570 40040000 		.long	0x440
+ 1056 0574 3C       		.byte	0x3c
+ 1057 0575 14       		.uleb128 0x14
+ 1058 0576 C3030000 		.long	.LASF98
+ 1059 057a 10       		.byte	0x10
+ 1060 057b 2601     		.value	0x126
+ 1061 057d 1A       		.byte	0x1a
+ 1062 057e F4000000 		.long	0xf4
+ 1063 0582 40       		.byte	0x40
+ 1064 0583 00       		.byte	0
+ 1065 0584 02       		.uleb128 0x2
+ 1066 0585 B5070000 		.long	.LASF99
+ 1067 0589 0F       		.byte	0xf
+ 1068 058a 39       		.byte	0x39
+ 1069 058b 14       		.byte	0x14
+ 1070 058c 90050000 		.long	0x590
+ 1071 0590 08       		.uleb128 0x8
+ 1072 0591 04       		.byte	0x4
+ 1073 0592 88040000 		.long	0x488
+ 1074 0596 02       		.uleb128 0x2
+ 1075 0597 D10A0000 		.long	.LASF100
+ 1076 059b 0F       		.byte	0xf
+ 1077 059c 3E       		.byte	0x3e
+ 1078 059d 20       		.byte	0x20
+ 1079 059e A2050000 		.long	0x5a2
+ 1080 05a2 0B       		.uleb128 0xb
+ 1081 05a3 F6010000 		.long	.LASF101
+ 1082 05a7 04       		.byte	0x4
+ 1083 05a8 10       		.byte	0x10
+ 1084 05a9 7C       		.byte	0x7c
+ 1085 05aa 08       		.byte	0x8
+ 1086 05ab BD050000 		.long	0x5bd
+ 1087 05af 0C       		.uleb128 0xc
+ 1088 05b0 060C0000 		.long	.LASF102
+ 1089 05b4 10       		.byte	0x10
+ 1090 05b5 7D       		.byte	0x7d
+ 1091 05b6 1A       		.byte	0x1a
+ 1092 05b7 90050000 		.long	0x590
+ 1093 05bb 00       		.byte	0
+ 1094 05bc 00       		.byte	0
+ 1095 05bd 02       		.uleb128 0x2
+ 1096 05be D5010000 		.long	.LASF103
+GAS LISTING /tmp/ccEseu02.s 			page 21
+
+
+ 1097 05c2 0F       		.byte	0xf
+ 1098 05c3 45       		.byte	0x45
+ 1099 05c4 21       		.byte	0x21
+ 1100 05c5 C9050000 		.long	0x5c9
+ 1101 05c9 0B       		.uleb128 0xb
+ 1102 05ca 6A080000 		.long	.LASF104
+ 1103 05ce 08       		.byte	0x8
+ 1104 05cf 10       		.byte	0x10
+ 1105 05d0 83       		.byte	0x83
+ 1106 05d1 08       		.byte	0x8
+ 1107 05d2 F1050000 		.long	0x5f1
+ 1108 05d6 0C       		.uleb128 0xc
+ 1109 05d7 060C0000 		.long	.LASF102
+ 1110 05db 10       		.byte	0x10
+ 1111 05dc 84       		.byte	0x84
+ 1112 05dd 1A       		.byte	0x1a
+ 1113 05de 90050000 		.long	0x590
+ 1114 05e2 00       		.byte	0
+ 1115 05e3 0C       		.uleb128 0xc
+ 1116 05e4 0B0C0000 		.long	.LASF105
+ 1117 05e8 10       		.byte	0x10
+ 1118 05e9 85       		.byte	0x85
+ 1119 05ea 1A       		.byte	0x1a
+ 1120 05eb 90050000 		.long	0x590
+ 1121 05ef 04       		.byte	0x4
+ 1122 05f0 00       		.byte	0
+ 1123 05f1 02       		.uleb128 0x2
+ 1124 05f2 57050000 		.long	.LASF106
+ 1125 05f6 0F       		.byte	0xf
+ 1126 05f7 4C       		.byte	0x4c
+ 1127 05f8 1E       		.byte	0x1e
+ 1128 05f9 FD050000 		.long	0x5fd
+ 1129 05fd 15       		.uleb128 0x15
+ 1130 05fe 5A040000 		.long	.LASF107
+ 1131 0602 1C       		.byte	0x1c
+ 1132 0603 10       		.byte	0x10
+ 1133 0604 5E01     		.value	0x15e
+ 1134 0606 08       		.byte	0x8
+ 1135 0607 60060000 		.long	0x660
+ 1136 060b 14       		.uleb128 0x14
+ 1137 060c BF080000 		.long	.LASF84
+ 1138 0610 10       		.byte	0x10
+ 1139 0611 5F01     		.value	0x15f
+ 1140 0613 19       		.byte	0x19
+ 1141 0614 BD050000 		.long	0x5bd
+ 1142 0618 00       		.byte	0
+ 1143 0619 14       		.uleb128 0x14
+ 1144 061a 22010000 		.long	.LASF85
+ 1145 061e 10       		.byte	0x10
+ 1146 061f 6001     		.value	0x160
+ 1147 0621 19       		.byte	0x19
+ 1148 0622 40040000 		.long	0x440
+ 1149 0626 08       		.byte	0x8
+ 1150 0627 13       		.uleb128 0x13
+ 1151 0628 63747800 		.string	"ctx"
+ 1152 062c 10       		.byte	0x10
+ 1153 062d 6201     		.value	0x162
+GAS LISTING /tmp/ccEseu02.s 			page 22
+
+
+ 1154 062f 19       		.byte	0x19
+ 1155 0630 64080000 		.long	0x864
+ 1156 0634 0C       		.byte	0xc
+ 1157 0635 14       		.uleb128 0x14
+ 1158 0636 EA0A0000 		.long	.LASF86
+ 1159 063a 10       		.byte	0x10
+ 1160 063b 6501     		.value	0x165
+ 1161 063d 1A       		.byte	0x1a
+ 1162 063e 90050000 		.long	0x590
+ 1163 0642 10       		.byte	0x10
+ 1164 0643 14       		.uleb128 0x14
+ 1165 0644 64050000 		.long	.LASF87
+ 1166 0648 10       		.byte	0x10
+ 1167 0649 6601     		.value	0x166
+ 1168 064b 1A       		.byte	0x1a
+ 1169 064c 90050000 		.long	0x590
+ 1170 0650 14       		.byte	0x14
+ 1171 0651 14       		.uleb128 0x14
+ 1172 0652 48070000 		.long	.LASF108
+ 1173 0656 10       		.byte	0x10
+ 1174 0657 6901     		.value	0x169
+ 1175 0659 1A       		.byte	0x1a
+ 1176 065a 90050000 		.long	0x590
+ 1177 065e 18       		.byte	0x18
+ 1178 065f 00       		.byte	0
+ 1179 0660 02       		.uleb128 0x2
+ 1180 0661 77000000 		.long	.LASF109
+ 1181 0665 0F       		.byte	0xf
+ 1182 0666 51       		.byte	0x51
+ 1183 0667 10       		.byte	0x10
+ 1184 0668 6C060000 		.long	0x66c
+ 1185 066c 08       		.uleb128 0x8
+ 1186 066d 04       		.byte	0x4
+ 1187 066e 72060000 		.long	0x672
+ 1188 0672 16       		.uleb128 0x16
+ 1189 0673 7D060000 		.long	0x67d
+ 1190 0677 17       		.uleb128 0x17
+ 1191 0678 F4000000 		.long	0xf4
+ 1192 067c 00       		.byte	0
+ 1193 067d 02       		.uleb128 0x2
+ 1194 067e 47050000 		.long	.LASF110
+ 1195 0682 0F       		.byte	0xf
+ 1196 0683 56       		.byte	0x56
+ 1197 0684 21       		.byte	0x21
+ 1198 0685 89060000 		.long	0x689
+ 1199 0689 15       		.uleb128 0x15
+ 1200 068a 0E080000 		.long	.LASF111
+ 1201 068e 14       		.byte	0x14
+ 1202 068f 10       		.byte	0x10
+ 1203 0690 3901     		.value	0x139
+ 1204 0692 08       		.byte	0x8
+ 1205 0693 DE060000 		.long	0x6de
+ 1206 0697 14       		.uleb128 0x14
+ 1207 0698 060C0000 		.long	.LASF102
+ 1208 069c 10       		.byte	0x10
+ 1209 069d 3A01     		.value	0x13a
+ 1210 069f 1A       		.byte	0x1a
+GAS LISTING /tmp/ccEseu02.s 			page 23
+
+
+ 1211 06a0 A8090000 		.long	0x9a8
+ 1212 06a4 00       		.byte	0
+ 1213 06a5 14       		.uleb128 0x14
+ 1214 06a6 0B0C0000 		.long	.LASF105
+ 1215 06aa 10       		.byte	0x10
+ 1216 06ab 3B01     		.value	0x13b
+ 1217 06ad 1A       		.byte	0x1a
+ 1218 06ae A8090000 		.long	0x9a8
+ 1219 06b2 04       		.byte	0x4
+ 1220 06b3 14       		.uleb128 0x14
+ 1221 06b4 95080000 		.long	.LASF112
+ 1222 06b8 10       		.byte	0x10
+ 1223 06b9 3C01     		.value	0x13c
+ 1224 06bb 19       		.byte	0x19
+ 1225 06bc CB070000 		.long	0x7cb
+ 1226 06c0 08       		.byte	0x8
+ 1227 06c1 14       		.uleb128 0x14
+ 1228 06c2 080A0000 		.long	.LASF113
+ 1229 06c6 10       		.byte	0x10
+ 1230 06c7 3D01     		.value	0x13d
+ 1231 06c9 19       		.byte	0x19
+ 1232 06ca 60060000 		.long	0x660
+ 1233 06ce 0C       		.byte	0xc
+ 1234 06cf 13       		.uleb128 0x13
+ 1235 06d0 70617200 		.string	"par"
+ 1236 06d4 10       		.byte	0x10
+ 1237 06d5 3F01     		.value	0x13f
+ 1238 06d7 1A       		.byte	0x1a
+ 1239 06d8 F4000000 		.long	0xf4
+ 1240 06dc 10       		.byte	0x10
+ 1241 06dd 00       		.byte	0
+ 1242 06de 02       		.uleb128 0x2
+ 1243 06df FE040000 		.long	.LASF114
+ 1244 06e3 0F       		.byte	0xf
+ 1245 06e4 5B       		.byte	0x5b
+ 1246 06e5 28       		.byte	0x28
+ 1247 06e6 EA060000 		.long	0x6ea
+ 1248 06ea 15       		.uleb128 0x15
+ 1249 06eb 9E000000 		.long	.LASF115
+ 1250 06ef 10       		.byte	0x10
+ 1251 06f0 10       		.byte	0x10
+ 1252 06f1 4901     		.value	0x149
+ 1253 06f3 08       		.byte	0x8
+ 1254 06f4 31070000 		.long	0x731
+ 1255 06f8 14       		.uleb128 0x14
+ 1256 06f9 060C0000 		.long	.LASF102
+ 1257 06fd 10       		.byte	0x10
+ 1258 06fe 4A01     		.value	0x14a
+ 1259 0700 1A       		.byte	0x1a
+ 1260 0701 A8090000 		.long	0x9a8
+ 1261 0705 00       		.byte	0
+ 1262 0706 14       		.uleb128 0x14
+ 1263 0707 0B0C0000 		.long	.LASF105
+ 1264 070b 10       		.byte	0x10
+ 1265 070c 4C01     		.value	0x14c
+ 1266 070e 1A       		.byte	0x1a
+ 1267 070f A8090000 		.long	0x9a8
+GAS LISTING /tmp/ccEseu02.s 			page 24
+
+
+ 1268 0713 04       		.byte	0x4
+ 1269 0714 14       		.uleb128 0x14
+ 1270 0715 95080000 		.long	.LASF112
+ 1271 0719 10       		.byte	0x10
+ 1272 071a 4E01     		.value	0x14e
+ 1273 071c 19       		.byte	0x19
+ 1274 071d CB070000 		.long	0x7cb
+ 1275 0721 08       		.byte	0x8
+ 1276 0722 14       		.uleb128 0x14
+ 1277 0723 55010000 		.long	.LASF116
+ 1278 0727 10       		.byte	0x10
+ 1279 0728 5001     		.value	0x150
+ 1280 072a 19       		.byte	0x19
+ 1281 072b C6070000 		.long	0x7c6
+ 1282 072f 0C       		.byte	0xc
+ 1283 0730 00       		.byte	0
+ 1284 0731 02       		.uleb128 0x2
+ 1285 0732 1D030000 		.long	.LASF117
+ 1286 0736 0F       		.byte	0xf
+ 1287 0737 60       		.byte	0x60
+ 1288 0738 20       		.byte	0x20
+ 1289 0739 3D070000 		.long	0x73d
+ 1290 073d 15       		.uleb128 0x15
+ 1291 073e 350A0000 		.long	.LASF118
+ 1292 0742 04       		.byte	0x4
+ 1293 0743 10       		.byte	0x10
+ 1294 0744 7001     		.value	0x170
+ 1295 0746 08       		.byte	0x8
+ 1296 0747 5A070000 		.long	0x75a
+ 1297 074b 14       		.uleb128 0x14
+ 1298 074c FD020000 		.long	.LASF119
+ 1299 0750 10       		.byte	0x10
+ 1300 0751 7801     		.value	0x178
+ 1301 0753 24       		.byte	0x24
+ 1302 0754 45030000 		.long	0x345
+ 1303 0758 00       		.byte	0
+ 1304 0759 00       		.byte	0
+ 1305 075a 02       		.uleb128 0x2
+ 1306 075b 870B0000 		.long	.LASF120
+ 1307 075f 0F       		.byte	0xf
+ 1308 0760 65       		.byte	0x65
+ 1309 0761 1A       		.byte	0x1a
+ 1310 0762 66070000 		.long	0x766
+ 1311 0766 15       		.uleb128 0x15
+ 1312 0767 E00A0000 		.long	.LASF121
+ 1313 076b 78       		.byte	0x78
+ 1314 076c 10       		.byte	0x10
+ 1315 076d 9001     		.value	0x190
+ 1316 076f 08       		.byte	0x8
+ 1317 0770 BA070000 		.long	0x7ba
+ 1318 0774 14       		.uleb128 0x14
+ 1319 0775 96090000 		.long	.LASF122
+ 1320 0779 10       		.byte	0x10
+ 1321 077a 9401     		.value	0x194
+ 1322 077c 19       		.byte	0x19
+ 1323 077d F1050000 		.long	0x5f1
+ 1324 0781 00       		.byte	0
+GAS LISTING /tmp/ccEseu02.s 			page 25
+
+
+ 1325 0782 14       		.uleb128 0x14
+ 1326 0783 8A0A0000 		.long	.LASF123
+ 1327 0787 10       		.byte	0x10
+ 1328 0788 9801     		.value	0x198
+ 1329 078a 19       		.byte	0x19
+ 1330 078b DE060000 		.long	0x6de
+ 1331 078f 1C       		.byte	0x1c
+ 1332 0790 13       		.uleb128 0x13
+ 1333 0791 64626700 		.string	"dbg"
+ 1334 0795 10       		.byte	0x10
+ 1335 0796 9C01     		.value	0x19c
+ 1336 0798 19       		.byte	0x19
+ 1337 0799 31070000 		.long	0x731
+ 1338 079d 2C       		.byte	0x2c
+ 1339 079e 14       		.uleb128 0x14
+ 1340 079f EA080000 		.long	.LASF124
+ 1341 07a3 10       		.byte	0x10
+ 1342 07a4 A001     		.value	0x1a0
+ 1343 07a6 19       		.byte	0x19
+ 1344 07a7 88040000 		.long	0x488
+ 1345 07ab 30       		.byte	0x30
+ 1346 07ac 13       		.uleb128 0x13
+ 1347 07ad 746D00   		.string	"tm"
+ 1348 07b0 10       		.byte	0x10
+ 1349 07b1 A501     		.value	0x1a5
+ 1350 07b3 19       		.byte	0x19
+ 1351 07b4 BC080000 		.long	0x8bc
+ 1352 07b8 74       		.byte	0x74
+ 1353 07b9 00       		.byte	0
+ 1354 07ba 02       		.uleb128 0x2
+ 1355 07bb 26000000 		.long	.LASF125
+ 1356 07bf 11       		.byte	0x11
+ 1357 07c0 8E       		.byte	0x8e
+ 1358 07c1 12       		.byte	0x12
+ 1359 07c2 EC030000 		.long	0x3ec
+ 1360 07c6 03       		.uleb128 0x3
+ 1361 07c7 BA070000 		.long	0x7ba
+ 1362 07cb 02       		.uleb128 0x2
+ 1363 07cc EA050000 		.long	.LASF126
+ 1364 07d0 11       		.byte	0x11
+ 1365 07d1 98       		.byte	0x98
+ 1366 07d2 12       		.byte	0x12
+ 1367 07d3 F8030000 		.long	0x3f8
+ 1368 07d7 18       		.uleb128 0x18
+ 1369 07d8 10       		.byte	0x10
+ 1370 07d9 02       		.byte	0x2
+ 1371 07da 91       		.byte	0x91
+ 1372 07db 09       		.byte	0x9
+ 1373 07dc EC070000 		.long	0x7ec
+ 1374 07e0 12       		.uleb128 0x12
+ 1375 07e1 6100     		.string	"a"
+ 1376 07e3 02       		.byte	0x2
+ 1377 07e4 92       		.byte	0x92
+ 1378 07e5 0B       		.byte	0xb
+ 1379 07e6 EC070000 		.long	0x7ec
+ 1380 07ea 00       		.byte	0
+ 1381 07eb 00       		.byte	0
+GAS LISTING /tmp/ccEseu02.s 			page 26
+
+
+ 1382 07ec 09       		.uleb128 0x9
+ 1383 07ed DB030000 		.long	0x3db
+ 1384 07f1 FC070000 		.long	0x7fc
+ 1385 07f5 0A       		.uleb128 0xa
+ 1386 07f6 36000000 		.long	0x36
+ 1387 07fa 0F       		.byte	0xf
+ 1388 07fb 00       		.byte	0
+ 1389 07fc 19       		.uleb128 0x19
+ 1390 07fd B2030000 		.long	.LASF269
+ 1391 0801 02       		.byte	0x2
+ 1392 0802 93       		.byte	0x93
+ 1393 0803 03       		.byte	0x3
+ 1394 0804 D7070000 		.long	0x7d7
+ 1395 0808 10       		.byte	0x10
+ 1396 0809 02       		.uleb128 0x2
+ 1397 080a 800B0000 		.long	.LASF127
+ 1398 080e 02       		.byte	0x2
+ 1399 080f 98       		.byte	0x98
+ 1400 0810 0F       		.byte	0xf
+ 1401 0811 F4000000 		.long	0xf4
+ 1402 0815 0B       		.uleb128 0xb
+ 1403 0816 DF070000 		.long	.LASF128
+ 1404 081a 14       		.byte	0x14
+ 1405 081b 02       		.byte	0x2
+ 1406 081c A7       		.byte	0xa7
+ 1407 081d 08       		.byte	0x8
+ 1408 081e 64080000 		.long	0x864
+ 1409 0822 12       		.uleb128 0x12
+ 1410 0823 65627800 		.string	"ebx"
+ 1411 0827 02       		.byte	0x2
+ 1412 0828 A8       		.byte	0xa8
+ 1413 0829 0B       		.byte	0xb
+ 1414 082a 09080000 		.long	0x809
+ 1415 082e 00       		.byte	0
+ 1416 082f 12       		.uleb128 0x12
+ 1417 0830 65646900 		.string	"edi"
+ 1418 0834 02       		.byte	0x2
+ 1419 0835 A9       		.byte	0xa9
+ 1420 0836 0B       		.byte	0xb
+ 1421 0837 09080000 		.long	0x809
+ 1422 083b 04       		.byte	0x4
+ 1423 083c 12       		.uleb128 0x12
+ 1424 083d 65736900 		.string	"esi"
+ 1425 0841 02       		.byte	0x2
+ 1426 0842 AA       		.byte	0xaa
+ 1427 0843 0B       		.byte	0xb
+ 1428 0844 09080000 		.long	0x809
+ 1429 0848 08       		.byte	0x8
+ 1430 0849 12       		.uleb128 0x12
+ 1431 084a 65627000 		.string	"ebp"
+ 1432 084e 02       		.byte	0x2
+ 1433 084f AB       		.byte	0xab
+ 1434 0850 0B       		.byte	0xb
+ 1435 0851 09080000 		.long	0x809
+ 1436 0855 0C       		.byte	0xc
+ 1437 0856 12       		.uleb128 0x12
+ 1438 0857 65697000 		.string	"eip"
+GAS LISTING /tmp/ccEseu02.s 			page 27
+
+
+ 1439 085b 02       		.byte	0x2
+ 1440 085c AC       		.byte	0xac
+ 1441 085d 0B       		.byte	0xb
+ 1442 085e 09080000 		.long	0x809
+ 1443 0862 10       		.byte	0x10
+ 1444 0863 00       		.byte	0
+ 1445 0864 0B       		.uleb128 0xb
+ 1446 0865 B70A0000 		.long	.LASF129
+ 1447 0869 04       		.byte	0x4
+ 1448 086a 02       		.byte	0x2
+ 1449 086b B4       		.byte	0xb4
+ 1450 086c 08       		.byte	0x8
+ 1451 086d 7E080000 		.long	0x87e
+ 1452 0871 12       		.uleb128 0x12
+ 1453 0872 737000   		.string	"sp"
+ 1454 0875 02       		.byte	0x2
+ 1455 0876 B5       		.byte	0xb5
+ 1456 0877 17       		.byte	0x17
+ 1457 0878 7E080000 		.long	0x87e
+ 1458 087c 00       		.byte	0
+ 1459 087d 00       		.byte	0
+ 1460 087e 08       		.uleb128 0x8
+ 1461 087f 04       		.byte	0x4
+ 1462 0880 15080000 		.long	0x815
+ 1463 0884 1A       		.uleb128 0x1a
+ 1464 0885 64070000 		.long	.LASF130
+ 1465 0889 02       		.byte	0x2
+ 1466 088a 1E01     		.value	0x11e
+ 1467 088c 0D       		.byte	0xd
+ 1468 088d 91080000 		.long	0x891
+ 1469 0891 04       		.uleb128 0x4
+ 1470 0892 01       		.byte	0x1
+ 1471 0893 02       		.byte	0x2
+ 1472 0894 36030000 		.long	.LASF131
+ 1473 0898 1A       		.uleb128 0x1a
+ 1474 0899 80030000 		.long	.LASF132
+ 1475 089d 02       		.byte	0x2
+ 1476 089e 1F01     		.value	0x11f
+ 1477 08a0 11       		.byte	0x11
+ 1478 08a1 10040000 		.long	0x410
+ 1479 08a5 18       		.uleb128 0x18
+ 1480 08a6 04       		.byte	0x4
+ 1481 08a7 12       		.byte	0x12
+ 1482 08a8 38       		.byte	0x38
+ 1483 08a9 09       		.byte	0x9
+ 1484 08aa BC080000 		.long	0x8bc
+ 1485 08ae 0C       		.uleb128 0xc
+ 1486 08af 57070000 		.long	.LASF133
+ 1487 08b3 12       		.byte	0x12
+ 1488 08b4 3C       		.byte	0x3c
+ 1489 08b5 19       		.byte	0x19
+ 1490 08b6 04040000 		.long	0x404
+ 1491 08ba 00       		.byte	0
+ 1492 08bb 00       		.byte	0
+ 1493 08bc 02       		.uleb128 0x2
+ 1494 08bd C3090000 		.long	.LASF134
+ 1495 08c1 12       		.byte	0x12
+GAS LISTING /tmp/ccEseu02.s 			page 28
+
+
+ 1496 08c2 3D       		.byte	0x3d
+ 1497 08c3 03       		.byte	0x3
+ 1498 08c4 A5080000 		.long	0x8a5
+ 1499 08c8 1B       		.uleb128 0x1b
+ 1500 08c9 04       		.byte	0x4
+ 1501 08ca 10       		.byte	0x10
+ 1502 08cb C6       		.byte	0xc6
+ 1503 08cc 03       		.byte	0x3
+ 1504 08cd 33090000 		.long	0x933
+ 1505 08d1 1C       		.uleb128 0x1c
+ 1506 08d2 570B0000 		.long	.LASF135
+ 1507 08d6 10       		.byte	0x10
+ 1508 08d7 CD       		.byte	0xcd
+ 1509 08d8 19       		.byte	0x19
+ 1510 08d9 4C040000 		.long	0x44c
+ 1511 08dd 1C       		.uleb128 0x1c
+ 1512 08de 3C010000 		.long	.LASF136
+ 1513 08e2 10       		.byte	0x10
+ 1514 08e3 D4       		.byte	0xd4
+ 1515 08e4 19       		.byte	0x19
+ 1516 08e5 4C040000 		.long	0x44c
+ 1517 08e9 1C       		.uleb128 0x1c
+ 1518 08ea 71030000 		.long	.LASF137
+ 1519 08ee 10       		.byte	0x10
+ 1520 08ef DB       		.byte	0xdb
+ 1521 08f0 1A       		.byte	0x1a
+ 1522 08f1 F4000000 		.long	0xf4
+ 1523 08f5 1C       		.uleb128 0x1c
+ 1524 08f6 C1020000 		.long	.LASF138
+ 1525 08fa 10       		.byte	0x10
+ 1526 08fb E2       		.byte	0xe2
+ 1527 08fc 1A       		.byte	0x1a
+ 1528 08fd 33090000 		.long	0x933
+ 1529 0901 1C       		.uleb128 0x1c
+ 1530 0902 C8070000 		.long	.LASF139
+ 1531 0906 10       		.byte	0x10
+ 1532 0907 E7       		.byte	0xe7
+ 1533 0908 19       		.byte	0x19
+ 1534 0909 4C040000 		.long	0x44c
+ 1535 090d 1C       		.uleb128 0x1c
+ 1536 090e 1F000000 		.long	.LASF140
+ 1537 0912 10       		.byte	0x10
+ 1538 0913 F0       		.byte	0xf0
+ 1539 0914 1A       		.byte	0x1a
+ 1540 0915 61090000 		.long	0x961
+ 1541 0919 1C       		.uleb128 0x1c
+ 1542 091a 3D040000 		.long	.LASF141
+ 1543 091e 10       		.byte	0x10
+ 1544 091f F9       		.byte	0xf9
+ 1545 0920 1A       		.byte	0x1a
+ 1546 0921 9C090000 		.long	0x99c
+ 1547 0925 1D       		.uleb128 0x1d
+ 1548 0926 52020000 		.long	.LASF142
+ 1549 092a 10       		.byte	0x10
+ 1550 092b 0101     		.value	0x101
+ 1551 092d 19       		.byte	0x19
+ 1552 092e 58040000 		.long	0x458
+GAS LISTING /tmp/ccEseu02.s 			page 29
+
+
+ 1553 0932 00       		.byte	0
+ 1554 0933 08       		.uleb128 0x8
+ 1555 0934 04       		.byte	0x4
+ 1556 0935 84050000 		.long	0x584
+ 1557 0939 0B       		.uleb128 0xb
+ 1558 093a D9040000 		.long	.LASF143
+ 1559 093e 0C       		.byte	0xc
+ 1560 093f 13       		.byte	0x13
+ 1561 0940 34       		.byte	0x34
+ 1562 0941 10       		.byte	0x10
+ 1563 0942 61090000 		.long	0x961
+ 1564 0946 0C       		.uleb128 0xc
+ 1565 0947 BF080000 		.long	.LASF84
+ 1566 094b 13       		.byte	0x13
+ 1567 094c 35       		.byte	0x35
+ 1568 094d 19       		.byte	0x19
+ 1569 094e BD050000 		.long	0x5bd
+ 1570 0952 00       		.byte	0
+ 1571 0953 12       		.uleb128 0x12
+ 1572 0954 636E7400 		.string	"cnt"
+ 1573 0958 13       		.byte	0x13
+ 1574 0959 37       		.byte	0x37
+ 1575 095a 19       		.byte	0x19
+ 1576 095b 70040000 		.long	0x470
+ 1577 095f 08       		.byte	0x8
+ 1578 0960 00       		.byte	0
+ 1579 0961 08       		.uleb128 0x8
+ 1580 0962 04       		.byte	0x4
+ 1581 0963 39090000 		.long	0x939
+ 1582 0967 0B       		.uleb128 0xb
+ 1583 0968 0D0A0000 		.long	.LASF144
+ 1584 096c 10       		.byte	0x10
+ 1585 096d 14       		.byte	0x14
+ 1586 096e 39       		.byte	0x39
+ 1587 096f 08       		.byte	0x8
+ 1588 0970 9C090000 		.long	0x99c
+ 1589 0974 0C       		.uleb128 0xc
+ 1590 0975 BF080000 		.long	.LASF84
+ 1591 0979 14       		.byte	0x14
+ 1592 097a 3A       		.byte	0x3a
+ 1593 097b 19       		.byte	0x19
+ 1594 097c BD050000 		.long	0x5bd
+ 1595 0980 00       		.byte	0
+ 1596 0981 0C       		.uleb128 0xc
+ 1597 0982 3C000000 		.long	.LASF145
+ 1598 0986 14       		.byte	0x14
+ 1599 0987 3C       		.byte	0x3c
+ 1600 0988 1A       		.byte	0x1a
+ 1601 0989 90050000 		.long	0x590
+ 1602 098d 08       		.byte	0x8
+ 1603 098e 0C       		.uleb128 0xc
+ 1604 098f 060C0000 		.long	.LASF102
+ 1605 0993 14       		.byte	0x14
+ 1606 0994 3E       		.byte	0x3e
+ 1607 0995 1A       		.byte	0x1a
+ 1608 0996 F00A0000 		.long	0xaf0
+ 1609 099a 0C       		.byte	0xc
+GAS LISTING /tmp/ccEseu02.s 			page 30
+
+
+ 1610 099b 00       		.byte	0
+ 1611 099c 08       		.uleb128 0x8
+ 1612 099d 04       		.byte	0x4
+ 1613 099e 67090000 		.long	0x967
+ 1614 09a2 08       		.uleb128 0x8
+ 1615 09a3 04       		.byte	0x4
+ 1616 09a4 FC070000 		.long	0x7fc
+ 1617 09a8 08       		.uleb128 0x8
+ 1618 09a9 04       		.byte	0x4
+ 1619 09aa 7D060000 		.long	0x67d
+ 1620 09ae 1E       		.uleb128 0x1e
+ 1621 09af 636800   		.string	"ch"
+ 1622 09b2 10       		.byte	0x10
+ 1623 09b3 C701     		.value	0x1c7
+ 1624 09b5 14       		.byte	0x14
+ 1625 09b6 5A070000 		.long	0x75a
+ 1626 09ba 1F       		.uleb128 0x1f
+ 1627 09bb FC070000 		.long	0x7fc
+ 1628 09bf 10       		.byte	0x10
+ 1629 09c0 C6090000 		.long	0x9c6
+ 1630 09c4 10       		.uleb128 0x10
+ 1631 09c5 00       		.byte	0
+ 1632 09c6 1A       		.uleb128 0x1a
+ 1633 09c7 14050000 		.long	.LASF146
+ 1634 09cb 03       		.byte	0x3
+ 1635 09cc 1701     		.value	0x117
+ 1636 09ce 13       		.byte	0x13
+ 1637 09cf BA090000 		.long	0x9ba
+ 1638 09d3 18       		.uleb128 0x18
+ 1639 09d4 16       		.byte	0x16
+ 1640 09d5 15       		.byte	0x15
+ 1641 09d6 34       		.byte	0x34
+ 1642 09d7 09       		.byte	0x9
+ 1643 09d8 C70A0000 		.long	0xac7
+ 1644 09dc 0C       		.uleb128 0xc
+ 1645 09dd 170C0000 		.long	.LASF147
+ 1646 09e1 15       		.byte	0x15
+ 1647 09e2 35       		.byte	0x35
+ 1648 09e3 0D       		.byte	0xd
+ 1649 09e4 FC000000 		.long	0xfc
+ 1650 09e8 00       		.byte	0
+ 1651 09e9 0C       		.uleb128 0xc
+ 1652 09ea A2010000 		.long	.LASF148
+ 1653 09ee 15       		.byte	0x15
+ 1654 09ef 36       		.byte	0x36
+ 1655 09f0 0D       		.byte	0xd
+ 1656 09f1 DB030000 		.long	0x3db
+ 1657 09f5 04       		.byte	0x4
+ 1658 09f6 0C       		.uleb128 0xc
+ 1659 09f7 2E080000 		.long	.LASF149
+ 1660 09fb 15       		.byte	0x15
+ 1661 09fc 37       		.byte	0x37
+ 1662 09fd 0D       		.byte	0xd
+ 1663 09fe DB030000 		.long	0x3db
+ 1664 0a02 05       		.byte	0x5
+ 1665 0a03 0C       		.uleb128 0xc
+ 1666 0a04 F5080000 		.long	.LASF150
+GAS LISTING /tmp/ccEseu02.s 			page 31
+
+
+ 1667 0a08 15       		.byte	0x15
+ 1668 0a09 38       		.byte	0x38
+ 1669 0a0a 0D       		.byte	0xd
+ 1670 0a0b EC030000 		.long	0x3ec
+ 1671 0a0f 06       		.byte	0x6
+ 1672 0a10 0C       		.uleb128 0xc
+ 1673 0a11 EF030000 		.long	.LASF151
+ 1674 0a15 15       		.byte	0x15
+ 1675 0a16 39       		.byte	0x39
+ 1676 0a17 0D       		.byte	0xd
+ 1677 0a18 DB030000 		.long	0x3db
+ 1678 0a1c 08       		.byte	0x8
+ 1679 0a1d 0C       		.uleb128 0xc
+ 1680 0a1e BA0B0000 		.long	.LASF152
+ 1681 0a22 15       		.byte	0x15
+ 1682 0a23 3A       		.byte	0x3a
+ 1683 0a24 0D       		.byte	0xd
+ 1684 0a25 DB030000 		.long	0x3db
+ 1685 0a29 09       		.byte	0x9
+ 1686 0a2a 0C       		.uleb128 0xc
+ 1687 0a2b BE040000 		.long	.LASF153
+ 1688 0a2f 15       		.byte	0x15
+ 1689 0a30 3B       		.byte	0x3b
+ 1690 0a31 0D       		.byte	0xd
+ 1691 0a32 DB030000 		.long	0x3db
+ 1692 0a36 0A       		.byte	0xa
+ 1693 0a37 0C       		.uleb128 0xc
+ 1694 0a38 0F000000 		.long	.LASF154
+ 1695 0a3c 15       		.byte	0x15
+ 1696 0a3d 3C       		.byte	0x3c
+ 1697 0a3e 0D       		.byte	0xd
+ 1698 0a3f DB030000 		.long	0x3db
+ 1699 0a43 0B       		.byte	0xb
+ 1700 0a44 0C       		.uleb128 0xc
+ 1701 0a45 00000000 		.long	.LASF155
+ 1702 0a49 15       		.byte	0x15
+ 1703 0a4a 3D       		.byte	0x3d
+ 1704 0a4b 0D       		.byte	0xd
+ 1705 0a4c DB030000 		.long	0x3db
+ 1706 0a50 0C       		.byte	0xc
+ 1707 0a51 0C       		.uleb128 0xc
+ 1708 0a52 01070000 		.long	.LASF156
+ 1709 0a56 15       		.byte	0x15
+ 1710 0a57 3E       		.byte	0x3e
+ 1711 0a58 0D       		.byte	0xd
+ 1712 0a59 DB030000 		.long	0x3db
+ 1713 0a5d 0D       		.byte	0xd
+ 1714 0a5e 0C       		.uleb128 0xc
+ 1715 0a5f 11010000 		.long	.LASF157
+ 1716 0a63 15       		.byte	0x15
+ 1717 0a64 3F       		.byte	0x3f
+ 1718 0a65 0D       		.byte	0xd
+ 1719 0a66 DB030000 		.long	0x3db
+ 1720 0a6a 0E       		.byte	0xe
+ 1721 0a6b 0C       		.uleb128 0xc
+ 1722 0a6c 5B080000 		.long	.LASF158
+ 1723 0a70 15       		.byte	0x15
+GAS LISTING /tmp/ccEseu02.s 			page 32
+
+
+ 1724 0a71 40       		.byte	0x40
+ 1725 0a72 0D       		.byte	0xd
+ 1726 0a73 DB030000 		.long	0x3db
+ 1727 0a77 0F       		.byte	0xf
+ 1728 0a78 0C       		.uleb128 0xc
+ 1729 0a79 8A050000 		.long	.LASF159
+ 1730 0a7d 15       		.byte	0x15
+ 1731 0a7e 41       		.byte	0x41
+ 1732 0a7f 0D       		.byte	0xd
+ 1733 0a80 DB030000 		.long	0x3db
+ 1734 0a84 10       		.byte	0x10
+ 1735 0a85 0C       		.uleb128 0xc
+ 1736 0a86 A2040000 		.long	.LASF160
+ 1737 0a8a 15       		.byte	0x15
+ 1738 0a8b 42       		.byte	0x42
+ 1739 0a8c 0D       		.byte	0xd
+ 1740 0a8d DB030000 		.long	0x3db
+ 1741 0a91 11       		.byte	0x11
+ 1742 0a92 0C       		.uleb128 0xc
+ 1743 0a93 EC0B0000 		.long	.LASF161
+ 1744 0a97 15       		.byte	0x15
+ 1745 0a98 43       		.byte	0x43
+ 1746 0a99 0D       		.byte	0xd
+ 1747 0a9a DB030000 		.long	0x3db
+ 1748 0a9e 12       		.byte	0x12
+ 1749 0a9f 0C       		.uleb128 0xc
+ 1750 0aa0 96030000 		.long	.LASF162
+ 1751 0aa4 15       		.byte	0x15
+ 1752 0aa5 44       		.byte	0x44
+ 1753 0aa6 0D       		.byte	0xd
+ 1754 0aa7 DB030000 		.long	0x3db
+ 1755 0aab 13       		.byte	0x13
+ 1756 0aac 0C       		.uleb128 0xc
+ 1757 0aad 30000000 		.long	.LASF163
+ 1758 0ab1 15       		.byte	0x15
+ 1759 0ab2 45       		.byte	0x45
+ 1760 0ab3 0D       		.byte	0xd
+ 1761 0ab4 DB030000 		.long	0x3db
+ 1762 0ab8 14       		.byte	0x14
+ 1763 0ab9 0C       		.uleb128 0xc
+ 1764 0aba 26040000 		.long	.LASF164
+ 1765 0abe 15       		.byte	0x15
+ 1766 0abf 46       		.byte	0x46
+ 1767 0ac0 0D       		.byte	0xd
+ 1768 0ac1 DB030000 		.long	0x3db
+ 1769 0ac5 15       		.byte	0x15
+ 1770 0ac6 00       		.byte	0
+ 1771 0ac7 02       		.uleb128 0x2
+ 1772 0ac8 930B0000 		.long	.LASF165
+ 1773 0acc 15       		.byte	0x15
+ 1774 0acd 47       		.byte	0x47
+ 1775 0ace 03       		.byte	0x3
+ 1776 0acf D3090000 		.long	0x9d3
+ 1777 0ad3 05       		.uleb128 0x5
+ 1778 0ad4 C70A0000 		.long	0xac7
+ 1779 0ad8 0F       		.uleb128 0xf
+ 1780 0ad9 4A000000 		.long	.LASF166
+GAS LISTING /tmp/ccEseu02.s 			page 33
+
+
+ 1781 0add 15       		.byte	0x15
+ 1782 0ade 6C       		.byte	0x6c
+ 1783 0adf 1D       		.byte	0x1d
+ 1784 0ae0 D30A0000 		.long	0xad3
+ 1785 0ae4 02       		.uleb128 0x2
+ 1786 0ae5 A70A0000 		.long	.LASF167
+ 1787 0ae9 14       		.byte	0x14
+ 1788 0aea 34       		.byte	0x34
+ 1789 0aeb 19       		.byte	0x19
+ 1790 0aec 67090000 		.long	0x967
+ 1791 0af0 08       		.uleb128 0x8
+ 1792 0af1 04       		.byte	0x4
+ 1793 0af2 E40A0000 		.long	0xae4
+ 1794 0af6 02       		.uleb128 0x2
+ 1795 0af7 DE030000 		.long	.LASF168
+ 1796 0afb 16       		.byte	0x16
+ 1797 0afc 34       		.byte	0x34
+ 1798 0afd 1F       		.byte	0x1f
+ 1799 0afe 020B0000 		.long	0xb02
+ 1800 0b02 0B       		.uleb128 0xb
+ 1801 0b03 480B0000 		.long	.LASF169
+ 1802 0b07 14       		.byte	0x14
+ 1803 0b08 16       		.byte	0x16
+ 1804 0b09 39       		.byte	0x39
+ 1805 0b0a 08       		.byte	0x8
+ 1806 0b0b 510B0000 		.long	0xb51
+ 1807 0b0f 0C       		.uleb128 0xc
+ 1808 0b10 060C0000 		.long	.LASF102
+ 1809 0b14 16       		.byte	0x16
+ 1810 0b15 3A       		.byte	0x3a
+ 1811 0b16 1A       		.byte	0x1a
+ 1812 0b17 510B0000 		.long	0xb51
+ 1813 0b1b 00       		.byte	0
+ 1814 0b1c 0C       		.uleb128 0xc
+ 1815 0b1d E1090000 		.long	.LASF170
+ 1816 0b21 16       		.byte	0x16
+ 1817 0b22 3D       		.byte	0x3d
+ 1818 0b23 1A       		.byte	0x1a
+ 1819 0b24 90050000 		.long	0x590
+ 1820 0b28 04       		.byte	0x4
+ 1821 0b29 0C       		.uleb128 0xc
+ 1822 0b2a FF0B0000 		.long	.LASF171
+ 1823 0b2e 16       		.byte	0x16
+ 1824 0b2f 3F       		.byte	0x3f
+ 1825 0b30 19       		.byte	0x19
+ 1826 0b31 58040000 		.long	0x458
+ 1827 0b35 08       		.byte	0x8
+ 1828 0b36 0C       		.uleb128 0xc
+ 1829 0b37 9F030000 		.long	.LASF91
+ 1830 0b3b 16       		.byte	0x16
+ 1831 0b3c 41       		.byte	0x41
+ 1832 0b3d 19       		.byte	0x19
+ 1833 0b3e 64040000 		.long	0x464
+ 1834 0b42 0C       		.byte	0xc
+ 1835 0b43 0C       		.uleb128 0xc
+ 1836 0b44 AE070000 		.long	.LASF172
+ 1837 0b48 16       		.byte	0x16
+GAS LISTING /tmp/ccEseu02.s 			page 34
+
+
+ 1838 0b49 43       		.byte	0x43
+ 1839 0b4a 19       		.byte	0x19
+ 1840 0b4b 64040000 		.long	0x464
+ 1841 0b4f 10       		.byte	0x10
+ 1842 0b50 00       		.byte	0
+ 1843 0b51 08       		.uleb128 0x8
+ 1844 0b52 04       		.byte	0x4
+ 1845 0b53 F60A0000 		.long	0xaf6
+ 1846 0b57 0B       		.uleb128 0xb
+ 1847 0b58 FB090000 		.long	.LASF173
+ 1848 0b5c 04       		.byte	0x4
+ 1849 0b5d 16       		.byte	0x16
+ 1850 0b5e 4A       		.byte	0x4a
+ 1851 0b5f 10       		.byte	0x10
+ 1852 0b60 720B0000 		.long	0xb72
+ 1853 0b64 0C       		.uleb128 0xc
+ 1854 0b65 060C0000 		.long	.LASF102
+ 1855 0b69 16       		.byte	0x16
+ 1856 0b6a 4B       		.byte	0x4b
+ 1857 0b6b 1A       		.byte	0x1a
+ 1858 0b6c 510B0000 		.long	0xb51
+ 1859 0b70 00       		.byte	0
+ 1860 0b71 00       		.byte	0
+ 1861 0b72 02       		.uleb128 0x2
+ 1862 0b73 49060000 		.long	.LASF174
+ 1863 0b77 16       		.byte	0x16
+ 1864 0b78 4E       		.byte	0x4e
+ 1865 0b79 03       		.byte	0x3
+ 1866 0b7a 570B0000 		.long	0xb57
+ 1867 0b7e 02       		.uleb128 0x2
+ 1868 0b7f 8C070000 		.long	.LASF175
+ 1869 0b83 17       		.byte	0x17
+ 1870 0b84 4B       		.byte	0x4b
+ 1871 0b85 11       		.byte	0x11
+ 1872 0b86 8A0B0000 		.long	0xb8a
+ 1873 0b8a 08       		.uleb128 0x8
+ 1874 0b8b 04       		.byte	0x4
+ 1875 0b8c 900B0000 		.long	0xb90
+ 1876 0b90 20       		.uleb128 0x20
+ 1877 0b91 F4000000 		.long	0xf4
+ 1878 0b95 A40B0000 		.long	0xba4
+ 1879 0b99 17       		.uleb128 0x17
+ 1880 0b9a 25000000 		.long	0x25
+ 1881 0b9e 17       		.uleb128 0x17
+ 1882 0b9f 36000000 		.long	0x36
+ 1883 0ba3 00       		.byte	0
+ 1884 0ba4 18       		.uleb128 0x18
+ 1885 0ba5 08       		.byte	0x8
+ 1886 0ba6 17       		.byte	0x17
+ 1887 0ba7 55       		.byte	0x55
+ 1888 0ba8 09       		.byte	0x9
+ 1889 0ba9 C80B0000 		.long	0xbc8
+ 1890 0bad 0C       		.uleb128 0xc
+ 1891 0bae 93040000 		.long	.LASF176
+ 1892 0bb2 17       		.byte	0x17
+ 1893 0bb3 59       		.byte	0x59
+ 1894 0bb4 0C       		.byte	0xc
+GAS LISTING /tmp/ccEseu02.s 			page 35
+
+
+ 1895 0bb5 C80B0000 		.long	0xbc8
+ 1896 0bb9 00       		.byte	0
+ 1897 0bba 0C       		.uleb128 0xc
+ 1898 0bbb 18000000 		.long	.LASF177
+ 1899 0bbf 17       		.byte	0x17
+ 1900 0bc0 5D       		.byte	0x5d
+ 1901 0bc1 0C       		.byte	0xc
+ 1902 0bc2 C80B0000 		.long	0xbc8
+ 1903 0bc6 04       		.byte	0x4
+ 1904 0bc7 00       		.byte	0
+ 1905 0bc8 08       		.uleb128 0x8
+ 1906 0bc9 04       		.byte	0x4
+ 1907 0bca DB030000 		.long	0x3db
+ 1908 0bce 02       		.uleb128 0x2
+ 1909 0bcf 33020000 		.long	.LASF178
+ 1910 0bd3 17       		.byte	0x17
+ 1911 0bd4 5E       		.byte	0x5e
+ 1912 0bd5 03       		.byte	0x3
+ 1913 0bd6 A40B0000 		.long	0xba4
+ 1914 0bda 0F       		.uleb128 0xf
+ 1915 0bdb E10B0000 		.long	.LASF179
+ 1916 0bdf 17       		.byte	0x17
+ 1917 0be0 69       		.byte	0x69
+ 1918 0be1 12       		.byte	0x12
+ 1919 0be2 CE0B0000 		.long	0xbce
+ 1920 0be6 0B       		.uleb128 0xb
+ 1921 0be7 97050000 		.long	.LASF180
+ 1922 0beb 04       		.byte	0x4
+ 1923 0bec 18       		.byte	0x18
+ 1924 0bed 3C       		.byte	0x3c
+ 1925 0bee 08       		.byte	0x8
+ 1926 0bef 010C0000 		.long	0xc01
+ 1927 0bf3 0C       		.uleb128 0xc
+ 1928 0bf4 060C0000 		.long	.LASF102
+ 1929 0bf8 18       		.byte	0x18
+ 1930 0bf9 3D       		.byte	0x3d
+ 1931 0bfa 1A       		.byte	0x1a
+ 1932 0bfb 010C0000 		.long	0xc01
+ 1933 0bff 00       		.byte	0
+ 1934 0c00 00       		.byte	0
+ 1935 0c01 08       		.uleb128 0x8
+ 1936 0c02 04       		.byte	0x4
+ 1937 0c03 E60B0000 		.long	0xbe6
+ 1938 0c07 18       		.uleb128 0x18
+ 1939 0c08 10       		.byte	0x10
+ 1940 0c09 18       		.byte	0x18
+ 1941 0c0a 44       		.byte	0x44
+ 1942 0c0b 09       		.byte	0x9
+ 1943 0c0c 450C0000 		.long	0xc45
+ 1944 0c10 0C       		.uleb128 0xc
+ 1945 0c11 060C0000 		.long	.LASF102
+ 1946 0c15 18       		.byte	0x18
+ 1947 0c16 45       		.byte	0x45
+ 1948 0c17 1A       		.byte	0x1a
+ 1949 0c18 010C0000 		.long	0xc01
+ 1950 0c1c 00       		.byte	0
+ 1951 0c1d 0C       		.uleb128 0xc
+GAS LISTING /tmp/ccEseu02.s 			page 36
+
+
+ 1952 0c1e 7E0A0000 		.long	.LASF181
+ 1953 0c22 18       		.byte	0x18
+ 1954 0c23 46       		.byte	0x46
+ 1955 0c24 19       		.byte	0x19
+ 1956 0c25 25000000 		.long	0x25
+ 1957 0c29 04       		.byte	0x4
+ 1958 0c2a 0C       		.uleb128 0xc
+ 1959 0c2b D9060000 		.long	.LASF182
+ 1960 0c2f 18       		.byte	0x18
+ 1961 0c30 48       		.byte	0x48
+ 1962 0c31 19       		.byte	0x19
+ 1963 0c32 36000000 		.long	0x36
+ 1964 0c36 08       		.byte	0x8
+ 1965 0c37 0C       		.uleb128 0xc
+ 1966 0c38 53000000 		.long	.LASF183
+ 1967 0c3c 18       		.byte	0x18
+ 1968 0c3d 49       		.byte	0x49
+ 1969 0c3e 19       		.byte	0x19
+ 1970 0c3f 7E0B0000 		.long	0xb7e
+ 1971 0c43 0C       		.byte	0xc
+ 1972 0c44 00       		.byte	0
+ 1973 0c45 02       		.uleb128 0x2
+ 1974 0c46 2B090000 		.long	.LASF184
+ 1975 0c4a 18       		.byte	0x18
+ 1976 0c4b 4B       		.byte	0x4b
+ 1977 0c4c 03       		.byte	0x3
+ 1978 0c4d 070C0000 		.long	0xc07
+ 1979 0c51 0B       		.uleb128 0xb
+ 1980 0c52 C6000000 		.long	.LASF185
+ 1981 0c56 10       		.byte	0x10
+ 1982 0c57 19       		.byte	0x19
+ 1983 0c58 97       		.byte	0x97
+ 1984 0c59 10       		.byte	0x10
+ 1985 0c5a 860C0000 		.long	0xc86
+ 1986 0c5e 0C       		.uleb128 0xc
+ 1987 0c5f 060C0000 		.long	.LASF102
+ 1988 0c63 19       		.byte	0x19
+ 1989 0c64 9B       		.byte	0x9b
+ 1990 0c65 1A       		.byte	0x1a
+ 1991 0c66 860C0000 		.long	0xc86
+ 1992 0c6a 00       		.byte	0
+ 1993 0c6b 0C       		.uleb128 0xc
+ 1994 0c6c BA080000 		.long	.LASF92
+ 1995 0c70 19       		.byte	0x19
+ 1996 0c71 9F       		.byte	0x9f
+ 1997 0c72 19       		.byte	0x19
+ 1998 0c73 7C040000 		.long	0x47c
+ 1999 0c77 04       		.byte	0x4
+ 2000 0c78 0C       		.uleb128 0xc
+ 2001 0c79 DC090000 		.long	.LASF88
+ 2002 0c7d 19       		.byte	0x19
+ 2003 0c7e A1       		.byte	0xa1
+ 2004 0c7f 19       		.byte	0x19
+ 2005 0c80 8A030000 		.long	0x38a
+ 2006 0c84 08       		.byte	0x8
+ 2007 0c85 00       		.byte	0
+ 2008 0c86 08       		.uleb128 0x8
+GAS LISTING /tmp/ccEseu02.s 			page 37
+
+
+ 2009 0c87 04       		.byte	0x4
+ 2010 0c88 510C0000 		.long	0xc51
+ 2011 0c8c 02       		.uleb128 0x2
+ 2012 0c8d 990A0000 		.long	.LASF186
+ 2013 0c91 19       		.byte	0x19
+ 2014 0c92 A5       		.byte	0xa5
+ 2015 0c93 03       		.byte	0x3
+ 2016 0c94 510C0000 		.long	0xc51
+ 2017 0c98 0B       		.uleb128 0xb
+ 2018 0c99 3C030000 		.long	.LASF187
+ 2019 0c9d 04       		.byte	0x4
+ 2020 0c9e 19       		.byte	0x19
+ 2021 0c9f AA       		.byte	0xaa
+ 2022 0ca0 10       		.byte	0x10
+ 2023 0ca1 B30C0000 		.long	0xcb3
+ 2024 0ca5 0C       		.uleb128 0xc
+ 2025 0ca6 060C0000 		.long	.LASF102
+ 2026 0caa 19       		.byte	0x19
+ 2027 0cab AB       		.byte	0xab
+ 2028 0cac 1A       		.byte	0x1a
+ 2029 0cad B30C0000 		.long	0xcb3
+ 2030 0cb1 00       		.byte	0
+ 2031 0cb2 00       		.byte	0
+ 2032 0cb3 08       		.uleb128 0x8
+ 2033 0cb4 04       		.byte	0x4
+ 2034 0cb5 8C0C0000 		.long	0xc8c
+ 2035 0cb9 02       		.uleb128 0x2
+ 2036 0cba 450A0000 		.long	.LASF188
+ 2037 0cbe 19       		.byte	0x19
+ 2038 0cbf AC       		.byte	0xac
+ 2039 0cc0 03       		.byte	0x3
+ 2040 0cc1 980C0000 		.long	0xc98
+ 2041 0cc5 15       		.uleb128 0x15
+ 2042 0cc6 0B060000 		.long	.LASF189
+ 2043 0cca 44       		.byte	0x44
+ 2044 0ccb 19       		.byte	0x19
+ 2045 0ccc 1501     		.value	0x115
+ 2046 0cce 10       		.byte	0x10
+ 2047 0ccf 440D0000 		.long	0xd44
+ 2048 0cd3 13       		.uleb128 0x13
+ 2049 0cd4 6D747800 		.string	"mtx"
+ 2050 0cd8 19       		.byte	0x19
+ 2051 0cd9 1A01     		.value	0x11a
+ 2052 0cdb 19       		.byte	0x19
+ 2053 0cdc E40A0000 		.long	0xae4
+ 2054 0ce0 00       		.byte	0
+ 2055 0ce1 14       		.uleb128 0x14
+ 2056 0ce2 08010000 		.long	.LASF190
+ 2057 0ce6 19       		.byte	0x19
+ 2058 0ce7 2101     		.value	0x121
+ 2059 0ce9 19       		.byte	0x19
+ 2060 0cea B90C0000 		.long	0xcb9
+ 2061 0cee 10       		.byte	0x10
+ 2062 0cef 14       		.uleb128 0x14
+ 2063 0cf0 6C010000 		.long	.LASF191
+ 2064 0cf4 19       		.byte	0x19
+ 2065 0cf5 2501     		.value	0x125
+GAS LISTING /tmp/ccEseu02.s 			page 38
+
+
+ 2066 0cf7 19       		.byte	0x19
+ 2067 0cf8 450C0000 		.long	0xc45
+ 2068 0cfc 14       		.byte	0x14
+ 2069 0cfd 14       		.uleb128 0x14
+ 2070 0cfe F0070000 		.long	.LASF192
+ 2071 0d02 19       		.byte	0x19
+ 2072 0d03 2A01     		.value	0x12a
+ 2073 0d05 19       		.byte	0x19
+ 2074 0d06 B90C0000 		.long	0xcb9
+ 2075 0d0a 24       		.byte	0x24
+ 2076 0d0b 14       		.uleb128 0x14
+ 2077 0d0c 4D030000 		.long	.LASF193
+ 2078 0d10 19       		.byte	0x19
+ 2079 0d11 3001     		.value	0x130
+ 2080 0d13 19       		.byte	0x19
+ 2081 0d14 B90C0000 		.long	0xcb9
+ 2082 0d18 28       		.byte	0x28
+ 2083 0d19 14       		.uleb128 0x14
+ 2084 0d1a 7A040000 		.long	.LASF194
+ 2085 0d1e 19       		.byte	0x19
+ 2086 0d1f 3401     		.value	0x134
+ 2087 0d21 19       		.byte	0x19
+ 2088 0d22 450C0000 		.long	0xc45
+ 2089 0d26 2C       		.byte	0x2c
+ 2090 0d27 14       		.uleb128 0x14
+ 2091 0d28 F60B0000 		.long	.LASF195
+ 2092 0d2c 19       		.byte	0x19
+ 2093 0d2d 3A01     		.value	0x13a
+ 2094 0d2f 19       		.byte	0x19
+ 2095 0d30 B90C0000 		.long	0xcb9
+ 2096 0d34 3C       		.byte	0x3c
+ 2097 0d35 14       		.uleb128 0x14
+ 2098 0d36 3D050000 		.long	.LASF196
+ 2099 0d3a 19       		.byte	0x19
+ 2100 0d3b 4001     		.value	0x140
+ 2101 0d3d 19       		.byte	0x19
+ 2102 0d3e B90C0000 		.long	0xcb9
+ 2103 0d42 40       		.byte	0x40
+ 2104 0d43 00       		.byte	0
+ 2105 0d44 21       		.uleb128 0x21
+ 2106 0d45 9B080000 		.long	.LASF197
+ 2107 0d49 19       		.byte	0x19
+ 2108 0d4a 4201     		.value	0x142
+ 2109 0d4c 03       		.byte	0x3
+ 2110 0d4d C50C0000 		.long	0xcc5
+ 2111 0d51 1A       		.uleb128 0x1a
+ 2112 0d52 D6080000 		.long	.LASF198
+ 2113 0d56 19       		.byte	0x19
+ 2114 0d57 4D01     		.value	0x14d
+ 2115 0d59 1A       		.byte	0x1a
+ 2116 0d5a 440D0000 		.long	0xd44
+ 2117 0d5e 1B       		.uleb128 0x1b
+ 2118 0d5f 10       		.byte	0x10
+ 2119 0d60 1A       		.byte	0x1a
+ 2120 0d61 D5       		.byte	0xd5
+ 2121 0d62 05       		.byte	0x5
+ 2122 0d63 8C0D0000 		.long	0xd8c
+GAS LISTING /tmp/ccEseu02.s 			page 39
+
+
+ 2123 0d67 1C       		.uleb128 0x1c
+ 2124 0d68 C9050000 		.long	.LASF199
+ 2125 0d6c 1A       		.byte	0x1a
+ 2126 0d6d D7       		.byte	0xd7
+ 2127 0d6e 0A       		.byte	0xa
+ 2128 0d6f EC070000 		.long	0x7ec
+ 2129 0d73 1C       		.uleb128 0x1c
+ 2130 0d74 F00A0000 		.long	.LASF200
+ 2131 0d78 1A       		.byte	0x1a
+ 2132 0d79 D8       		.byte	0xd8
+ 2133 0d7a 0B       		.byte	0xb
+ 2134 0d7b 8C0D0000 		.long	0xd8c
+ 2135 0d7f 1C       		.uleb128 0x1c
+ 2136 0d80 D50B0000 		.long	.LASF201
+ 2137 0d84 1A       		.byte	0x1a
+ 2138 0d85 D9       		.byte	0xd9
+ 2139 0d86 0B       		.byte	0xb
+ 2140 0d87 9C0D0000 		.long	0xd9c
+ 2141 0d8b 00       		.byte	0
+ 2142 0d8c 09       		.uleb128 0x9
+ 2143 0d8d EC030000 		.long	0x3ec
+ 2144 0d91 9C0D0000 		.long	0xd9c
+ 2145 0d95 0A       		.uleb128 0xa
+ 2146 0d96 36000000 		.long	0x36
+ 2147 0d9a 07       		.byte	0x7
+ 2148 0d9b 00       		.byte	0
+ 2149 0d9c 09       		.uleb128 0x9
+ 2150 0d9d F8030000 		.long	0x3f8
+ 2151 0da1 AC0D0000 		.long	0xdac
+ 2152 0da5 0A       		.uleb128 0xa
+ 2153 0da6 36000000 		.long	0x36
+ 2154 0daa 03       		.byte	0x3
+ 2155 0dab 00       		.byte	0
+ 2156 0dac 0B       		.uleb128 0xb
+ 2157 0dad 83070000 		.long	.LASF202
+ 2158 0db1 10       		.byte	0x10
+ 2159 0db2 1A       		.byte	0x1a
+ 2160 0db3 D3       		.byte	0xd3
+ 2161 0db4 08       		.byte	0x8
+ 2162 0db5 C70D0000 		.long	0xdc7
+ 2163 0db9 0C       		.uleb128 0xc
+ 2164 0dba D4090000 		.long	.LASF203
+ 2165 0dbe 1A       		.byte	0x1a
+ 2166 0dbf DA       		.byte	0xda
+ 2167 0dc0 09       		.byte	0x9
+ 2168 0dc1 5E0D0000 		.long	0xd5e
+ 2169 0dc5 00       		.byte	0
+ 2170 0dc6 00       		.byte	0
+ 2171 0dc7 05       		.uleb128 0x5
+ 2172 0dc8 AC0D0000 		.long	0xdac
+ 2173 0dcc 0F       		.uleb128 0xf
+ 2174 0dcd 1A040000 		.long	.LASF204
+ 2175 0dd1 1A       		.byte	0x1a
+ 2176 0dd2 E3       		.byte	0xe3
+ 2177 0dd3 1E       		.byte	0x1e
+ 2178 0dd4 C70D0000 		.long	0xdc7
+ 2179 0dd8 0F       		.uleb128 0xf
+GAS LISTING /tmp/ccEseu02.s 			page 40
+
+
+ 2180 0dd9 8D000000 		.long	.LASF205
+ 2181 0ddd 1A       		.byte	0x1a
+ 2182 0dde E4       		.byte	0xe4
+ 2183 0ddf 1E       		.byte	0x1e
+ 2184 0de0 C70D0000 		.long	0xdc7
+ 2185 0de4 08       		.uleb128 0x8
+ 2186 0de5 04       		.byte	0x4
+ 2187 0de6 F6000000 		.long	0xf6
+ 2188 0dea 1A       		.uleb128 0x1a
+ 2189 0deb 7E010000 		.long	.LASF206
+ 2190 0def 1B       		.byte	0x1b
+ 2191 0df0 1F02     		.value	0x21f
+ 2192 0df2 0F       		.byte	0xf
+ 2193 0df3 E40D0000 		.long	0xde4
+ 2194 0df7 0F       		.uleb128 0xf
+ 2195 0df8 410B0000 		.long	.LASF207
+ 2196 0dfc 1C       		.byte	0x1c
+ 2197 0dfd 24       		.byte	0x24
+ 2198 0dfe 0E       		.byte	0xe
+ 2199 0dff F6000000 		.long	0xf6
+ 2200 0e03 0F       		.uleb128 0xf
+ 2201 0e04 9B040000 		.long	.LASF208
+ 2202 0e08 1C       		.byte	0x1c
+ 2203 0e09 32       		.byte	0x32
+ 2204 0e0a 0C       		.byte	0xc
+ 2205 0e0b 90000000 		.long	0x90
+ 2206 0e0f 0F       		.uleb128 0xf
+ 2207 0e10 CF080000 		.long	.LASF209
+ 2208 0e14 1C       		.byte	0x1c
+ 2209 0e15 37       		.byte	0x37
+ 2210 0e16 0C       		.byte	0xc
+ 2211 0e17 90000000 		.long	0x90
+ 2212 0e1b 0F       		.uleb128 0xf
+ 2213 0e1c 27080000 		.long	.LASF210
+ 2214 0e20 1C       		.byte	0x1c
+ 2215 0e21 3B       		.byte	0x3b
+ 2216 0e22 0C       		.byte	0xc
+ 2217 0e23 90000000 		.long	0x90
+ 2218 0e27 20       		.uleb128 0x20
+ 2219 0e28 25000000 		.long	0x25
+ 2220 0e2c 400E0000 		.long	0xe40
+ 2221 0e30 17       		.uleb128 0x17
+ 2222 0e31 F4000000 		.long	0xf4
+ 2223 0e35 17       		.uleb128 0x17
+ 2224 0e36 400E0000 		.long	0xe40
+ 2225 0e3a 17       		.uleb128 0x17
+ 2226 0e3b 25000000 		.long	0x25
+ 2227 0e3f 00       		.byte	0
+ 2228 0e40 08       		.uleb128 0x8
+ 2229 0e41 04       		.byte	0x4
+ 2230 0e42 E7030000 		.long	0x3e7
+ 2231 0e46 08       		.uleb128 0x8
+ 2232 0e47 04       		.byte	0x4
+ 2233 0e48 270E0000 		.long	0xe27
+ 2234 0e4c 20       		.uleb128 0x20
+ 2235 0e4d 25000000 		.long	0x25
+ 2236 0e51 650E0000 		.long	0xe65
+GAS LISTING /tmp/ccEseu02.s 			page 41
+
+
+ 2237 0e55 17       		.uleb128 0x17
+ 2238 0e56 F4000000 		.long	0xf4
+ 2239 0e5a 17       		.uleb128 0x17
+ 2240 0e5b C80B0000 		.long	0xbc8
+ 2241 0e5f 17       		.uleb128 0x17
+ 2242 0e60 25000000 		.long	0x25
+ 2243 0e64 00       		.byte	0
+ 2244 0e65 08       		.uleb128 0x8
+ 2245 0e66 04       		.byte	0x4
+ 2246 0e67 4C0E0000 		.long	0xe4c
+ 2247 0e6b 20       		.uleb128 0x20
+ 2248 0e6c 4C040000 		.long	0x44c
+ 2249 0e70 7F0E0000 		.long	0xe7f
+ 2250 0e74 17       		.uleb128 0x17
+ 2251 0e75 F4000000 		.long	0xf4
+ 2252 0e79 17       		.uleb128 0x17
+ 2253 0e7a DB030000 		.long	0x3db
+ 2254 0e7e 00       		.byte	0
+ 2255 0e7f 08       		.uleb128 0x8
+ 2256 0e80 04       		.byte	0x4
+ 2257 0e81 6B0E0000 		.long	0xe6b
+ 2258 0e85 20       		.uleb128 0x20
+ 2259 0e86 4C040000 		.long	0x44c
+ 2260 0e8a 940E0000 		.long	0xe94
+ 2261 0e8e 17       		.uleb128 0x17
+ 2262 0e8f F4000000 		.long	0xf4
+ 2263 0e93 00       		.byte	0
+ 2264 0e94 08       		.uleb128 0x8
+ 2265 0e95 04       		.byte	0x4
+ 2266 0e96 850E0000 		.long	0xe85
+ 2267 0e9a 20       		.uleb128 0x20
+ 2268 0e9b 4C040000 		.long	0x44c
+ 2269 0e9f B30E0000 		.long	0xeb3
+ 2270 0ea3 17       		.uleb128 0x17
+ 2271 0ea4 F4000000 		.long	0xf4
+ 2272 0ea8 17       		.uleb128 0x17
+ 2273 0ea9 DB030000 		.long	0x3db
+ 2274 0ead 17       		.uleb128 0x17
+ 2275 0eae CB070000 		.long	0x7cb
+ 2276 0eb2 00       		.byte	0
+ 2277 0eb3 08       		.uleb128 0x8
+ 2278 0eb4 04       		.byte	0x4
+ 2279 0eb5 9A0E0000 		.long	0xe9a
+ 2280 0eb9 20       		.uleb128 0x20
+ 2281 0eba 4C040000 		.long	0x44c
+ 2282 0ebe CD0E0000 		.long	0xecd
+ 2283 0ec2 17       		.uleb128 0x17
+ 2284 0ec3 F4000000 		.long	0xf4
+ 2285 0ec7 17       		.uleb128 0x17
+ 2286 0ec8 CB070000 		.long	0x7cb
+ 2287 0ecc 00       		.byte	0
+ 2288 0ecd 08       		.uleb128 0x8
+ 2289 0ece 04       		.byte	0x4
+ 2290 0ecf B90E0000 		.long	0xeb9
+ 2291 0ed3 20       		.uleb128 0x20
+ 2292 0ed4 25000000 		.long	0x25
+ 2293 0ed8 F10E0000 		.long	0xef1
+GAS LISTING /tmp/ccEseu02.s 			page 42
+
+
+ 2294 0edc 17       		.uleb128 0x17
+ 2295 0edd F4000000 		.long	0xf4
+ 2296 0ee1 17       		.uleb128 0x17
+ 2297 0ee2 400E0000 		.long	0xe40
+ 2298 0ee6 17       		.uleb128 0x17
+ 2299 0ee7 25000000 		.long	0x25
+ 2300 0eeb 17       		.uleb128 0x17
+ 2301 0eec CB070000 		.long	0x7cb
+ 2302 0ef0 00       		.byte	0
+ 2303 0ef1 08       		.uleb128 0x8
+ 2304 0ef2 04       		.byte	0x4
+ 2305 0ef3 D30E0000 		.long	0xed3
+ 2306 0ef7 20       		.uleb128 0x20
+ 2307 0ef8 25000000 		.long	0x25
+ 2308 0efc 150F0000 		.long	0xf15
+ 2309 0f00 17       		.uleb128 0x17
+ 2310 0f01 F4000000 		.long	0xf4
+ 2311 0f05 17       		.uleb128 0x17
+ 2312 0f06 C80B0000 		.long	0xbc8
+ 2313 0f0a 17       		.uleb128 0x17
+ 2314 0f0b 25000000 		.long	0x25
+ 2315 0f0f 17       		.uleb128 0x17
+ 2316 0f10 CB070000 		.long	0x7cb
+ 2317 0f14 00       		.byte	0
+ 2318 0f15 08       		.uleb128 0x8
+ 2319 0f16 04       		.byte	0x4
+ 2320 0f17 F70E0000 		.long	0xef7
+ 2321 0f1b 20       		.uleb128 0x20
+ 2322 0f1c 4C040000 		.long	0x44c
+ 2323 0f20 340F0000 		.long	0xf34
+ 2324 0f24 17       		.uleb128 0x17
+ 2325 0f25 F4000000 		.long	0xf4
+ 2326 0f29 17       		.uleb128 0x17
+ 2327 0f2a 36000000 		.long	0x36
+ 2328 0f2e 17       		.uleb128 0x17
+ 2329 0f2f F4000000 		.long	0xf4
+ 2330 0f33 00       		.byte	0
+ 2331 0f34 08       		.uleb128 0x8
+ 2332 0f35 04       		.byte	0x4
+ 2333 0f36 1B0F0000 		.long	0xf1b
+ 2334 0f3a 02       		.uleb128 0x2
+ 2335 0f3b 500A0000 		.long	.LASF211
+ 2336 0f3f 1D       		.byte	0x1d
+ 2337 0f40 3A       		.byte	0x3a
+ 2338 0f41 19       		.byte	0x19
+ 2339 0f42 460F0000 		.long	0xf46
+ 2340 0f46 0B       		.uleb128 0xb
+ 2341 0f47 3D020000 		.long	.LASF212
+ 2342 0f4b 24       		.byte	0x24
+ 2343 0f4c 1D       		.byte	0x1d
+ 2344 0f4d 4B       		.byte	0x4b
+ 2345 0f4e 08       		.byte	0x8
+ 2346 0f4f BC0F0000 		.long	0xfbc
+ 2347 0f53 0C       		.uleb128 0xc
+ 2348 0f54 8C090000 		.long	.LASF213
+ 2349 0f58 1D       		.byte	0x1d
+ 2350 0f59 4C       		.byte	0x4c
+GAS LISTING /tmp/ccEseu02.s 			page 43
+
+
+ 2351 0f5a 19       		.byte	0x19
+ 2352 0f5b BD050000 		.long	0x5bd
+ 2353 0f5f 00       		.byte	0
+ 2354 0f60 0C       		.uleb128 0xc
+ 2355 0f61 C5080000 		.long	.LASF214
+ 2356 0f65 1D       		.byte	0x1d
+ 2357 0f66 4D       		.byte	0x4d
+ 2358 0f67 19       		.byte	0x19
+ 2359 0f68 31000000 		.long	0x31
+ 2360 0f6c 08       		.byte	0x8
+ 2361 0f6d 0C       		.uleb128 0xc
+ 2362 0f6e 63010000 		.long	.LASF215
+ 2363 0f72 1D       		.byte	0x1d
+ 2364 0f73 4E       		.byte	0x4e
+ 2365 0f74 1A       		.byte	0x1a
+ 2366 0f75 C80B0000 		.long	0xbc8
+ 2367 0f79 0C       		.byte	0xc
+ 2368 0f7a 0C       		.uleb128 0xc
+ 2369 0f7b 4F010000 		.long	.LASF216
+ 2370 0f7f 1D       		.byte	0x1d
+ 2371 0f80 4F       		.byte	0x4f
+ 2372 0f81 1A       		.byte	0x1a
+ 2373 0f82 C80B0000 		.long	0xbc8
+ 2374 0f86 10       		.byte	0x10
+ 2375 0f87 0C       		.uleb128 0xc
+ 2376 0f88 5E0B0000 		.long	.LASF217
+ 2377 0f8c 1D       		.byte	0x1d
+ 2378 0f8d 51       		.byte	0x51
+ 2379 0f8e 1A       		.byte	0x1a
+ 2380 0f8f C80B0000 		.long	0xbc8
+ 2381 0f93 14       		.byte	0x14
+ 2382 0f94 0C       		.uleb128 0xc
+ 2383 0f95 9A010000 		.long	.LASF218
+ 2384 0f99 1D       		.byte	0x1d
+ 2385 0f9a 52       		.byte	0x52
+ 2386 0f9b 1A       		.byte	0x1a
+ 2387 0f9c C80B0000 		.long	0xbc8
+ 2388 0fa0 18       		.byte	0x18
+ 2389 0fa1 0C       		.uleb128 0xc
+ 2390 0fa2 75010000 		.long	.LASF219
+ 2391 0fa6 1D       		.byte	0x1d
+ 2392 0fa7 53       		.byte	0x53
+ 2393 0fa8 19       		.byte	0x19
+ 2394 0fa9 BC0F0000 		.long	0xfbc
+ 2395 0fad 1C       		.byte	0x1c
+ 2396 0fae 0C       		.uleb128 0xc
+ 2397 0faf E8020000 		.long	.LASF220
+ 2398 0fb3 1D       		.byte	0x1d
+ 2399 0fb4 54       		.byte	0x54
+ 2400 0fb5 1A       		.byte	0x1a
+ 2401 0fb6 F4000000 		.long	0xf4
+ 2402 0fba 20       		.byte	0x20
+ 2403 0fbb 00       		.byte	0
+ 2404 0fbc 02       		.uleb128 0x2
+ 2405 0fbd DF060000 		.long	.LASF221
+ 2406 0fc1 1D       		.byte	0x1d
+ 2407 0fc2 41       		.byte	0x41
+GAS LISTING /tmp/ccEseu02.s 			page 44
+
+
+ 2408 0fc3 10       		.byte	0x10
+ 2409 0fc4 C80F0000 		.long	0xfc8
+ 2410 0fc8 08       		.uleb128 0x8
+ 2411 0fc9 04       		.byte	0x4
+ 2412 0fca CE0F0000 		.long	0xfce
+ 2413 0fce 16       		.uleb128 0x16
+ 2414 0fcf D90F0000 		.long	0xfd9
+ 2415 0fd3 17       		.uleb128 0x17
+ 2416 0fd4 D90F0000 		.long	0xfd9
+ 2417 0fd8 00       		.byte	0
+ 2418 0fd9 08       		.uleb128 0x8
+ 2419 0fda 04       		.byte	0x4
+ 2420 0fdb 3A0F0000 		.long	0xf3a
+ 2421 0fdf 02       		.uleb128 0x2
+ 2422 0fe0 1D0B0000 		.long	.LASF222
+ 2423 0fe4 1D       		.byte	0x1d
+ 2424 0fe5 61       		.byte	0x61
+ 2425 0fe6 14       		.byte	0x14
+ 2426 0fe7 3A0F0000 		.long	0xf3a
+ 2427 0feb 02       		.uleb128 0x2
+ 2428 0fec AB0B0000 		.long	.LASF223
+ 2429 0ff0 1D       		.byte	0x1d
+ 2430 0ff1 6D       		.byte	0x6d
+ 2431 0ff2 14       		.byte	0x14
+ 2432 0ff3 3A0F0000 		.long	0xf3a
+ 2433 0ff7 18       		.uleb128 0x18
+ 2434 0ff8 0C       		.byte	0xc
+ 2435 0ff9 1E       		.byte	0x1e
+ 2436 0ffa 2E       		.byte	0x2e
+ 2437 0ffb 09       		.byte	0x9
+ 2438 0ffc 28100000 		.long	0x1028
+ 2439 1000 0C       		.uleb128 0xc
+ 2440 1001 1E060000 		.long	.LASF224
+ 2441 1005 1E       		.byte	0x1e
+ 2442 1006 33       		.byte	0x33
+ 2443 1007 15       		.byte	0x15
+ 2444 1008 F8030000 		.long	0x3f8
+ 2445 100c 00       		.byte	0
+ 2446 100d 12       		.uleb128 0x12
+ 2447 100e 70696E00 		.string	"pin"
+ 2448 1012 1E       		.byte	0x1e
+ 2449 1013 39       		.byte	0x39
+ 2450 1014 15       		.byte	0x15
+ 2451 1015 F8030000 		.long	0x3f8
+ 2452 1019 04       		.byte	0x4
+ 2453 101a 12       		.uleb128 0x12
+ 2454 101b 64697200 		.string	"dir"
+ 2455 101f 1E       		.byte	0x1e
+ 2456 1020 3E       		.byte	0x3e
+ 2457 1021 15       		.byte	0x15
+ 2458 1022 F8030000 		.long	0x3f8
+ 2459 1026 08       		.byte	0x8
+ 2460 1027 00       		.byte	0
+ 2461 1028 02       		.uleb128 0x2
+ 2462 1029 D0070000 		.long	.LASF225
+ 2463 102d 1E       		.byte	0x1e
+ 2464 102e 3F       		.byte	0x3f
+GAS LISTING /tmp/ccEseu02.s 			page 45
+
+
+ 2465 102f 03       		.byte	0x3
+ 2466 1030 F70F0000 		.long	0xff7
+ 2467 1034 18       		.uleb128 0x18
+ 2468 1035 18       		.byte	0x18
+ 2469 1036 1E       		.byte	0x1e
+ 2470 1037 48       		.byte	0x48
+ 2471 1038 09       		.byte	0x9
+ 2472 1039 58100000 		.long	0x1058
+ 2473 103d 0C       		.uleb128 0xc
+ 2474 103e C9040000 		.long	.LASF226
+ 2475 1042 1E       		.byte	0x1e
+ 2476 1043 4C       		.byte	0x4c
+ 2477 1044 15       		.byte	0x15
+ 2478 1045 28100000 		.long	0x1028
+ 2479 1049 00       		.byte	0
+ 2480 104a 0C       		.uleb128 0xc
+ 2481 104b 8B040000 		.long	.LASF227
+ 2482 104f 1E       		.byte	0x1e
+ 2483 1050 50       		.byte	0x50
+ 2484 1051 15       		.byte	0x15
+ 2485 1052 28100000 		.long	0x1028
+ 2486 1056 0C       		.byte	0xc
+ 2487 1057 00       		.byte	0
+ 2488 1058 02       		.uleb128 0x2
+ 2489 1059 5B0A0000 		.long	.LASF228
+ 2490 105d 1E       		.byte	0x1e
+ 2491 105e 51       		.byte	0x51
+ 2492 105f 03       		.byte	0x3
+ 2493 1060 34100000 		.long	0x1034
+ 2494 1064 05       		.uleb128 0x5
+ 2495 1065 58100000 		.long	0x1058
+ 2496 1069 0F       		.uleb128 0xf
+ 2497 106a 44040000 		.long	.LASF229
+ 2498 106e 1E       		.byte	0x1e
+ 2499 106f F8       		.byte	0xf8
+ 2500 1070 17       		.byte	0x17
+ 2501 1071 28100000 		.long	0x1028
+ 2502 1075 0F       		.uleb128 0xf
+ 2503 1076 4F040000 		.long	.LASF230
+ 2504 107a 1E       		.byte	0x1e
+ 2505 107b F9       		.byte	0xf9
+ 2506 107c 17       		.byte	0x17
+ 2507 107d 28100000 		.long	0x1028
+ 2508 1081 0F       		.uleb128 0xf
+ 2509 1082 20020000 		.long	.LASF231
+ 2510 1086 1E       		.byte	0x1e
+ 2511 1087 FA       		.byte	0xfa
+ 2512 1088 18       		.byte	0x18
+ 2513 1089 64100000 		.long	0x1064
+ 2514 108d 22       		.uleb128 0x22
+ 2515 108e 07       		.byte	0x7
+ 2516 108f 04       		.byte	0x4
+ 2517 1090 36000000 		.long	0x36
+ 2518 1094 1F       		.byte	0x1f
+ 2519 1095 58       		.byte	0x58
+ 2520 1096 0E       		.byte	0xe
+ 2521 1097 AE100000 		.long	0x10ae
+GAS LISTING /tmp/ccEseu02.s 			page 46
+
+
+ 2522 109b 23       		.uleb128 0x23
+ 2523 109c 2C030000 		.long	.LASF232
+ 2524 10a0 00       		.byte	0
+ 2525 10a1 23       		.uleb128 0x23
+ 2526 10a2 CD0B0000 		.long	.LASF233
+ 2527 10a6 01       		.byte	0x1
+ 2528 10a7 23       		.uleb128 0x23
+ 2529 10a8 AE090000 		.long	.LASF234
+ 2530 10ac 02       		.byte	0x2
+ 2531 10ad 00       		.byte	0
+ 2532 10ae 02       		.uleb128 0x2
+ 2533 10af A4090000 		.long	.LASF235
+ 2534 10b3 1F       		.byte	0x1f
+ 2535 10b4 5C       		.byte	0x5c
+ 2536 10b5 03       		.byte	0x3
+ 2537 10b6 8D100000 		.long	0x108d
+ 2538 10ba 02       		.uleb128 0x2
+ 2539 10bb 1E090000 		.long	.LASF236
+ 2540 10bf 1F       		.byte	0x1f
+ 2541 10c0 61       		.byte	0x61
+ 2542 10c1 1D       		.byte	0x1d
+ 2543 10c2 C6100000 		.long	0x10c6
+ 2544 10c6 0B       		.uleb128 0xb
+ 2545 10c7 1E090000 		.long	.LASF236
+ 2546 10cb A0       		.byte	0xa0
+ 2547 10cc 1F       		.byte	0x1f
+ 2548 10cd 7B       		.byte	0x7b
+ 2549 10ce 08       		.byte	0x8
+ 2550 10cf 54110000 		.long	0x1154
+ 2551 10d3 12       		.uleb128 0x12
+ 2552 10d4 766D7400 		.string	"vmt"
+ 2553 10d8 1F       		.byte	0x1f
+ 2554 10d9 7D       		.byte	0x7d
+ 2555 10da 21       		.byte	0x21
+ 2556 10db 01120000 		.long	0x1201
+ 2557 10df 00       		.byte	0
+ 2558 10e0 0C       		.uleb128 0xc
+ 2559 10e1 E9060000 		.long	.LASF237
+ 2560 10e5 1F       		.byte	0x1f
+ 2561 10e6 7E       		.byte	0x7e
+ 2562 10e7 03       		.byte	0x3
+ 2563 10e8 720B0000 		.long	0xb72
+ 2564 10ec 04       		.byte	0x4
+ 2565 10ed 0C       		.uleb128 0xc
+ 2566 10ee E4000000 		.long	.LASF90
+ 2567 10f2 1F       		.byte	0x1f
+ 2568 10f3 7E       		.byte	0x7e
+ 2569 10f4 03       		.byte	0x3
+ 2570 10f5 AE100000 		.long	0x10ae
+ 2571 10f9 08       		.byte	0x8
+ 2572 10fa 0C       		.uleb128 0xc
+ 2573 10fb 1F0A0000 		.long	.LASF238
+ 2574 10ff 1F       		.byte	0x1f
+ 2575 1100 7E       		.byte	0x7e
+ 2576 1101 03       		.byte	0x3
+ 2577 1102 DF0F0000 		.long	0xfdf
+ 2578 1106 0C       		.byte	0xc
+GAS LISTING /tmp/ccEseu02.s 			page 47
+
+
+ 2579 1107 0C       		.uleb128 0xc
+ 2580 1108 E5010000 		.long	.LASF239
+ 2581 110c 1F       		.byte	0x1f
+ 2582 110d 7E       		.byte	0x7e
+ 2583 110e 03       		.byte	0x3
+ 2584 110f EB0F0000 		.long	0xfeb
+ 2585 1113 30       		.byte	0x30
+ 2586 1114 12       		.uleb128 0x12
+ 2587 1115 696200   		.string	"ib"
+ 2588 1118 1F       		.byte	0x1f
+ 2589 1119 7E       		.byte	0x7e
+ 2590 111a 03       		.byte	0x3
+ 2591 111b 07120000 		.long	0x1207
+ 2592 111f 54       		.byte	0x54
+ 2593 1120 12       		.uleb128 0x12
+ 2594 1121 6F6200   		.string	"ob"
+ 2595 1124 1F       		.byte	0x1f
+ 2596 1125 7E       		.byte	0x7e
+ 2597 1126 03       		.byte	0x3
+ 2598 1127 07120000 		.long	0x1207
+ 2599 112b 74       		.byte	0x74
+ 2600 112c 0C       		.uleb128 0xc
+ 2601 112d B5000000 		.long	.LASF240
+ 2602 1131 1F       		.byte	0x1f
+ 2603 1132 7E       		.byte	0x7e
+ 2604 1133 03       		.byte	0x3
+ 2605 1134 90000000 		.long	0x90
+ 2606 1138 94       		.byte	0x94
+ 2607 1139 0C       		.uleb128 0xc
+ 2608 113a C9030000 		.long	.LASF241
+ 2609 113e 1F       		.byte	0x1f
+ 2610 113f 7E       		.byte	0x7e
+ 2611 1140 03       		.byte	0x3
+ 2612 1141 90000000 		.long	0x90
+ 2613 1145 98       		.byte	0x98
+ 2614 1146 0C       		.uleb128 0xc
+ 2615 1147 91010000 		.long	.LASF242
+ 2616 114b 1F       		.byte	0x1f
+ 2617 114c 7E       		.byte	0x7e
+ 2618 114d 03       		.byte	0x3
+ 2619 114e 3A030000 		.long	0x33a
+ 2620 1152 9C       		.byte	0x9c
+ 2621 1153 00       		.byte	0
+ 2622 1154 24       		.uleb128 0x24
+ 2623 1155 53443100 		.string	"SD1"
+ 2624 1159 20       		.byte	0x20
+ 2625 115a 7A       		.byte	0x7a
+ 2626 115b 15       		.byte	0x15
+ 2627 115c BA100000 		.long	0x10ba
+ 2628 1160 24       		.uleb128 0x24
+ 2629 1161 53443200 		.string	"SD2"
+ 2630 1165 20       		.byte	0x20
+ 2631 1166 7D       		.byte	0x7d
+ 2632 1167 15       		.byte	0x15
+ 2633 1168 BA100000 		.long	0x10ba
+ 2634 116c 0B       		.uleb128 0xb
+ 2635 116d 6A050000 		.long	.LASF243
+GAS LISTING /tmp/ccEseu02.s 			page 48
+
+
+ 2636 1171 28       		.byte	0x28
+ 2637 1172 1F       		.byte	0x1f
+ 2638 1173 70       		.byte	0x70
+ 2639 1174 08       		.byte	0x8
+ 2640 1175 FC110000 		.long	0x11fc
+ 2641 1179 0C       		.uleb128 0xc
+ 2642 117a 050B0000 		.long	.LASF244
+ 2643 117e 1F       		.byte	0x1f
+ 2644 117f 71       		.byte	0x71
+ 2645 1180 03       		.byte	0x3
+ 2646 1181 25000000 		.long	0x25
+ 2647 1185 00       		.byte	0
+ 2648 1186 0C       		.uleb128 0xc
+ 2649 1187 C0000000 		.long	.LASF245
+ 2650 118b 1F       		.byte	0x1f
+ 2651 118c 71       		.byte	0x71
+ 2652 118d 03       		.byte	0x3
+ 2653 118e 460E0000 		.long	0xe46
+ 2654 1192 04       		.byte	0x4
+ 2655 1193 0C       		.uleb128 0xc
+ 2656 1194 EF060000 		.long	.LASF246
+ 2657 1198 1F       		.byte	0x1f
+ 2658 1199 71       		.byte	0x71
+ 2659 119a 03       		.byte	0x3
+ 2660 119b 650E0000 		.long	0xe65
+ 2661 119f 08       		.byte	0x8
+ 2662 11a0 12       		.uleb128 0x12
+ 2663 11a1 70757400 		.string	"put"
+ 2664 11a5 1F       		.byte	0x1f
+ 2665 11a6 71       		.byte	0x71
+ 2666 11a7 03       		.byte	0x3
+ 2667 11a8 7F0E0000 		.long	0xe7f
+ 2668 11ac 0C       		.byte	0xc
+ 2669 11ad 12       		.uleb128 0x12
+ 2670 11ae 67657400 		.string	"get"
+ 2671 11b2 1F       		.byte	0x1f
+ 2672 11b3 71       		.byte	0x71
+ 2673 11b4 03       		.byte	0x3
+ 2674 11b5 940E0000 		.long	0xe94
+ 2675 11b9 10       		.byte	0x10
+ 2676 11ba 0C       		.uleb128 0xc
+ 2677 11bb F5000000 		.long	.LASF247
+ 2678 11bf 1F       		.byte	0x1f
+ 2679 11c0 71       		.byte	0x71
+ 2680 11c1 03       		.byte	0x3
+ 2681 11c2 B30E0000 		.long	0xeb3
+ 2682 11c6 14       		.byte	0x14
+ 2683 11c7 0C       		.uleb128 0xc
+ 2684 11c8 6C030000 		.long	.LASF248
+ 2685 11cc 1F       		.byte	0x1f
+ 2686 11cd 71       		.byte	0x71
+ 2687 11ce 03       		.byte	0x3
+ 2688 11cf CD0E0000 		.long	0xecd
+ 2689 11d3 18       		.byte	0x18
+ 2690 11d4 0C       		.uleb128 0xc
+ 2691 11d5 70000000 		.long	.LASF249
+ 2692 11d9 1F       		.byte	0x1f
+GAS LISTING /tmp/ccEseu02.s 			page 49
+
+
+ 2693 11da 71       		.byte	0x71
+ 2694 11db 03       		.byte	0x3
+ 2695 11dc F10E0000 		.long	0xef1
+ 2696 11e0 1C       		.byte	0x1c
+ 2697 11e1 0C       		.uleb128 0xc
+ 2698 11e2 5D010000 		.long	.LASF250
+ 2699 11e6 1F       		.byte	0x1f
+ 2700 11e7 71       		.byte	0x71
+ 2701 11e8 03       		.byte	0x3
+ 2702 11e9 150F0000 		.long	0xf15
+ 2703 11ed 20       		.byte	0x20
+ 2704 11ee 12       		.uleb128 0x12
+ 2705 11ef 63746C00 		.string	"ctl"
+ 2706 11f3 1F       		.byte	0x1f
+ 2707 11f4 71       		.byte	0x71
+ 2708 11f5 03       		.byte	0x3
+ 2709 11f6 340F0000 		.long	0xf34
+ 2710 11fa 24       		.byte	0x24
+ 2711 11fb 00       		.byte	0
+ 2712 11fc 05       		.uleb128 0x5
+ 2713 11fd 6C110000 		.long	0x116c
+ 2714 1201 08       		.uleb128 0x8
+ 2715 1202 04       		.byte	0x4
+ 2716 1203 FC110000 		.long	0x11fc
+ 2717 1207 09       		.uleb128 0x9
+ 2718 1208 DB030000 		.long	0x3db
+ 2719 120c 17120000 		.long	0x1217
+ 2720 1210 0A       		.uleb128 0xa
+ 2721 1211 36000000 		.long	0x36
+ 2722 1215 1F       		.byte	0x1f
+ 2723 1216 00       		.byte	0
+ 2724 1217 25       		.uleb128 0x25
+ 2725 1218 1F080000 		.long	.LASF251
+ 2726 121c 01       		.byte	0x1
+ 2727 121d 27       		.byte	0x27
+ 2728 121e 17       		.byte	0x17
+ 2729 121f 62030000 		.long	0x362
+ 2730 1223 05       		.uleb128 0x5
+ 2731 1224 03       		.byte	0x3
+ 2732 1225 00000000 		.long	nextcnt
+ 2733 1229 26       		.uleb128 0x26
+ 2734 122a 26050000 		.long	.LASF270
+ 2735 122e 01       		.byte	0x1
+ 2736 122f 28       		.byte	0x28
+ 2737 1230 17       		.byte	0x17
+ 2738 1231 62030000 		.long	0x362
+ 2739 1235 27       		.uleb128 0x27
+ 2740 1236 06020000 		.long	.LASF253
+ 2741 123a 01       		.byte	0x1
+ 2742 123b 47       		.byte	0x47
+ 2743 123c 06       		.byte	0x6
+ 2744 123d 00000000 		.long	.LFB233
+ 2745 1241 EB000000 		.long	.LFE233-.LFB233
+ 2746 1245 01       		.uleb128 0x1
+ 2747 1246 9C       		.byte	0x9c
+ 2748 1247 01130000 		.long	0x1301
+ 2749 124b 28       		.uleb128 0x28
+GAS LISTING /tmp/ccEseu02.s 			page 50
+
+
+ 2750 124c 747600   		.string	"tv"
+ 2751 124f 01       		.byte	0x1
+ 2752 1250 48       		.byte	0x48
+ 2753 1251 12       		.byte	0x12
+ 2754 1252 62030000 		.long	0x362
+ 2755 1256 02       		.uleb128 0x2
+ 2756 1257 91       		.byte	0x91
+ 2757 1258 64       		.sleb128 -28
+ 2758 1259 29       		.uleb128 0x29
+ 2759 125a 07030000 		.long	.LASF252
+ 2760 125e 01       		.byte	0x1
+ 2761 125f 49       		.byte	0x49
+ 2762 1260 08       		.byte	0x8
+ 2763 1261 91080000 		.long	0x891
+ 2764 1265 10000000 		.long	.LLST0
+ 2765 1269 00000000 		.long	.LVUS0
+ 2766 126d 2A       		.uleb128 0x2a
+ 2767 126e 34130000 		.long	0x1334
+ 2768 1272 81000000 		.long	.LBI14
+ 2769 1276 07       		.byte	.LVU41
+ 2770 1277 00000000 		.long	.Ldebug_ranges0+0
+ 2771 127b 01       		.byte	0x1
+ 2772 127c 58       		.byte	0x58
+ 2773 127d 05       		.byte	0x5
+ 2774 127e 95120000 		.long	0x1295
+ 2775 1282 2B       		.uleb128 0x2b
+ 2776 1283 48130000 		.long	0x1348
+ 2777 1287 81000000 		.long	.LBI15
+ 2778 128b 09       		.byte	.LVU43
+ 2779 128c 20000000 		.long	.Ldebug_ranges0+0x20
+ 2780 1290 03       		.byte	0x3
+ 2781 1291 8B01     		.value	0x18b
+ 2782 1293 03       		.byte	0x3
+ 2783 1294 00       		.byte	0
+ 2784 1295 2A       		.uleb128 0x2a
+ 2785 1296 2A130000 		.long	0x132a
+ 2786 129a 8C000000 		.long	.LBI21
+ 2787 129e 01       		.byte	.LVU50
+ 2788 129f 38000000 		.long	.Ldebug_ranges0+0x38
+ 2789 12a3 01       		.byte	0x1
+ 2790 12a4 5A       		.byte	0x5a
+ 2791 12a5 05       		.byte	0x5
+ 2792 12a6 C1120000 		.long	0x12c1
+ 2793 12aa 2C       		.uleb128 0x2c
+ 2794 12ab 3E130000 		.long	0x133e
+ 2795 12af 8C000000 		.long	.LBI22
+ 2796 12b3 05       		.byte	.LVU54
+ 2797 12b4 8C000000 		.long	.LBB22
+ 2798 12b8 06000000 		.long	.LBE22-.LBB22
+ 2799 12bc 03       		.byte	0x3
+ 2800 12bd A101     		.value	0x1a1
+ 2801 12bf 03       		.byte	0x3
+ 2802 12c0 00       		.byte	0
+ 2803 12c1 2D       		.uleb128 0x2d
+ 2804 12c2 22000000 		.long	.LVL3
+ 2805 12c6 52130000 		.long	0x1352
+ 2806 12ca 2D       		.uleb128 0x2d
+GAS LISTING /tmp/ccEseu02.s 			page 51
+
+
+ 2807 12cb 33000000 		.long	.LVL6
+ 2808 12cf 5E130000 		.long	0x135e
+ 2809 12d3 2D       		.uleb128 0x2d
+ 2810 12d4 8C000000 		.long	.LVL8
+ 2811 12d8 6A130000 		.long	0x136a
+ 2812 12dc 2D       		.uleb128 0x2d
+ 2813 12dd 9A000000 		.long	.LVL9
+ 2814 12e1 77130000 		.long	0x1377
+ 2815 12e5 2D       		.uleb128 0x2d
+ 2816 12e6 DB000000 		.long	.LVL14
+ 2817 12ea 77130000 		.long	0x1377
+ 2818 12ee 2D       		.uleb128 0x2d
+ 2819 12ef E4000000 		.long	.LVL16
+ 2820 12f3 84130000 		.long	0x1384
+ 2821 12f7 2D       		.uleb128 0x2d
+ 2822 12f8 EB000000 		.long	.LVL17
+ 2823 12fc 91130000 		.long	0x1391
+ 2824 1300 00       		.byte	0
+ 2825 1301 27       		.uleb128 0x27
+ 2826 1302 A8020000 		.long	.LASF254
+ 2827 1306 01       		.byte	0x1
+ 2828 1307 39       		.byte	0x39
+ 2829 1308 06       		.byte	0x6
+ 2830 1309 00000000 		.long	.LFB232
+ 2831 130d 67000000 		.long	.LFE232-.LFB232
+ 2832 1311 01       		.uleb128 0x1
+ 2833 1312 9C       		.byte	0x9c
+ 2834 1313 2A130000 		.long	0x132a
+ 2835 1317 2D       		.uleb128 0x2d
+ 2836 1318 1B000000 		.long	.LVL0
+ 2837 131c 9A130000 		.long	0x139a
+ 2838 1320 2D       		.uleb128 0x2d
+ 2839 1321 2B000000 		.long	.LVL1
+ 2840 1325 5E130000 		.long	0x135e
+ 2841 1329 00       		.byte	0
+ 2842 132a 2E       		.uleb128 0x2e
+ 2843 132b C7020000 		.long	.LASF255
+ 2844 132f 03       		.byte	0x3
+ 2845 1330 9D01     		.value	0x19d
+ 2846 1332 14       		.byte	0x14
+ 2847 1333 03       		.byte	0x3
+ 2848 1334 2E       		.uleb128 0x2e
+ 2849 1335 A7010000 		.long	.LASF256
+ 2850 1339 03       		.byte	0x3
+ 2851 133a 8901     		.value	0x189
+ 2852 133c 14       		.byte	0x14
+ 2853 133d 03       		.byte	0x3
+ 2854 133e 2E       		.uleb128 0x2e
+ 2855 133f F9070000 		.long	.LASF257
+ 2856 1343 02       		.byte	0x2
+ 2857 1344 8701     		.value	0x187
+ 2858 1346 14       		.byte	0x14
+ 2859 1347 03       		.byte	0x3
+ 2860 1348 2E       		.uleb128 0x2e
+ 2861 1349 F8050000 		.long	.LASF258
+ 2862 134d 02       		.byte	0x2
+ 2863 134e 7D01     		.value	0x17d
+GAS LISTING /tmp/ccEseu02.s 			page 52
+
+
+ 2864 1350 14       		.byte	0x14
+ 2865 1351 03       		.byte	0x3
+ 2866 1352 2F       		.uleb128 0x2f
+ 2867 1353 650A0000 		.long	.LASF259
+ 2868 1357 650A0000 		.long	.LASF259
+ 2869 135b 20       		.byte	0x20
+ 2870 135c 86       		.byte	0x86
+ 2871 135d 08       		.byte	0x8
+ 2872 135e 2F       		.uleb128 0x2f
+ 2873 135f 88080000 		.long	.LASF260
+ 2874 1363 88080000 		.long	.LASF260
+ 2875 1367 0C       		.byte	0xc
+ 2876 1368 44       		.byte	0x44
+ 2877 1369 0C       		.byte	0xc
+ 2878 136a 30       		.uleb128 0x30
+ 2879 136b 20070000 		.long	.LASF261
+ 2880 136f 20070000 		.long	.LASF261
+ 2881 1373 03       		.byte	0x3
+ 2882 1374 1F01     		.value	0x11f
+ 2883 1376 08       		.byte	0x8
+ 2884 1377 30       		.uleb128 0x30
+ 2885 1378 00040000 		.long	.LASF262
+ 2886 137c 00040000 		.long	.LASF262
+ 2887 1380 10       		.byte	0x10
+ 2888 1381 D701     		.value	0x1d7
+ 2889 1383 08       		.byte	0x8
+ 2890 1384 30       		.uleb128 0x30
+ 2891 1385 68040000 		.long	.LASF263
+ 2892 1389 68040000 		.long	.LASF263
+ 2893 138d 10       		.byte	0x10
+ 2894 138e DA01     		.value	0x1da
+ 2895 1390 08       		.byte	0x8
+ 2896 1391 31       		.uleb128 0x31
+ 2897 1392 32060000 		.long	.LASF271
+ 2898 1396 32060000 		.long	.LASF271
+ 2899 139a 30       		.uleb128 0x30
+ 2900 139b F0000000 		.long	.LASF264
+ 2901 139f F0000000 		.long	.LASF264
+ 2902 13a3 08       		.byte	0x8
+ 2903 13a4 7802     		.value	0x278
+ 2904 13a6 0C       		.byte	0xc
+ 2905 13a7 00       		.byte	0
+ 2906              		.section	.debug_abbrev,"",@progbits
+ 2907              	.Ldebug_abbrev0:
+ 2908 0000 01       		.uleb128 0x1
+ 2909 0001 11       		.uleb128 0x11
+ 2910 0002 01       		.byte	0x1
+ 2911 0003 25       		.uleb128 0x25
+ 2912 0004 0E       		.uleb128 0xe
+ 2913 0005 13       		.uleb128 0x13
+ 2914 0006 0B       		.uleb128 0xb
+ 2915 0007 03       		.uleb128 0x3
+ 2916 0008 0E       		.uleb128 0xe
+ 2917 0009 1B       		.uleb128 0x1b
+ 2918 000a 0E       		.uleb128 0xe
+ 2919 000b 55       		.uleb128 0x55
+ 2920 000c 17       		.uleb128 0x17
+GAS LISTING /tmp/ccEseu02.s 			page 53
+
+
+ 2921 000d 11       		.uleb128 0x11
+ 2922 000e 01       		.uleb128 0x1
+ 2923 000f 10       		.uleb128 0x10
+ 2924 0010 17       		.uleb128 0x17
+ 2925 0011 00       		.byte	0
+ 2926 0012 00       		.byte	0
+ 2927 0013 02       		.uleb128 0x2
+ 2928 0014 16       		.uleb128 0x16
+ 2929 0015 00       		.byte	0
+ 2930 0016 03       		.uleb128 0x3
+ 2931 0017 0E       		.uleb128 0xe
+ 2932 0018 3A       		.uleb128 0x3a
+ 2933 0019 0B       		.uleb128 0xb
+ 2934 001a 3B       		.uleb128 0x3b
+ 2935 001b 0B       		.uleb128 0xb
+ 2936 001c 39       		.uleb128 0x39
+ 2937 001d 0B       		.uleb128 0xb
+ 2938 001e 49       		.uleb128 0x49
+ 2939 001f 13       		.uleb128 0x13
+ 2940 0020 00       		.byte	0
+ 2941 0021 00       		.byte	0
+ 2942 0022 03       		.uleb128 0x3
+ 2943 0023 35       		.uleb128 0x35
+ 2944 0024 00       		.byte	0
+ 2945 0025 49       		.uleb128 0x49
+ 2946 0026 13       		.uleb128 0x13
+ 2947 0027 00       		.byte	0
+ 2948 0028 00       		.byte	0
+ 2949 0029 04       		.uleb128 0x4
+ 2950 002a 24       		.uleb128 0x24
+ 2951 002b 00       		.byte	0
+ 2952 002c 0B       		.uleb128 0xb
+ 2953 002d 0B       		.uleb128 0xb
+ 2954 002e 3E       		.uleb128 0x3e
+ 2955 002f 0B       		.uleb128 0xb
+ 2956 0030 03       		.uleb128 0x3
+ 2957 0031 0E       		.uleb128 0xe
+ 2958 0032 00       		.byte	0
+ 2959 0033 00       		.byte	0
+ 2960 0034 05       		.uleb128 0x5
+ 2961 0035 26       		.uleb128 0x26
+ 2962 0036 00       		.byte	0
+ 2963 0037 49       		.uleb128 0x49
+ 2964 0038 13       		.uleb128 0x13
+ 2965 0039 00       		.byte	0
+ 2966 003a 00       		.byte	0
+ 2967 003b 06       		.uleb128 0x6
+ 2968 003c 24       		.uleb128 0x24
+ 2969 003d 00       		.byte	0
+ 2970 003e 0B       		.uleb128 0xb
+ 2971 003f 0B       		.uleb128 0xb
+ 2972 0040 3E       		.uleb128 0x3e
+ 2973 0041 0B       		.uleb128 0xb
+ 2974 0042 03       		.uleb128 0x3
+ 2975 0043 08       		.uleb128 0x8
+ 2976 0044 00       		.byte	0
+ 2977 0045 00       		.byte	0
+GAS LISTING /tmp/ccEseu02.s 			page 54
+
+
+ 2978 0046 07       		.uleb128 0x7
+ 2979 0047 0F       		.uleb128 0xf
+ 2980 0048 00       		.byte	0
+ 2981 0049 0B       		.uleb128 0xb
+ 2982 004a 0B       		.uleb128 0xb
+ 2983 004b 00       		.byte	0
+ 2984 004c 00       		.byte	0
+ 2985 004d 08       		.uleb128 0x8
+ 2986 004e 0F       		.uleb128 0xf
+ 2987 004f 00       		.byte	0
+ 2988 0050 0B       		.uleb128 0xb
+ 2989 0051 0B       		.uleb128 0xb
+ 2990 0052 49       		.uleb128 0x49
+ 2991 0053 13       		.uleb128 0x13
+ 2992 0054 00       		.byte	0
+ 2993 0055 00       		.byte	0
+ 2994 0056 09       		.uleb128 0x9
+ 2995 0057 01       		.uleb128 0x1
+ 2996 0058 01       		.byte	0x1
+ 2997 0059 49       		.uleb128 0x49
+ 2998 005a 13       		.uleb128 0x13
+ 2999 005b 01       		.uleb128 0x1
+ 3000 005c 13       		.uleb128 0x13
+ 3001 005d 00       		.byte	0
+ 3002 005e 00       		.byte	0
+ 3003 005f 0A       		.uleb128 0xa
+ 3004 0060 21       		.uleb128 0x21
+ 3005 0061 00       		.byte	0
+ 3006 0062 49       		.uleb128 0x49
+ 3007 0063 13       		.uleb128 0x13
+ 3008 0064 2F       		.uleb128 0x2f
+ 3009 0065 0B       		.uleb128 0xb
+ 3010 0066 00       		.byte	0
+ 3011 0067 00       		.byte	0
+ 3012 0068 0B       		.uleb128 0xb
+ 3013 0069 13       		.uleb128 0x13
+ 3014 006a 01       		.byte	0x1
+ 3015 006b 03       		.uleb128 0x3
+ 3016 006c 0E       		.uleb128 0xe
+ 3017 006d 0B       		.uleb128 0xb
+ 3018 006e 0B       		.uleb128 0xb
+ 3019 006f 3A       		.uleb128 0x3a
+ 3020 0070 0B       		.uleb128 0xb
+ 3021 0071 3B       		.uleb128 0x3b
+ 3022 0072 0B       		.uleb128 0xb
+ 3023 0073 39       		.uleb128 0x39
+ 3024 0074 0B       		.uleb128 0xb
+ 3025 0075 01       		.uleb128 0x1
+ 3026 0076 13       		.uleb128 0x13
+ 3027 0077 00       		.byte	0
+ 3028 0078 00       		.byte	0
+ 3029 0079 0C       		.uleb128 0xc
+ 3030 007a 0D       		.uleb128 0xd
+ 3031 007b 00       		.byte	0
+ 3032 007c 03       		.uleb128 0x3
+ 3033 007d 0E       		.uleb128 0xe
+ 3034 007e 3A       		.uleb128 0x3a
+GAS LISTING /tmp/ccEseu02.s 			page 55
+
+
+ 3035 007f 0B       		.uleb128 0xb
+ 3036 0080 3B       		.uleb128 0x3b
+ 3037 0081 0B       		.uleb128 0xb
+ 3038 0082 39       		.uleb128 0x39
+ 3039 0083 0B       		.uleb128 0xb
+ 3040 0084 49       		.uleb128 0x49
+ 3041 0085 13       		.uleb128 0x13
+ 3042 0086 38       		.uleb128 0x38
+ 3043 0087 0B       		.uleb128 0xb
+ 3044 0088 00       		.byte	0
+ 3045 0089 00       		.byte	0
+ 3046 008a 0D       		.uleb128 0xd
+ 3047 008b 16       		.uleb128 0x16
+ 3048 008c 00       		.byte	0
+ 3049 008d 03       		.uleb128 0x3
+ 3050 008e 0E       		.uleb128 0xe
+ 3051 008f 3A       		.uleb128 0x3a
+ 3052 0090 0B       		.uleb128 0xb
+ 3053 0091 3B       		.uleb128 0x3b
+ 3054 0092 0B       		.uleb128 0xb
+ 3055 0093 39       		.uleb128 0x39
+ 3056 0094 0B       		.uleb128 0xb
+ 3057 0095 00       		.byte	0
+ 3058 0096 00       		.byte	0
+ 3059 0097 0E       		.uleb128 0xe
+ 3060 0098 13       		.uleb128 0x13
+ 3061 0099 00       		.byte	0
+ 3062 009a 03       		.uleb128 0x3
+ 3063 009b 0E       		.uleb128 0xe
+ 3064 009c 3C       		.uleb128 0x3c
+ 3065 009d 19       		.uleb128 0x19
+ 3066 009e 00       		.byte	0
+ 3067 009f 00       		.byte	0
+ 3068 00a0 0F       		.uleb128 0xf
+ 3069 00a1 34       		.uleb128 0x34
+ 3070 00a2 00       		.byte	0
+ 3071 00a3 03       		.uleb128 0x3
+ 3072 00a4 0E       		.uleb128 0xe
+ 3073 00a5 3A       		.uleb128 0x3a
+ 3074 00a6 0B       		.uleb128 0xb
+ 3075 00a7 3B       		.uleb128 0x3b
+ 3076 00a8 0B       		.uleb128 0xb
+ 3077 00a9 39       		.uleb128 0x39
+ 3078 00aa 0B       		.uleb128 0xb
+ 3079 00ab 49       		.uleb128 0x49
+ 3080 00ac 13       		.uleb128 0x13
+ 3081 00ad 3F       		.uleb128 0x3f
+ 3082 00ae 19       		.uleb128 0x19
+ 3083 00af 3C       		.uleb128 0x3c
+ 3084 00b0 19       		.uleb128 0x19
+ 3085 00b1 00       		.byte	0
+ 3086 00b2 00       		.byte	0
+ 3087 00b3 10       		.uleb128 0x10
+ 3088 00b4 21       		.uleb128 0x21
+ 3089 00b5 00       		.byte	0
+ 3090 00b6 00       		.byte	0
+ 3091 00b7 00       		.byte	0
+GAS LISTING /tmp/ccEseu02.s 			page 56
+
+
+ 3092 00b8 11       		.uleb128 0x11
+ 3093 00b9 37       		.uleb128 0x37
+ 3094 00ba 00       		.byte	0
+ 3095 00bb 49       		.uleb128 0x49
+ 3096 00bc 13       		.uleb128 0x13
+ 3097 00bd 00       		.byte	0
+ 3098 00be 00       		.byte	0
+ 3099 00bf 12       		.uleb128 0x12
+ 3100 00c0 0D       		.uleb128 0xd
+ 3101 00c1 00       		.byte	0
+ 3102 00c2 03       		.uleb128 0x3
+ 3103 00c3 08       		.uleb128 0x8
+ 3104 00c4 3A       		.uleb128 0x3a
+ 3105 00c5 0B       		.uleb128 0xb
+ 3106 00c6 3B       		.uleb128 0x3b
+ 3107 00c7 0B       		.uleb128 0xb
+ 3108 00c8 39       		.uleb128 0x39
+ 3109 00c9 0B       		.uleb128 0xb
+ 3110 00ca 49       		.uleb128 0x49
+ 3111 00cb 13       		.uleb128 0x13
+ 3112 00cc 38       		.uleb128 0x38
+ 3113 00cd 0B       		.uleb128 0xb
+ 3114 00ce 00       		.byte	0
+ 3115 00cf 00       		.byte	0
+ 3116 00d0 13       		.uleb128 0x13
+ 3117 00d1 0D       		.uleb128 0xd
+ 3118 00d2 00       		.byte	0
+ 3119 00d3 03       		.uleb128 0x3
+ 3120 00d4 08       		.uleb128 0x8
+ 3121 00d5 3A       		.uleb128 0x3a
+ 3122 00d6 0B       		.uleb128 0xb
+ 3123 00d7 3B       		.uleb128 0x3b
+ 3124 00d8 05       		.uleb128 0x5
+ 3125 00d9 39       		.uleb128 0x39
+ 3126 00da 0B       		.uleb128 0xb
+ 3127 00db 49       		.uleb128 0x49
+ 3128 00dc 13       		.uleb128 0x13
+ 3129 00dd 38       		.uleb128 0x38
+ 3130 00de 0B       		.uleb128 0xb
+ 3131 00df 00       		.byte	0
+ 3132 00e0 00       		.byte	0
+ 3133 00e1 14       		.uleb128 0x14
+ 3134 00e2 0D       		.uleb128 0xd
+ 3135 00e3 00       		.byte	0
+ 3136 00e4 03       		.uleb128 0x3
+ 3137 00e5 0E       		.uleb128 0xe
+ 3138 00e6 3A       		.uleb128 0x3a
+ 3139 00e7 0B       		.uleb128 0xb
+ 3140 00e8 3B       		.uleb128 0x3b
+ 3141 00e9 05       		.uleb128 0x5
+ 3142 00ea 39       		.uleb128 0x39
+ 3143 00eb 0B       		.uleb128 0xb
+ 3144 00ec 49       		.uleb128 0x49
+ 3145 00ed 13       		.uleb128 0x13
+ 3146 00ee 38       		.uleb128 0x38
+ 3147 00ef 0B       		.uleb128 0xb
+ 3148 00f0 00       		.byte	0
+GAS LISTING /tmp/ccEseu02.s 			page 57
+
+
+ 3149 00f1 00       		.byte	0
+ 3150 00f2 15       		.uleb128 0x15
+ 3151 00f3 13       		.uleb128 0x13
+ 3152 00f4 01       		.byte	0x1
+ 3153 00f5 03       		.uleb128 0x3
+ 3154 00f6 0E       		.uleb128 0xe
+ 3155 00f7 0B       		.uleb128 0xb
+ 3156 00f8 0B       		.uleb128 0xb
+ 3157 00f9 3A       		.uleb128 0x3a
+ 3158 00fa 0B       		.uleb128 0xb
+ 3159 00fb 3B       		.uleb128 0x3b
+ 3160 00fc 05       		.uleb128 0x5
+ 3161 00fd 39       		.uleb128 0x39
+ 3162 00fe 0B       		.uleb128 0xb
+ 3163 00ff 01       		.uleb128 0x1
+ 3164 0100 13       		.uleb128 0x13
+ 3165 0101 00       		.byte	0
+ 3166 0102 00       		.byte	0
+ 3167 0103 16       		.uleb128 0x16
+ 3168 0104 15       		.uleb128 0x15
+ 3169 0105 01       		.byte	0x1
+ 3170 0106 27       		.uleb128 0x27
+ 3171 0107 19       		.uleb128 0x19
+ 3172 0108 01       		.uleb128 0x1
+ 3173 0109 13       		.uleb128 0x13
+ 3174 010a 00       		.byte	0
+ 3175 010b 00       		.byte	0
+ 3176 010c 17       		.uleb128 0x17
+ 3177 010d 05       		.uleb128 0x5
+ 3178 010e 00       		.byte	0
+ 3179 010f 49       		.uleb128 0x49
+ 3180 0110 13       		.uleb128 0x13
+ 3181 0111 00       		.byte	0
+ 3182 0112 00       		.byte	0
+ 3183 0113 18       		.uleb128 0x18
+ 3184 0114 13       		.uleb128 0x13
+ 3185 0115 01       		.byte	0x1
+ 3186 0116 0B       		.uleb128 0xb
+ 3187 0117 0B       		.uleb128 0xb
+ 3188 0118 3A       		.uleb128 0x3a
+ 3189 0119 0B       		.uleb128 0xb
+ 3190 011a 3B       		.uleb128 0x3b
+ 3191 011b 0B       		.uleb128 0xb
+ 3192 011c 39       		.uleb128 0x39
+ 3193 011d 0B       		.uleb128 0xb
+ 3194 011e 01       		.uleb128 0x1
+ 3195 011f 13       		.uleb128 0x13
+ 3196 0120 00       		.byte	0
+ 3197 0121 00       		.byte	0
+ 3198 0122 19       		.uleb128 0x19
+ 3199 0123 16       		.uleb128 0x16
+ 3200 0124 00       		.byte	0
+ 3201 0125 03       		.uleb128 0x3
+ 3202 0126 0E       		.uleb128 0xe
+ 3203 0127 3A       		.uleb128 0x3a
+ 3204 0128 0B       		.uleb128 0xb
+ 3205 0129 3B       		.uleb128 0x3b
+GAS LISTING /tmp/ccEseu02.s 			page 58
+
+
+ 3206 012a 0B       		.uleb128 0xb
+ 3207 012b 39       		.uleb128 0x39
+ 3208 012c 0B       		.uleb128 0xb
+ 3209 012d 49       		.uleb128 0x49
+ 3210 012e 13       		.uleb128 0x13
+ 3211 012f 8801     		.uleb128 0x88
+ 3212 0131 0B       		.uleb128 0xb
+ 3213 0132 00       		.byte	0
+ 3214 0133 00       		.byte	0
+ 3215 0134 1A       		.uleb128 0x1a
+ 3216 0135 34       		.uleb128 0x34
+ 3217 0136 00       		.byte	0
+ 3218 0137 03       		.uleb128 0x3
+ 3219 0138 0E       		.uleb128 0xe
+ 3220 0139 3A       		.uleb128 0x3a
+ 3221 013a 0B       		.uleb128 0xb
+ 3222 013b 3B       		.uleb128 0x3b
+ 3223 013c 05       		.uleb128 0x5
+ 3224 013d 39       		.uleb128 0x39
+ 3225 013e 0B       		.uleb128 0xb
+ 3226 013f 49       		.uleb128 0x49
+ 3227 0140 13       		.uleb128 0x13
+ 3228 0141 3F       		.uleb128 0x3f
+ 3229 0142 19       		.uleb128 0x19
+ 3230 0143 3C       		.uleb128 0x3c
+ 3231 0144 19       		.uleb128 0x19
+ 3232 0145 00       		.byte	0
+ 3233 0146 00       		.byte	0
+ 3234 0147 1B       		.uleb128 0x1b
+ 3235 0148 17       		.uleb128 0x17
+ 3236 0149 01       		.byte	0x1
+ 3237 014a 0B       		.uleb128 0xb
+ 3238 014b 0B       		.uleb128 0xb
+ 3239 014c 3A       		.uleb128 0x3a
+ 3240 014d 0B       		.uleb128 0xb
+ 3241 014e 3B       		.uleb128 0x3b
+ 3242 014f 0B       		.uleb128 0xb
+ 3243 0150 39       		.uleb128 0x39
+ 3244 0151 0B       		.uleb128 0xb
+ 3245 0152 01       		.uleb128 0x1
+ 3246 0153 13       		.uleb128 0x13
+ 3247 0154 00       		.byte	0
+ 3248 0155 00       		.byte	0
+ 3249 0156 1C       		.uleb128 0x1c
+ 3250 0157 0D       		.uleb128 0xd
+ 3251 0158 00       		.byte	0
+ 3252 0159 03       		.uleb128 0x3
+ 3253 015a 0E       		.uleb128 0xe
+ 3254 015b 3A       		.uleb128 0x3a
+ 3255 015c 0B       		.uleb128 0xb
+ 3256 015d 3B       		.uleb128 0x3b
+ 3257 015e 0B       		.uleb128 0xb
+ 3258 015f 39       		.uleb128 0x39
+ 3259 0160 0B       		.uleb128 0xb
+ 3260 0161 49       		.uleb128 0x49
+ 3261 0162 13       		.uleb128 0x13
+ 3262 0163 00       		.byte	0
+GAS LISTING /tmp/ccEseu02.s 			page 59
+
+
+ 3263 0164 00       		.byte	0
+ 3264 0165 1D       		.uleb128 0x1d
+ 3265 0166 0D       		.uleb128 0xd
+ 3266 0167 00       		.byte	0
+ 3267 0168 03       		.uleb128 0x3
+ 3268 0169 0E       		.uleb128 0xe
+ 3269 016a 3A       		.uleb128 0x3a
+ 3270 016b 0B       		.uleb128 0xb
+ 3271 016c 3B       		.uleb128 0x3b
+ 3272 016d 05       		.uleb128 0x5
+ 3273 016e 39       		.uleb128 0x39
+ 3274 016f 0B       		.uleb128 0xb
+ 3275 0170 49       		.uleb128 0x49
+ 3276 0171 13       		.uleb128 0x13
+ 3277 0172 00       		.byte	0
+ 3278 0173 00       		.byte	0
+ 3279 0174 1E       		.uleb128 0x1e
+ 3280 0175 34       		.uleb128 0x34
+ 3281 0176 00       		.byte	0
+ 3282 0177 03       		.uleb128 0x3
+ 3283 0178 08       		.uleb128 0x8
+ 3284 0179 3A       		.uleb128 0x3a
+ 3285 017a 0B       		.uleb128 0xb
+ 3286 017b 3B       		.uleb128 0x3b
+ 3287 017c 05       		.uleb128 0x5
+ 3288 017d 39       		.uleb128 0x39
+ 3289 017e 0B       		.uleb128 0xb
+ 3290 017f 49       		.uleb128 0x49
+ 3291 0180 13       		.uleb128 0x13
+ 3292 0181 3F       		.uleb128 0x3f
+ 3293 0182 19       		.uleb128 0x19
+ 3294 0183 3C       		.uleb128 0x3c
+ 3295 0184 19       		.uleb128 0x19
+ 3296 0185 00       		.byte	0
+ 3297 0186 00       		.byte	0
+ 3298 0187 1F       		.uleb128 0x1f
+ 3299 0188 01       		.uleb128 0x1
+ 3300 0189 01       		.byte	0x1
+ 3301 018a 49       		.uleb128 0x49
+ 3302 018b 13       		.uleb128 0x13
+ 3303 018c 8801     		.uleb128 0x88
+ 3304 018e 0B       		.uleb128 0xb
+ 3305 018f 01       		.uleb128 0x1
+ 3306 0190 13       		.uleb128 0x13
+ 3307 0191 00       		.byte	0
+ 3308 0192 00       		.byte	0
+ 3309 0193 20       		.uleb128 0x20
+ 3310 0194 15       		.uleb128 0x15
+ 3311 0195 01       		.byte	0x1
+ 3312 0196 27       		.uleb128 0x27
+ 3313 0197 19       		.uleb128 0x19
+ 3314 0198 49       		.uleb128 0x49
+ 3315 0199 13       		.uleb128 0x13
+ 3316 019a 01       		.uleb128 0x1
+ 3317 019b 13       		.uleb128 0x13
+ 3318 019c 00       		.byte	0
+ 3319 019d 00       		.byte	0
+GAS LISTING /tmp/ccEseu02.s 			page 60
+
+
+ 3320 019e 21       		.uleb128 0x21
+ 3321 019f 16       		.uleb128 0x16
+ 3322 01a0 00       		.byte	0
+ 3323 01a1 03       		.uleb128 0x3
+ 3324 01a2 0E       		.uleb128 0xe
+ 3325 01a3 3A       		.uleb128 0x3a
+ 3326 01a4 0B       		.uleb128 0xb
+ 3327 01a5 3B       		.uleb128 0x3b
+ 3328 01a6 05       		.uleb128 0x5
+ 3329 01a7 39       		.uleb128 0x39
+ 3330 01a8 0B       		.uleb128 0xb
+ 3331 01a9 49       		.uleb128 0x49
+ 3332 01aa 13       		.uleb128 0x13
+ 3333 01ab 00       		.byte	0
+ 3334 01ac 00       		.byte	0
+ 3335 01ad 22       		.uleb128 0x22
+ 3336 01ae 04       		.uleb128 0x4
+ 3337 01af 01       		.byte	0x1
+ 3338 01b0 3E       		.uleb128 0x3e
+ 3339 01b1 0B       		.uleb128 0xb
+ 3340 01b2 0B       		.uleb128 0xb
+ 3341 01b3 0B       		.uleb128 0xb
+ 3342 01b4 49       		.uleb128 0x49
+ 3343 01b5 13       		.uleb128 0x13
+ 3344 01b6 3A       		.uleb128 0x3a
+ 3345 01b7 0B       		.uleb128 0xb
+ 3346 01b8 3B       		.uleb128 0x3b
+ 3347 01b9 0B       		.uleb128 0xb
+ 3348 01ba 39       		.uleb128 0x39
+ 3349 01bb 0B       		.uleb128 0xb
+ 3350 01bc 01       		.uleb128 0x1
+ 3351 01bd 13       		.uleb128 0x13
+ 3352 01be 00       		.byte	0
+ 3353 01bf 00       		.byte	0
+ 3354 01c0 23       		.uleb128 0x23
+ 3355 01c1 28       		.uleb128 0x28
+ 3356 01c2 00       		.byte	0
+ 3357 01c3 03       		.uleb128 0x3
+ 3358 01c4 0E       		.uleb128 0xe
+ 3359 01c5 1C       		.uleb128 0x1c
+ 3360 01c6 0B       		.uleb128 0xb
+ 3361 01c7 00       		.byte	0
+ 3362 01c8 00       		.byte	0
+ 3363 01c9 24       		.uleb128 0x24
+ 3364 01ca 34       		.uleb128 0x34
+ 3365 01cb 00       		.byte	0
+ 3366 01cc 03       		.uleb128 0x3
+ 3367 01cd 08       		.uleb128 0x8
+ 3368 01ce 3A       		.uleb128 0x3a
+ 3369 01cf 0B       		.uleb128 0xb
+ 3370 01d0 3B       		.uleb128 0x3b
+ 3371 01d1 0B       		.uleb128 0xb
+ 3372 01d2 39       		.uleb128 0x39
+ 3373 01d3 0B       		.uleb128 0xb
+ 3374 01d4 49       		.uleb128 0x49
+ 3375 01d5 13       		.uleb128 0x13
+ 3376 01d6 3F       		.uleb128 0x3f
+GAS LISTING /tmp/ccEseu02.s 			page 61
+
+
+ 3377 01d7 19       		.uleb128 0x19
+ 3378 01d8 3C       		.uleb128 0x3c
+ 3379 01d9 19       		.uleb128 0x19
+ 3380 01da 00       		.byte	0
+ 3381 01db 00       		.byte	0
+ 3382 01dc 25       		.uleb128 0x25
+ 3383 01dd 34       		.uleb128 0x34
+ 3384 01de 00       		.byte	0
+ 3385 01df 03       		.uleb128 0x3
+ 3386 01e0 0E       		.uleb128 0xe
+ 3387 01e1 3A       		.uleb128 0x3a
+ 3388 01e2 0B       		.uleb128 0xb
+ 3389 01e3 3B       		.uleb128 0x3b
+ 3390 01e4 0B       		.uleb128 0xb
+ 3391 01e5 39       		.uleb128 0x39
+ 3392 01e6 0B       		.uleb128 0xb
+ 3393 01e7 49       		.uleb128 0x49
+ 3394 01e8 13       		.uleb128 0x13
+ 3395 01e9 02       		.uleb128 0x2
+ 3396 01ea 18       		.uleb128 0x18
+ 3397 01eb 00       		.byte	0
+ 3398 01ec 00       		.byte	0
+ 3399 01ed 26       		.uleb128 0x26
+ 3400 01ee 34       		.uleb128 0x34
+ 3401 01ef 00       		.byte	0
+ 3402 01f0 03       		.uleb128 0x3
+ 3403 01f1 0E       		.uleb128 0xe
+ 3404 01f2 3A       		.uleb128 0x3a
+ 3405 01f3 0B       		.uleb128 0xb
+ 3406 01f4 3B       		.uleb128 0x3b
+ 3407 01f5 0B       		.uleb128 0xb
+ 3408 01f6 39       		.uleb128 0x39
+ 3409 01f7 0B       		.uleb128 0xb
+ 3410 01f8 49       		.uleb128 0x49
+ 3411 01f9 13       		.uleb128 0x13
+ 3412 01fa 00       		.byte	0
+ 3413 01fb 00       		.byte	0
+ 3414 01fc 27       		.uleb128 0x27
+ 3415 01fd 2E       		.uleb128 0x2e
+ 3416 01fe 01       		.byte	0x1
+ 3417 01ff 3F       		.uleb128 0x3f
+ 3418 0200 19       		.uleb128 0x19
+ 3419 0201 03       		.uleb128 0x3
+ 3420 0202 0E       		.uleb128 0xe
+ 3421 0203 3A       		.uleb128 0x3a
+ 3422 0204 0B       		.uleb128 0xb
+ 3423 0205 3B       		.uleb128 0x3b
+ 3424 0206 0B       		.uleb128 0xb
+ 3425 0207 39       		.uleb128 0x39
+ 3426 0208 0B       		.uleb128 0xb
+ 3427 0209 27       		.uleb128 0x27
+ 3428 020a 19       		.uleb128 0x19
+ 3429 020b 11       		.uleb128 0x11
+ 3430 020c 01       		.uleb128 0x1
+ 3431 020d 12       		.uleb128 0x12
+ 3432 020e 06       		.uleb128 0x6
+ 3433 020f 40       		.uleb128 0x40
+GAS LISTING /tmp/ccEseu02.s 			page 62
+
+
+ 3434 0210 18       		.uleb128 0x18
+ 3435 0211 9742     		.uleb128 0x2117
+ 3436 0213 19       		.uleb128 0x19
+ 3437 0214 01       		.uleb128 0x1
+ 3438 0215 13       		.uleb128 0x13
+ 3439 0216 00       		.byte	0
+ 3440 0217 00       		.byte	0
+ 3441 0218 28       		.uleb128 0x28
+ 3442 0219 34       		.uleb128 0x34
+ 3443 021a 00       		.byte	0
+ 3444 021b 03       		.uleb128 0x3
+ 3445 021c 08       		.uleb128 0x8
+ 3446 021d 3A       		.uleb128 0x3a
+ 3447 021e 0B       		.uleb128 0xb
+ 3448 021f 3B       		.uleb128 0x3b
+ 3449 0220 0B       		.uleb128 0xb
+ 3450 0221 39       		.uleb128 0x39
+ 3451 0222 0B       		.uleb128 0xb
+ 3452 0223 49       		.uleb128 0x49
+ 3453 0224 13       		.uleb128 0x13
+ 3454 0225 02       		.uleb128 0x2
+ 3455 0226 18       		.uleb128 0x18
+ 3456 0227 00       		.byte	0
+ 3457 0228 00       		.byte	0
+ 3458 0229 29       		.uleb128 0x29
+ 3459 022a 34       		.uleb128 0x34
+ 3460 022b 00       		.byte	0
+ 3461 022c 03       		.uleb128 0x3
+ 3462 022d 0E       		.uleb128 0xe
+ 3463 022e 3A       		.uleb128 0x3a
+ 3464 022f 0B       		.uleb128 0xb
+ 3465 0230 3B       		.uleb128 0x3b
+ 3466 0231 0B       		.uleb128 0xb
+ 3467 0232 39       		.uleb128 0x39
+ 3468 0233 0B       		.uleb128 0xb
+ 3469 0234 49       		.uleb128 0x49
+ 3470 0235 13       		.uleb128 0x13
+ 3471 0236 02       		.uleb128 0x2
+ 3472 0237 17       		.uleb128 0x17
+ 3473 0238 B742     		.uleb128 0x2137
+ 3474 023a 17       		.uleb128 0x17
+ 3475 023b 00       		.byte	0
+ 3476 023c 00       		.byte	0
+ 3477 023d 2A       		.uleb128 0x2a
+ 3478 023e 1D       		.uleb128 0x1d
+ 3479 023f 01       		.byte	0x1
+ 3480 0240 31       		.uleb128 0x31
+ 3481 0241 13       		.uleb128 0x13
+ 3482 0242 52       		.uleb128 0x52
+ 3483 0243 01       		.uleb128 0x1
+ 3484 0244 B842     		.uleb128 0x2138
+ 3485 0246 0B       		.uleb128 0xb
+ 3486 0247 55       		.uleb128 0x55
+ 3487 0248 17       		.uleb128 0x17
+ 3488 0249 58       		.uleb128 0x58
+ 3489 024a 0B       		.uleb128 0xb
+ 3490 024b 59       		.uleb128 0x59
+GAS LISTING /tmp/ccEseu02.s 			page 63
+
+
+ 3491 024c 0B       		.uleb128 0xb
+ 3492 024d 57       		.uleb128 0x57
+ 3493 024e 0B       		.uleb128 0xb
+ 3494 024f 01       		.uleb128 0x1
+ 3495 0250 13       		.uleb128 0x13
+ 3496 0251 00       		.byte	0
+ 3497 0252 00       		.byte	0
+ 3498 0253 2B       		.uleb128 0x2b
+ 3499 0254 1D       		.uleb128 0x1d
+ 3500 0255 00       		.byte	0
+ 3501 0256 31       		.uleb128 0x31
+ 3502 0257 13       		.uleb128 0x13
+ 3503 0258 52       		.uleb128 0x52
+ 3504 0259 01       		.uleb128 0x1
+ 3505 025a B842     		.uleb128 0x2138
+ 3506 025c 0B       		.uleb128 0xb
+ 3507 025d 55       		.uleb128 0x55
+ 3508 025e 17       		.uleb128 0x17
+ 3509 025f 58       		.uleb128 0x58
+ 3510 0260 0B       		.uleb128 0xb
+ 3511 0261 59       		.uleb128 0x59
+ 3512 0262 05       		.uleb128 0x5
+ 3513 0263 57       		.uleb128 0x57
+ 3514 0264 0B       		.uleb128 0xb
+ 3515 0265 00       		.byte	0
+ 3516 0266 00       		.byte	0
+ 3517 0267 2C       		.uleb128 0x2c
+ 3518 0268 1D       		.uleb128 0x1d
+ 3519 0269 00       		.byte	0
+ 3520 026a 31       		.uleb128 0x31
+ 3521 026b 13       		.uleb128 0x13
+ 3522 026c 52       		.uleb128 0x52
+ 3523 026d 01       		.uleb128 0x1
+ 3524 026e B842     		.uleb128 0x2138
+ 3525 0270 0B       		.uleb128 0xb
+ 3526 0271 11       		.uleb128 0x11
+ 3527 0272 01       		.uleb128 0x1
+ 3528 0273 12       		.uleb128 0x12
+ 3529 0274 06       		.uleb128 0x6
+ 3530 0275 58       		.uleb128 0x58
+ 3531 0276 0B       		.uleb128 0xb
+ 3532 0277 59       		.uleb128 0x59
+ 3533 0278 05       		.uleb128 0x5
+ 3534 0279 57       		.uleb128 0x57
+ 3535 027a 0B       		.uleb128 0xb
+ 3536 027b 00       		.byte	0
+ 3537 027c 00       		.byte	0
+ 3538 027d 2D       		.uleb128 0x2d
+ 3539 027e 898201   		.uleb128 0x4109
+ 3540 0281 00       		.byte	0
+ 3541 0282 11       		.uleb128 0x11
+ 3542 0283 01       		.uleb128 0x1
+ 3543 0284 31       		.uleb128 0x31
+ 3544 0285 13       		.uleb128 0x13
+ 3545 0286 00       		.byte	0
+ 3546 0287 00       		.byte	0
+ 3547 0288 2E       		.uleb128 0x2e
+GAS LISTING /tmp/ccEseu02.s 			page 64
+
+
+ 3548 0289 2E       		.uleb128 0x2e
+ 3549 028a 00       		.byte	0
+ 3550 028b 03       		.uleb128 0x3
+ 3551 028c 0E       		.uleb128 0xe
+ 3552 028d 3A       		.uleb128 0x3a
+ 3553 028e 0B       		.uleb128 0xb
+ 3554 028f 3B       		.uleb128 0x3b
+ 3555 0290 05       		.uleb128 0x5
+ 3556 0291 39       		.uleb128 0x39
+ 3557 0292 0B       		.uleb128 0xb
+ 3558 0293 27       		.uleb128 0x27
+ 3559 0294 19       		.uleb128 0x19
+ 3560 0295 20       		.uleb128 0x20
+ 3561 0296 0B       		.uleb128 0xb
+ 3562 0297 00       		.byte	0
+ 3563 0298 00       		.byte	0
+ 3564 0299 2F       		.uleb128 0x2f
+ 3565 029a 2E       		.uleb128 0x2e
+ 3566 029b 00       		.byte	0
+ 3567 029c 3F       		.uleb128 0x3f
+ 3568 029d 19       		.uleb128 0x19
+ 3569 029e 3C       		.uleb128 0x3c
+ 3570 029f 19       		.uleb128 0x19
+ 3571 02a0 6E       		.uleb128 0x6e
+ 3572 02a1 0E       		.uleb128 0xe
+ 3573 02a2 03       		.uleb128 0x3
+ 3574 02a3 0E       		.uleb128 0xe
+ 3575 02a4 3A       		.uleb128 0x3a
+ 3576 02a5 0B       		.uleb128 0xb
+ 3577 02a6 3B       		.uleb128 0x3b
+ 3578 02a7 0B       		.uleb128 0xb
+ 3579 02a8 39       		.uleb128 0x39
+ 3580 02a9 0B       		.uleb128 0xb
+ 3581 02aa 00       		.byte	0
+ 3582 02ab 00       		.byte	0
+ 3583 02ac 30       		.uleb128 0x30
+ 3584 02ad 2E       		.uleb128 0x2e
+ 3585 02ae 00       		.byte	0
+ 3586 02af 3F       		.uleb128 0x3f
+ 3587 02b0 19       		.uleb128 0x19
+ 3588 02b1 3C       		.uleb128 0x3c
+ 3589 02b2 19       		.uleb128 0x19
+ 3590 02b3 6E       		.uleb128 0x6e
+ 3591 02b4 0E       		.uleb128 0xe
+ 3592 02b5 03       		.uleb128 0x3
+ 3593 02b6 0E       		.uleb128 0xe
+ 3594 02b7 3A       		.uleb128 0x3a
+ 3595 02b8 0B       		.uleb128 0xb
+ 3596 02b9 3B       		.uleb128 0x3b
+ 3597 02ba 05       		.uleb128 0x5
+ 3598 02bb 39       		.uleb128 0x39
+ 3599 02bc 0B       		.uleb128 0xb
+ 3600 02bd 00       		.byte	0
+ 3601 02be 00       		.byte	0
+ 3602 02bf 31       		.uleb128 0x31
+ 3603 02c0 2E       		.uleb128 0x2e
+ 3604 02c1 00       		.byte	0
+GAS LISTING /tmp/ccEseu02.s 			page 65
+
+
+ 3605 02c2 3F       		.uleb128 0x3f
+ 3606 02c3 19       		.uleb128 0x19
+ 3607 02c4 3C       		.uleb128 0x3c
+ 3608 02c5 19       		.uleb128 0x19
+ 3609 02c6 6E       		.uleb128 0x6e
+ 3610 02c7 0E       		.uleb128 0xe
+ 3611 02c8 03       		.uleb128 0x3
+ 3612 02c9 0E       		.uleb128 0xe
+ 3613 02ca 00       		.byte	0
+ 3614 02cb 00       		.byte	0
+ 3615 02cc 00       		.byte	0
+ 3616              		.section	.debug_loc,"",@progbits
+ 3617              	.Ldebug_loc0:
+ 3618              	.LVUS0:
+ 3619 0000 02       		.uleb128 .LVU16
+ 3620 0001 00       		.uleb128 .LVU20
+ 3621 0002 00       		.uleb128 .LVU20
+ 3622 0003 00       		.uleb128 .LVU21
+ 3623 0004 00       		.uleb128 .LVU21
+ 3624 0005 01       		.uleb128 .LVU27
+ 3625 0006 01       		.uleb128 .LVU27
+ 3626 0007 00       		.uleb128 .LVU68
+ 3627 0008 00       		.uleb128 .LVU69
+ 3628 0009 00       		.uleb128 .LVU71
+ 3629 000a 00       		.uleb128 .LVU71
+ 3630 000b 00       		.uleb128 .LVU74
+ 3631 000c 00       		.uleb128 .LVU74
+ 3632 000d 00       		.uleb128 .LVU77
+ 3633 000e 00       		.uleb128 .LVU77
+ 3634 000f 00       		.uleb128 .LVU78
+ 3635              	.LLST0:
+ 3636 0010 1D000000 		.long	.LVL2
+ 3637 0014 29000000 		.long	.LVL4
+ 3638 0018 0200     		.value	0x2
+ 3639 001a 30       		.byte	0x30
+ 3640 001b 9F       		.byte	0x9f
+ 3641 001c 29000000 		.long	.LVL4
+ 3642 0020 2D000000 		.long	.LVL5
+ 3643 0024 0100     		.value	0x1
+ 3644 0026 50       		.byte	0x50
+ 3645 0027 2D000000 		.long	.LVL5
+ 3646 002b 58000000 		.long	.LVL7
+ 3647 002f 0100     		.value	0x1
+ 3648 0031 56       		.byte	0x56
+ 3649 0032 58000000 		.long	.LVL7
+ 3650 0036 9E000000 		.long	.LVL10
+ 3651 003a 0200     		.value	0x2
+ 3652 003c 31       		.byte	0x31
+ 3653 003d 9F       		.byte	0x9f
+ 3654 003e B2000000 		.long	.LVL11
+ 3655 0042 CF000000 		.long	.LVL12
+ 3656 0046 0200     		.value	0x2
+ 3657 0048 31       		.byte	0x31
+ 3658 0049 9F       		.byte	0x9f
+ 3659 004a CF000000 		.long	.LVL12
+ 3660 004e D6000000 		.long	.LVL13
+ 3661 0052 0100     		.value	0x1
+GAS LISTING /tmp/ccEseu02.s 			page 66
+
+
+ 3662 0054 56       		.byte	0x56
+ 3663 0055 D6000000 		.long	.LVL13
+ 3664 0059 DA000000 		.long	.LVL14-1
+ 3665 005d 0100     		.value	0x1
+ 3666 005f 50       		.byte	0x50
+ 3667 0060 DA000000 		.long	.LVL14-1
+ 3668 0064 DF000000 		.long	.LVL15
+ 3669 0068 0100     		.value	0x1
+ 3670 006a 56       		.byte	0x56
+ 3671 006b 00000000 		.long	0
+ 3672 006f 00000000 		.long	0
+ 3673              		.section	.debug_aranges,"",@progbits
+ 3674 0000 24000000 		.long	0x24
+ 3675 0004 0200     		.value	0x2
+ 3676 0006 00000000 		.long	.Ldebug_info0
+ 3677 000a 04       		.byte	0x4
+ 3678 000b 00       		.byte	0
+ 3679 000c 0000     		.value	0
+ 3680 000e 0000     		.value	0
+ 3681 0010 00000000 		.long	.LFB232
+ 3682 0014 67000000 		.long	.LFE232-.LFB232
+ 3683 0018 00000000 		.long	.LFB233
+ 3684 001c EB000000 		.long	.LFE233-.LFB233
+ 3685 0020 00000000 		.long	0
+ 3686 0024 00000000 		.long	0
+ 3687              		.section	.debug_ranges,"",@progbits
+ 3688              	.Ldebug_ranges0:
+ 3689 0000 78000000 		.long	.LBB14
+ 3690 0004 7E000000 		.long	.LBE14
+ 3691 0008 81000000 		.long	.LBB19
+ 3692 000c 81000000 		.long	.LBE19
+ 3693 0010 81000000 		.long	.LBB20
+ 3694 0014 87000000 		.long	.LBE20
+ 3695 0018 00000000 		.long	0
+ 3696 001c 00000000 		.long	0
+ 3697 0020 78000000 		.long	.LBB15
+ 3698 0024 7E000000 		.long	.LBE15
+ 3699 0028 81000000 		.long	.LBB18
+ 3700 002c 87000000 		.long	.LBE18
+ 3701 0030 00000000 		.long	0
+ 3702 0034 00000000 		.long	0
+ 3703 0038 8C000000 		.long	.LBB21
+ 3704 003c 8C000000 		.long	.LBE21
+ 3705 0040 8C000000 		.long	.LBB24
+ 3706 0044 92000000 		.long	.LBE24
+ 3707 0048 00000000 		.long	0
+ 3708 004c 00000000 		.long	0
+ 3709 0050 00000000 		.long	.LFB232
+ 3710 0054 67000000 		.long	.LFE232
+ 3711 0058 00000000 		.long	.LFB233
+ 3712 005c EB000000 		.long	.LFE233
+ 3713 0060 00000000 		.long	0
+ 3714 0064 00000000 		.long	0
+ 3715              		.section	.debug_line,"",@progbits
+ 3716              	.Ldebug_line0:
+ 3717 0000 B1040000 		.section	.debug_str,"MS",@progbits,1
+ 3717      03006903 
+GAS LISTING /tmp/ccEseu02.s 			page 67
+
+
+ 3717      00000101 
+ 3717      FB0E0D00 
+ 3717      01010101 
+ 3718              	.LASF155:
+ 3719 0000 6F66665F 		.string	"off_ctx"
+ 3719      63747800 
+ 3720              	.LASF6:
+ 3721 0008 73697A65 		.string	"size_t"
+ 3721      5F7400
+ 3722              	.LASF154:
+ 3723 000f 6F66665F 		.string	"off_prio"
+ 3723      7072696F 
+ 3723      00
+ 3724              	.LASF177:
+ 3725 0018 656E646D 		.string	"endmem"
+ 3725      656D00
+ 3726              	.LASF140:
+ 3727 001f 77747365 		.string	"wtsemp"
+ 3727      6D7000
+ 3728              	.LASF125:
+ 3729 0026 73797374 		.string	"systime_t"
+ 3729      696D655F 
+ 3729      7400
+ 3730              	.LASF163:
+ 3731 0030 6F66665F 		.string	"off_preempt"
+ 3731      70726565 
+ 3731      6D707400 
+ 3732              	.LASF145:
+ 3733 003c 6F776E65 		.string	"owner"
+ 3733      7200
+ 3734              	.LASF76:
+ 3735 0042 74707269 		.string	"tprio_t"
+ 3735      6F5F7400 
+ 3736              	.LASF166:
+ 3737 004a 63685F64 		.string	"ch_debug"
+ 3737      65627567 
+ 3737      00
+ 3738              	.LASF183:
+ 3739 0053 70726F76 		.string	"provider"
+ 3739      69646572 
+ 3739      00
+ 3740              	.LASF51:
+ 3741 005c 5F494F5F 		.string	"_IO_codecvt"
+ 3741      636F6465 
+ 3741      63767400 
+ 3742              	.LASF58:
+ 3743 0068 696E7433 		.string	"int32_t"
+ 3743      325F7400 
+ 3744              	.LASF249:
+ 3745 0070 77726974 		.string	"writet"
+ 3745      657400
+ 3746              	.LASF109:
+ 3747 0077 76746675 		.string	"vtfunc_t"
+ 3747      6E635F74 
+ 3747      00
+ 3748              	.LASF31:
+ 3749 0080 5F494F5F 		.string	"_IO_save_end"
+GAS LISTING /tmp/ccEseu02.s 			page 68
+
+
+ 3749      73617665 
+ 3749      5F656E64 
+ 3749      00
+ 3750              	.LASF205:
+ 3751 008d 696E3661 		.string	"in6addr_loopback"
+ 3751      6464725F 
+ 3751      6C6F6F70 
+ 3751      6261636B 
+ 3751      00
+ 3752              	.LASF115:
+ 3753 009e 63685F76 		.string	"ch_virtual_timers_list"
+ 3753      69727475 
+ 3753      616C5F74 
+ 3753      696D6572 
+ 3753      735F6C69 
+ 3754              	.LASF240:
+ 3755 00b5 636F6D5F 		.string	"com_listen"
+ 3755      6C697374 
+ 3755      656E00
+ 3756              	.LASF245:
+ 3757 00c0 77726974 		.string	"write"
+ 3757      6500
+ 3758              	.LASF185:
+ 3759 00c6 63685F64 		.string	"ch_dyn_element"
+ 3759      796E5F65 
+ 3759      6C656D65 
+ 3759      6E7400
+ 3760              	.LASF24:
+ 3761 00d5 5F494F5F 		.string	"_IO_write_base"
+ 3761      77726974 
+ 3761      655F6261 
+ 3761      736500
+ 3762              	.LASF90:
+ 3763 00e4 73746174 		.string	"state"
+ 3763      6500
+ 3764              	.LASF40:
+ 3765 00ea 5F6C6F63 		.string	"_lock"
+ 3765      6B00
+ 3766              	.LASF264:
+ 3767 00f0 70757473 		.string	"puts"
+ 3767      00
+ 3768              	.LASF247:
+ 3769 00f5 70757474 		.string	"putt"
+ 3769      00
+ 3770              	.LASF29:
+ 3771 00fa 5F494F5F 		.string	"_IO_save_base"
+ 3771      73617665 
+ 3771      5F626173 
+ 3771      6500
+ 3772              	.LASF190:
+ 3773 0108 6F626A5F 		.string	"obj_list"
+ 3773      6C697374 
+ 3773      00
+ 3774              	.LASF157:
+ 3775 0111 6F66665F 		.string	"off_older"
+ 3775      6F6C6465 
+ 3775      7200
+GAS LISTING /tmp/ccEseu02.s 			page 69
+
+
+ 3776              	.LASF33:
+ 3777 011b 5F636861 		.string	"_chain"
+ 3777      696E00
+ 3778              	.LASF85:
+ 3779 0122 7072696F 		.string	"prio"
+ 3779      00
+ 3780              	.LASF37:
+ 3781 0127 5F637572 		.string	"_cur_column"
+ 3781      5F636F6C 
+ 3781      756D6E00 
+ 3782              	.LASF56:
+ 3783 0133 7379735F 		.string	"sys_nerr"
+ 3783      6E657272 
+ 3783      00
+ 3784              	.LASF136:
+ 3785 013c 65786974 		.string	"exitcode"
+ 3785      636F6465 
+ 3785      00
+ 3786              	.LASF7:
+ 3787 0145 5F5F7569 		.string	"__uint8_t"
+ 3787      6E74385F 
+ 3787      7400
+ 3788              	.LASF216:
+ 3789 014f 715F746F 		.string	"q_top"
+ 3789      7000
+ 3790              	.LASF116:
+ 3791 0155 73797374 		.string	"systime"
+ 3791      696D6500 
+ 3792              	.LASF250:
+ 3793 015d 72656164 		.string	"readt"
+ 3793      7400
+ 3794              	.LASF215:
+ 3795 0163 715F6275 		.string	"q_buffer"
+ 3795      66666572 
+ 3795      00
+ 3796              	.LASF191:
+ 3797 016c 6F626A5F 		.string	"obj_pool"
+ 3797      706F6F6C 
+ 3797      00
+ 3798              	.LASF219:
+ 3799 0175 715F6E6F 		.string	"q_notify"
+ 3799      74696679 
+ 3799      00
+ 3800              	.LASF206:
+ 3801 017e 5F5F656E 		.string	"__environ"
+ 3801      7669726F 
+ 3801      6E00
+ 3802              	.LASF16:
+ 3803 0188 6C6F6E67 		.string	"long int"
+ 3803      20696E74 
+ 3803      00
+ 3804              	.LASF242:
+ 3805 0191 636F6D5F 		.string	"com_name"
+ 3805      6E616D65 
+ 3805      00
+ 3806              	.LASF218:
+ 3807 019a 715F7264 		.string	"q_rdptr"
+GAS LISTING /tmp/ccEseu02.s 			page 70
+
+
+ 3807      70747200 
+ 3808              	.LASF148:
+ 3809 01a2 7A65726F 		.string	"zero"
+ 3809      00
+ 3810              	.LASF256:
+ 3811 01a7 63685379 		.string	"chSysLockFromISR"
+ 3811      734C6F63 
+ 3811      6B46726F 
+ 3811      6D495352 
+ 3811      00
+ 3812              	.LASF50:
+ 3813 01b8 5F494F5F 		.string	"_IO_marker"
+ 3813      6D61726B 
+ 3813      657200
+ 3814              	.LASF74:
+ 3815 01c3 74737461 		.string	"tstate_t"
+ 3815      74655F74 
+ 3815      00
+ 3816              	.LASF95:
+ 3817 01cc 6570656E 		.string	"epending"
+ 3817      64696E67 
+ 3817      00
+ 3818              	.LASF103:
+ 3819 01d5 74687265 		.string	"threads_queue_t"
+ 3819      6164735F 
+ 3819      71756575 
+ 3819      655F7400 
+ 3820              	.LASF239:
+ 3821 01e5 6F717565 		.string	"oqueue"
+ 3821      756500
+ 3822              	.LASF67:
+ 3823 01ec 5F466C6F 		.string	"_Float128"
+ 3823      61743132 
+ 3823      3800
+ 3824              	.LASF101:
+ 3825 01f6 63685F74 		.string	"ch_threads_list"
+ 3825      68726561 
+ 3825      64735F6C 
+ 3825      69737400 
+ 3826              	.LASF253:
+ 3827 0206 5F73696D 		.string	"_sim_check_for_interrupts"
+ 3827      5F636865 
+ 3827      636B5F66 
+ 3827      6F725F69 
+ 3827      6E746572 
+ 3828              	.LASF231:
+ 3829 0220 70616C5F 		.string	"pal_default_config"
+ 3829      64656661 
+ 3829      756C745F 
+ 3829      636F6E66 
+ 3829      696700
+ 3830              	.LASF178:
+ 3831 0233 6D656D63 		.string	"memcore_t"
+ 3831      6F72655F 
+ 3831      7400
+ 3832              	.LASF212:
+ 3833 023d 696F5F71 		.string	"io_queue"
+GAS LISTING /tmp/ccEseu02.s 			page 71
+
+
+ 3833      75657565 
+ 3833      00
+ 3834              	.LASF5:
+ 3835 0246 7369676E 		.string	"signed char"
+ 3835      65642063 
+ 3835      68617200 
+ 3836              	.LASF142:
+ 3837 0252 65776D61 		.string	"ewmask"
+ 3837      736B00
+ 3838              	.LASF68:
+ 3839 0259 75696E74 		.string	"uint8_t"
+ 3839      385F7400 
+ 3840              	.LASF59:
+ 3841 0261 5F494F5F 		.string	"_IO_FILE"
+ 3841      46494C45 
+ 3841      00
+ 3842              	.LASF266:
+ 3843 026a 2E2E2F2E 		.string	"../../../os/hal/ports/simulator/posix/hal_lld.c"
+ 3843      2E2F2E2E 
+ 3843      2F6F732F 
+ 3843      68616C2F 
+ 3843      706F7274 
+ 3844              	.LASF52:
+ 3845 029a 5F494F5F 		.string	"_IO_wide_data"
+ 3845      77696465 
+ 3845      5F646174 
+ 3845      6100
+ 3846              	.LASF254:
+ 3847 02a8 68616C5F 		.string	"hal_lld_init"
+ 3847      6C6C645F 
+ 3847      696E6974 
+ 3847      00
+ 3848              	.LASF78:
+ 3849 02b5 6576656E 		.string	"eventmask_t"
+ 3849      746D6173 
+ 3849      6B5F7400 
+ 3850              	.LASF138:
+ 3851 02c1 77747472 		.string	"wttrp"
+ 3851      7000
+ 3852              	.LASF255:
+ 3853 02c7 63685379 		.string	"chSysUnlockFromISR"
+ 3853      73556E6C 
+ 3853      6F636B46 
+ 3853      726F6D49 
+ 3853      535200
+ 3854              	.LASF2:
+ 3855 02da 756E7369 		.string	"unsigned char"
+ 3855      676E6564 
+ 3855      20636861 
+ 3855      7200
+ 3856              	.LASF220:
+ 3857 02e8 715F6C69 		.string	"q_link"
+ 3857      6E6B00
+ 3858              	.LASF44:
+ 3859 02ef 5F667265 		.string	"_freeres_list"
+ 3859      65726573 
+ 3859      5F6C6973 
+GAS LISTING /tmp/ccEseu02.s 			page 72
+
+
+ 3859      7400
+ 3860              	.LASF119:
+ 3861 02fd 70616E69 		.string	"panic_msg"
+ 3861      635F6D73 
+ 3861      6700
+ 3862              	.LASF252:
+ 3863 0307 696E745F 		.string	"int_occurred"
+ 3863      6F636375 
+ 3863      72726564 
+ 3863      00
+ 3864              	.LASF72:
+ 3865 0314 73797373 		.string	"syssts_t"
+ 3865      74735F74 
+ 3865      00
+ 3866              	.LASF117:
+ 3867 031d 73797374 		.string	"system_debug_t"
+ 3867      656D5F64 
+ 3867      65627567 
+ 3867      5F7400
+ 3868              	.LASF232:
+ 3869 032c 53445F55 		.string	"SD_UNINIT"
+ 3869      4E494E49 
+ 3869      5400
+ 3870              	.LASF131:
+ 3871 0336 5F426F6F 		.string	"_Bool"
+ 3871      6C00
+ 3872              	.LASF187:
+ 3873 033c 63685F64 		.string	"ch_dyn_list"
+ 3873      796E5F6C 
+ 3873      69737400 
+ 3874              	.LASF1:
+ 3875 0348 63686172 		.string	"char"
+ 3875      00
+ 3876              	.LASF193:
+ 3877 034d 73656D5F 		.string	"sem_list"
+ 3877      6C697374 
+ 3877      00
+ 3878              	.LASF268:
+ 3879 0356 5F494F5F 		.string	"_IO_lock_t"
+ 3879      6C6F636B 
+ 3879      5F7400
+ 3880              	.LASF9:
+ 3881 0361 5F5F7569 		.string	"__uint16_t"
+ 3881      6E743136 
+ 3881      5F7400
+ 3882              	.LASF248:
+ 3883 036c 67657474 		.string	"gett"
+ 3883      00
+ 3884              	.LASF137:
+ 3885 0371 77746F62 		.string	"wtobjp"
+ 3885      6A7000
+ 3886              	.LASF60:
+ 3887 0378 74696D65 		.string	"timeval"
+ 3887      76616C00 
+ 3888              	.LASF132:
+ 3889 0380 706F7274 		.string	"port_irq_sts"
+ 3889      5F697271 
+GAS LISTING /tmp/ccEseu02.s 			page 73
+
+
+ 3889      5F737473 
+ 3889      00
+ 3890              	.LASF63:
+ 3891 038d 74696D65 		.string	"timezone"
+ 3891      7A6F6E65 
+ 3891      00
+ 3892              	.LASF162:
+ 3893 0396 6F66665F 		.string	"off_refs"
+ 3893      72656673 
+ 3893      00
+ 3894              	.LASF91:
+ 3895 039f 666C6167 		.string	"flags"
+ 3895      7300
+ 3896              	.LASF21:
+ 3897 03a5 5F494F5F 		.string	"_IO_read_ptr"
+ 3897      72656164 
+ 3897      5F707472 
+ 3897      00
+ 3898              	.LASF269:
+ 3899 03b2 73746B61 		.string	"stkalign_t"
+ 3899      6C69676E 
+ 3899      5F7400
+ 3900              	.LASF53:
+ 3901 03bd 73746469 		.string	"stdin"
+ 3901      6E00
+ 3902              	.LASF98:
+ 3903 03c3 6D706F6F 		.string	"mpool"
+ 3903      6C00
+ 3904              	.LASF241:
+ 3905 03c9 636F6D5F 		.string	"com_data"
+ 3905      64617461 
+ 3905      00
+ 3906              	.LASF57:
+ 3907 03d2 7379735F 		.string	"sys_errlist"
+ 3907      6572726C 
+ 3907      69737400 
+ 3908              	.LASF168:
+ 3909 03de 6576656E 		.string	"event_listener_t"
+ 3909      745F6C69 
+ 3909      7374656E 
+ 3909      65725F74 
+ 3909      00
+ 3910              	.LASF151:
+ 3911 03ef 70747273 		.string	"ptrsize"
+ 3911      697A6500 
+ 3912              	.LASF32:
+ 3913 03f7 5F6D6172 		.string	"_markers"
+ 3913      6B657273 
+ 3913      00
+ 3914              	.LASF262:
+ 3915 0400 63685363 		.string	"chSchIsPreemptionRequired"
+ 3915      68497350 
+ 3915      7265656D 
+ 3915      7074696F 
+ 3915      6E526571 
+ 3916              	.LASF204:
+ 3917 041a 696E3661 		.string	"in6addr_any"
+GAS LISTING /tmp/ccEseu02.s 			page 74
+
+
+ 3917      6464725F 
+ 3917      616E7900 
+ 3918              	.LASF164:
+ 3919 0426 6F66665F 		.string	"off_time"
+ 3919      74696D65 
+ 3919      00
+ 3920              	.LASF80:
+ 3921 042f 636E745F 		.string	"cnt_t"
+ 3921      7400
+ 3922              	.LASF62:
+ 3923 0435 74765F75 		.string	"tv_usec"
+ 3923      73656300 
+ 3924              	.LASF141:
+ 3925 043d 77746D74 		.string	"wtmtxp"
+ 3925      787000
+ 3926              	.LASF229:
+ 3927 0444 76696F5F 		.string	"vio_port_1"
+ 3927      706F7274 
+ 3927      5F3100
+ 3928              	.LASF230:
+ 3929 044f 76696F5F 		.string	"vio_port_2"
+ 3929      706F7274 
+ 3929      5F3200
+ 3930              	.LASF107:
+ 3931 045a 63685F72 		.string	"ch_ready_list"
+ 3931      65616479 
+ 3931      5F6C6973 
+ 3931      7400
+ 3932              	.LASF263:
+ 3933 0468 63685363 		.string	"chSchDoReschedule"
+ 3933      68446F52 
+ 3933      65736368 
+ 3933      6564756C 
+ 3933      6500
+ 3934              	.LASF194:
+ 3935 047a 73656D5F 		.string	"sem_pool"
+ 3935      706F6F6C 
+ 3935      00
+ 3936              	.LASF41:
+ 3937 0483 5F6F6666 		.string	"_offset"
+ 3937      73657400 
+ 3938              	.LASF227:
+ 3939 048b 56503244 		.string	"VP2Data"
+ 3939      61746100 
+ 3940              	.LASF176:
+ 3941 0493 6E657874 		.string	"nextmem"
+ 3941      6D656D00 
+ 3942              	.LASF208:
+ 3943 049b 6F707469 		.string	"optind"
+ 3943      6E6400
+ 3944              	.LASF160:
+ 3945 04a2 6F66665F 		.string	"off_state"
+ 3945      73746174 
+ 3945      6500
+ 3946              	.LASF4:
+ 3947 04ac 6C6F6E67 		.string	"long unsigned int"
+ 3947      20756E73 
+GAS LISTING /tmp/ccEseu02.s 			page 75
+
+
+ 3947      69676E65 
+ 3947      6420696E 
+ 3947      7400
+ 3948              	.LASF153:
+ 3949 04be 74687265 		.string	"threadsize"
+ 3949      61647369 
+ 3949      7A6500
+ 3950              	.LASF226:
+ 3951 04c9 56503144 		.string	"VP1Data"
+ 3951      61746100 
+ 3952              	.LASF35:
+ 3953 04d1 5F666C61 		.string	"_flags2"
+ 3953      67733200 
+ 3954              	.LASF143:
+ 3955 04d9 63685F73 		.string	"ch_semaphore"
+ 3955      656D6170 
+ 3955      686F7265 
+ 3955      00
+ 3956              	.LASF83:
+ 3957 04e6 63685F74 		.string	"ch_thread"
+ 3957      68726561 
+ 3957      6400
+ 3958              	.LASF23:
+ 3959 04f0 5F494F5F 		.string	"_IO_read_base"
+ 3959      72656164 
+ 3959      5F626173 
+ 3959      6500
+ 3960              	.LASF114:
+ 3961 04fe 76697274 		.string	"virtual_timers_list_t"
+ 3961      75616C5F 
+ 3961      74696D65 
+ 3961      72735F6C 
+ 3961      6973745F 
+ 3962              	.LASF146:
+ 3963 0514 63685F69 		.string	"ch_idle_thread_wa"
+ 3963      646C655F 
+ 3963      74687265 
+ 3963      61645F77 
+ 3963      6100
+ 3964              	.LASF270:
+ 3965 0526 7469636B 		.string	"tick"
+ 3965      00
+ 3966              	.LASF48:
+ 3967 052b 5F756E75 		.string	"_unused2"
+ 3967      73656432 
+ 3967      00
+ 3968              	.LASF14:
+ 3969 0534 5F5F7175 		.string	"__quad_t"
+ 3969      61645F74 
+ 3969      00
+ 3970              	.LASF196:
+ 3971 053d 6669666F 		.string	"fifo_list"
+ 3971      5F6C6973 
+ 3971      7400
+ 3972              	.LASF110:
+ 3973 0547 76697274 		.string	"virtual_timer_t"
+ 3973      75616C5F 
+GAS LISTING /tmp/ccEseu02.s 			page 76
+
+
+ 3973      74696D65 
+ 3973      725F7400 
+ 3974              	.LASF106:
+ 3975 0557 72656164 		.string	"ready_list_t"
+ 3975      795F6C69 
+ 3975      73745F74 
+ 3975      00
+ 3976              	.LASF87:
+ 3977 0564 6F6C6465 		.string	"older"
+ 3977      7200
+ 3978              	.LASF243:
+ 3979 056a 53657269 		.string	"SerialDriverVMT"
+ 3979      616C4472 
+ 3979      69766572 
+ 3979      564D5400 
+ 3980              	.LASF97:
+ 3981 057a 7265616C 		.string	"realprio"
+ 3981      7072696F 
+ 3981      00
+ 3982              	.LASF81:
+ 3983 0583 75636E74 		.string	"ucnt_t"
+ 3983      5F7400
+ 3984              	.LASF159:
+ 3985 058a 6F66665F 		.string	"off_stklimit"
+ 3985      73746B6C 
+ 3985      696D6974 
+ 3985      00
+ 3986              	.LASF180:
+ 3987 0597 706F6F6C 		.string	"pool_header"
+ 3987      5F686561 
+ 3987      64657200 
+ 3988              	.LASF36:
+ 3989 05a3 5F6F6C64 		.string	"_old_offset"
+ 3989      5F6F6666 
+ 3989      73657400 
+ 3990              	.LASF64:
+ 3991 05af 747A5F6D 		.string	"tz_minuteswest"
+ 3991      696E7574 
+ 3991      65737765 
+ 3991      737400
+ 3992              	.LASF11:
+ 3993 05be 5F5F7569 		.string	"__uint32_t"
+ 3993      6E743332 
+ 3993      5F7400
+ 3994              	.LASF199:
+ 3995 05c9 5F5F7536 		.string	"__u6_addr8"
+ 3995      5F616464 
+ 3995      723800
+ 3996              	.LASF96:
+ 3997 05d4 6D74786C 		.string	"mtxlist"
+ 3997      69737400 
+ 3998              	.LASF12:
+ 3999 05dc 6C6F6E67 		.string	"long long int"
+ 3999      206C6F6E 
+ 3999      6720696E 
+ 3999      7400
+ 4000              	.LASF126:
+GAS LISTING /tmp/ccEseu02.s 			page 77
+
+
+ 4001 05ea 73797369 		.string	"sysinterval_t"
+ 4001      6E746572 
+ 4001      76616C5F 
+ 4001      7400
+ 4002              	.LASF258:
+ 4003 05f8 706F7274 		.string	"port_lock_from_isr"
+ 4003      5F6C6F63 
+ 4003      6B5F6672 
+ 4003      6F6D5F69 
+ 4003      737200
+ 4004              	.LASF189:
+ 4005 060b 63685F6F 		.string	"ch_objects_factory"
+ 4005      626A6563 
+ 4005      74735F66 
+ 4005      6163746F 
+ 4005      727900
+ 4006              	.LASF224:
+ 4007 061e 6C617463 		.string	"latch"
+ 4007      6800
+ 4008              	.LASF26:
+ 4009 0624 5F494F5F 		.string	"_IO_write_end"
+ 4009      77726974 
+ 4009      655F656E 
+ 4009      6400
+ 4010              	.LASF271:
+ 4011 0632 5F5F7374 		.string	"__stack_chk_fail_local"
+ 4011      61636B5F 
+ 4011      63686B5F 
+ 4011      6661696C 
+ 4011      5F6C6F63 
+ 4012              	.LASF174:
+ 4013 0649 6576656E 		.string	"event_source_t"
+ 4013      745F736F 
+ 4013      75726365 
+ 4013      5F7400
+ 4014              	.LASF265:
+ 4015 0658 474E5520 		.string	"GNU C17 8.3.0 -m32 -mtune=generic -march=i686 -ggdb -O2 -ffunction-sections -fdata-sectio
+ 4015      43313720 
+ 4015      382E332E 
+ 4015      30202D6D 
+ 4015      3332202D 
+ 4016              	.LASF182:
+ 4017 06d9 616C6967 		.string	"align"
+ 4017      6E00
+ 4018              	.LASF221:
+ 4019 06df 716E6F74 		.string	"qnotify_t"
+ 4019      6966795F 
+ 4019      7400
+ 4020              	.LASF237:
+ 4021 06e9 6576656E 		.string	"event"
+ 4021      7400
+ 4022              	.LASF246:
+ 4023 06ef 72656164 		.string	"read"
+ 4023      00
+ 4024              	.LASF27:
+ 4025 06f4 5F494F5F 		.string	"_IO_buf_base"
+ 4025      6275665F 
+GAS LISTING /tmp/ccEseu02.s 			page 78
+
+
+ 4025      62617365 
+ 4025      00
+ 4026              	.LASF156:
+ 4027 0701 6F66665F 		.string	"off_newer"
+ 4027      6E657765 
+ 4027      7200
+ 4028              	.LASF0:
+ 4029 070b 756E7369 		.string	"unsigned int"
+ 4029      676E6564 
+ 4029      20696E74 
+ 4029      00
+ 4030              	.LASF71:
+ 4031 0718 7274636E 		.string	"rtcnt_t"
+ 4031      745F7400 
+ 4032              	.LASF261:
+ 4033 0720 63685379 		.string	"chSysTimerHandlerI"
+ 4033      7354696D 
+ 4033      65724861 
+ 4033      6E646C65 
+ 4033      724900
+ 4034              	.LASF46:
+ 4035 0733 5F5F7061 		.string	"__pad5"
+ 4035      643500
+ 4036              	.LASF19:
+ 4037 073a 5F5F7375 		.string	"__suseconds_t"
+ 4037      7365636F 
+ 4037      6E64735F 
+ 4037      7400
+ 4038              	.LASF108:
+ 4039 0748 63757272 		.string	"current"
+ 4039      656E7400 
+ 4040              	.LASF20:
+ 4041 0750 5F666C61 		.string	"_flags"
+ 4041      677300
+ 4042              	.LASF133:
+ 4043 0757 6F666673 		.string	"offset"
+ 4043      657400
+ 4044              	.LASF47:
+ 4045 075e 5F6D6F64 		.string	"_mode"
+ 4045      6500
+ 4046              	.LASF130:
+ 4047 0764 706F7274 		.string	"port_isr_context_flag"
+ 4047      5F697372 
+ 4047      5F636F6E 
+ 4047      74657874 
+ 4047      5F666C61 
+ 4048              	.LASF42:
+ 4049 077a 5F636F64 		.string	"_codecvt"
+ 4049      65637674 
+ 4049      00
+ 4050              	.LASF202:
+ 4051 0783 696E365F 		.string	"in6_addr"
+ 4051      61646472 
+ 4051      00
+ 4052              	.LASF175:
+ 4053 078c 6D656D67 		.string	"memgetfunc_t"
+ 4053      65746675 
+GAS LISTING /tmp/ccEseu02.s 			page 79
+
+
+ 4053      6E635F74 
+ 4053      00
+ 4054              	.LASF82:
+ 4055 0799 74687265 		.string	"thread_t"
+ 4055      61645F74 
+ 4055      00
+ 4056              	.LASF66:
+ 4057 07a2 6C6F6E67 		.string	"long double"
+ 4057      20646F75 
+ 4057      626C6500 
+ 4058              	.LASF172:
+ 4059 07ae 77666C61 		.string	"wflags"
+ 4059      677300
+ 4060              	.LASF99:
+ 4061 07b5 74687265 		.string	"thread_reference_t"
+ 4061      61645F72 
+ 4061      65666572 
+ 4061      656E6365 
+ 4061      5F7400
+ 4062              	.LASF139:
+ 4063 07c8 73656E74 		.string	"sentmsg"
+ 4063      6D736700 
+ 4064              	.LASF225:
+ 4065 07d0 73696D5F 		.string	"sim_vio_port_t"
+ 4065      76696F5F 
+ 4065      706F7274 
+ 4065      5F7400
+ 4066              	.LASF128:
+ 4067 07df 706F7274 		.string	"port_intctx"
+ 4067      5F696E74 
+ 4067      63747800 
+ 4068              	.LASF49:
+ 4069 07eb 46494C45 		.string	"FILE"
+ 4069      00
+ 4070              	.LASF192:
+ 4071 07f0 6275665F 		.string	"buf_list"
+ 4071      6C697374 
+ 4071      00
+ 4072              	.LASF257:
+ 4073 07f9 706F7274 		.string	"port_unlock_from_isr"
+ 4073      5F756E6C 
+ 4073      6F636B5F 
+ 4073      66726F6D 
+ 4073      5F697372 
+ 4074              	.LASF111:
+ 4075 080e 63685F76 		.string	"ch_virtual_timer"
+ 4075      69727475 
+ 4075      616C5F74 
+ 4075      696D6572 
+ 4075      00
+ 4076              	.LASF251:
+ 4077 081f 6E657874 		.string	"nextcnt"
+ 4077      636E7400 
+ 4078              	.LASF210:
+ 4079 0827 6F70746F 		.string	"optopt"
+ 4079      707400
+ 4080              	.LASF149:
+GAS LISTING /tmp/ccEseu02.s 			page 80
+
+
+ 4081 082e 73697A65 		.string	"size"
+ 4081      00
+ 4082              	.LASF13:
+ 4083 0833 6C6F6E67 		.string	"long long unsigned int"
+ 4083      206C6F6E 
+ 4083      6720756E 
+ 4083      7369676E 
+ 4083      65642069 
+ 4084              	.LASF69:
+ 4085 084a 75696E74 		.string	"uint16_t"
+ 4085      31365F74 
+ 4085      00
+ 4086              	.LASF15:
+ 4087 0853 5F5F6F66 		.string	"__off_t"
+ 4087      665F7400 
+ 4088              	.LASF158:
+ 4089 085b 6F66665F 		.string	"off_name"
+ 4089      6E616D65 
+ 4089      00
+ 4090              	.LASF77:
+ 4091 0864 6D73675F 		.string	"msg_t"
+ 4091      7400
+ 4092              	.LASF104:
+ 4093 086a 63685F74 		.string	"ch_threads_queue"
+ 4093      68726561 
+ 4093      64735F71 
+ 4093      75657565 
+ 4093      00
+ 4094              	.LASF79:
+ 4095 087b 6576656E 		.string	"eventflags_t"
+ 4095      74666C61 
+ 4095      67735F74 
+ 4095      00
+ 4096              	.LASF260:
+ 4097 0888 67657474 		.string	"gettimeofday"
+ 4097      696D656F 
+ 4097      66646179 
+ 4097      00
+ 4098              	.LASF112:
+ 4099 0895 64656C74 		.string	"delta"
+ 4099      6100
+ 4100              	.LASF197:
+ 4101 089b 6F626A65 		.string	"objects_factory_t"
+ 4101      6374735F 
+ 4101      66616374 
+ 4101      6F72795F 
+ 4101      7400
+ 4102              	.LASF45:
+ 4103 08ad 5F667265 		.string	"_freeres_buf"
+ 4103      65726573 
+ 4103      5F627566 
+ 4103      00
+ 4104              	.LASF92:
+ 4105 08ba 72656673 		.string	"refs"
+ 4105      00
+ 4106              	.LASF84:
+ 4107 08bf 71756575 		.string	"queue"
+GAS LISTING /tmp/ccEseu02.s 			page 81
+
+
+ 4107      6500
+ 4108              	.LASF214:
+ 4109 08c5 715F636F 		.string	"q_counter"
+ 4109      756E7465 
+ 4109      7200
+ 4110              	.LASF209:
+ 4111 08cf 6F707465 		.string	"opterr"
+ 4111      727200
+ 4112              	.LASF198:
+ 4113 08d6 63685F66 		.string	"ch_factory"
+ 4113      6163746F 
+ 4113      727900
+ 4114              	.LASF18:
+ 4115 08e1 5F5F7469 		.string	"__time_t"
+ 4115      6D655F74 
+ 4115      00
+ 4116              	.LASF124:
+ 4117 08ea 6D61696E 		.string	"mainthread"
+ 4117      74687265 
+ 4117      616400
+ 4118              	.LASF150:
+ 4119 08f5 76657273 		.string	"version"
+ 4119      696F6E00 
+ 4120              	.LASF30:
+ 4121 08fd 5F494F5F 		.string	"_IO_backup_base"
+ 4121      6261636B 
+ 4121      75705F62 
+ 4121      61736500 
+ 4122              	.LASF39:
+ 4123 090d 5F73686F 		.string	"_shortbuf"
+ 4123      72746275 
+ 4123      6600
+ 4124              	.LASF89:
+ 4125 0917 77616261 		.string	"wabase"
+ 4125      736500
+ 4126              	.LASF236:
+ 4127 091e 53657269 		.string	"SerialDriver"
+ 4127      616C4472 
+ 4127      69766572 
+ 4127      00
+ 4128              	.LASF184:
+ 4129 092b 6D656D6F 		.string	"memory_pool_t"
+ 4129      72795F70 
+ 4129      6F6F6C5F 
+ 4129      7400
+ 4130              	.LASF267:
+ 4131 0939 2F686F6D 		.string	"/home/phil/Documents/ChibiOS_18.2.1/demos/various/RT-Posix-SimulatorAtom"
+ 4131      652F7068 
+ 4131      696C2F44 
+ 4131      6F63756D 
+ 4131      656E7473 
+ 4132              	.LASF17:
+ 4133 0982 5F5F6F66 		.string	"__off64_t"
+ 4133      6636345F 
+ 4133      7400
+ 4134              	.LASF213:
+ 4135 098c 715F7761 		.string	"q_waiting"
+GAS LISTING /tmp/ccEseu02.s 			page 82
+
+
+ 4135      6974696E 
+ 4135      6700
+ 4136              	.LASF122:
+ 4137 0996 726C6973 		.string	"rlist"
+ 4137      7400
+ 4138              	.LASF73:
+ 4139 099c 746D6F64 		.string	"tmode_t"
+ 4139      655F7400 
+ 4140              	.LASF235:
+ 4141 09a4 73647374 		.string	"sdstate_t"
+ 4141      6174655F 
+ 4141      7400
+ 4142              	.LASF234:
+ 4143 09ae 53445F52 		.string	"SD_READY"
+ 4143      45414459 
+ 4143      00
+ 4144              	.LASF28:
+ 4145 09b7 5F494F5F 		.string	"_IO_buf_end"
+ 4145      6275665F 
+ 4145      656E6400 
+ 4146              	.LASF134:
+ 4147 09c3 746D5F63 		.string	"tm_calibration_t"
+ 4147      616C6962 
+ 4147      72617469 
+ 4147      6F6E5F74 
+ 4147      00
+ 4148              	.LASF203:
+ 4149 09d4 5F5F696E 		.string	"__in6_u"
+ 4149      365F7500 
+ 4150              	.LASF88:
+ 4151 09dc 6E616D65 		.string	"name"
+ 4151      00
+ 4152              	.LASF170:
+ 4153 09e1 6C697374 		.string	"listener"
+ 4153      656E6572 
+ 4153      00
+ 4154              	.LASF55:
+ 4155 09ea 73746465 		.string	"stderr"
+ 4155      727200
+ 4156              	.LASF8:
+ 4157 09f1 73686F72 		.string	"short int"
+ 4157      7420696E 
+ 4157      7400
+ 4158              	.LASF173:
+ 4159 09fb 6576656E 		.string	"event_source"
+ 4159      745F736F 
+ 4159      75726365 
+ 4159      00
+ 4160              	.LASF113:
+ 4161 0a08 66756E63 		.string	"func"
+ 4161      00
+ 4162              	.LASF144:
+ 4163 0a0d 63685F6D 		.string	"ch_mutex"
+ 4163      75746578 
+ 4163      00
+ 4164              	.LASF94:
+ 4165 0a16 6D736771 		.string	"msgqueue"
+GAS LISTING /tmp/ccEseu02.s 			page 83
+
+
+ 4165      75657565 
+ 4165      00
+ 4166              	.LASF238:
+ 4167 0a1f 69717565 		.string	"iqueue"
+ 4167      756500
+ 4168              	.LASF38:
+ 4169 0a26 5F767461 		.string	"_vtable_offset"
+ 4169      626C655F 
+ 4169      6F666673 
+ 4169      657400
+ 4170              	.LASF118:
+ 4171 0a35 63685F73 		.string	"ch_system_debug"
+ 4171      79737465 
+ 4171      6D5F6465 
+ 4171      62756700 
+ 4172              	.LASF188:
+ 4173 0a45 64796E5F 		.string	"dyn_list_t"
+ 4173      6C697374 
+ 4173      5F7400
+ 4174              	.LASF211:
+ 4175 0a50 696F5F71 		.string	"io_queue_t"
+ 4175      75657565 
+ 4175      5F7400
+ 4176              	.LASF228:
+ 4177 0a5b 50414C43 		.string	"PALConfig"
+ 4177      6F6E6669 
+ 4177      6700
+ 4178              	.LASF259:
+ 4179 0a65 73645F6C 		.string	"sd_lld_interrupt_pending"
+ 4179      6C645F69 
+ 4179      6E746572 
+ 4179      72757074 
+ 4179      5F70656E 
+ 4180              	.LASF181:
+ 4181 0a7e 6F626A65 		.string	"object_size"
+ 4181      63745F73 
+ 4181      697A6500 
+ 4182              	.LASF123:
+ 4183 0a8a 76746C69 		.string	"vtlist"
+ 4183      737400
+ 4184              	.LASF93:
+ 4185 0a91 77616974 		.string	"waiting"
+ 4185      696E6700 
+ 4186              	.LASF186:
+ 4187 0a99 64796E5F 		.string	"dyn_element_t"
+ 4187      656C656D 
+ 4187      656E745F 
+ 4187      7400
+ 4188              	.LASF167:
+ 4189 0aa7 6D757465 		.string	"mutex_t"
+ 4189      785F7400 
+ 4190              	.LASF75:
+ 4191 0aaf 74726566 		.string	"trefs_t"
+ 4191      735F7400 
+ 4192              	.LASF129:
+ 4193 0ab7 706F7274 		.string	"port_context"
+ 4193      5F636F6E 
+GAS LISTING /tmp/ccEseu02.s 			page 84
+
+
+ 4193      74657874 
+ 4193      00
+ 4194              	.LASF22:
+ 4195 0ac4 5F494F5F 		.string	"_IO_read_end"
+ 4195      72656164 
+ 4195      5F656E64 
+ 4195      00
+ 4196              	.LASF100:
+ 4197 0ad1 74687265 		.string	"threads_list_t"
+ 4197      6164735F 
+ 4197      6C697374 
+ 4197      5F7400
+ 4198              	.LASF121:
+ 4199 0ae0 63685F73 		.string	"ch_system"
+ 4199      79737465 
+ 4199      6D00
+ 4200              	.LASF86:
+ 4201 0aea 6E657765 		.string	"newer"
+ 4201      7200
+ 4202              	.LASF200:
+ 4203 0af0 5F5F7536 		.string	"__u6_addr16"
+ 4203      5F616464 
+ 4203      72313600 
+ 4204              	.LASF70:
+ 4205 0afc 75696E74 		.string	"uint32_t"
+ 4205      33325F74 
+ 4205      00
+ 4206              	.LASF244:
+ 4207 0b05 696E7374 		.string	"instance_offset"
+ 4207      616E6365 
+ 4207      5F6F6666 
+ 4207      73657400 
+ 4208              	.LASF34:
+ 4209 0b15 5F66696C 		.string	"_fileno"
+ 4209      656E6F00 
+ 4210              	.LASF222:
+ 4211 0b1d 696E7075 		.string	"input_queue_t"
+ 4211      745F7175 
+ 4211      6575655F 
+ 4211      7400
+ 4212              	.LASF65:
+ 4213 0b2b 747A5F64 		.string	"tz_dsttime"
+ 4213      73747469 
+ 4213      6D6500
+ 4214              	.LASF43:
+ 4215 0b36 5F776964 		.string	"_wide_data"
+ 4215      655F6461 
+ 4215      746100
+ 4216              	.LASF207:
+ 4217 0b41 6F707461 		.string	"optarg"
+ 4217      726700
+ 4218              	.LASF169:
+ 4219 0b48 6576656E 		.string	"event_listener"
+ 4219      745F6C69 
+ 4219      7374656E 
+ 4219      657200
+ 4220              	.LASF135:
+GAS LISTING /tmp/ccEseu02.s 			page 85
+
+
+ 4221 0b57 7264796D 		.string	"rdymsg"
+ 4221      736700
+ 4222              	.LASF217:
+ 4223 0b5e 715F7772 		.string	"q_wrptr"
+ 4223      70747200 
+ 4224              	.LASF3:
+ 4225 0b66 73686F72 		.string	"short unsigned int"
+ 4225      7420756E 
+ 4225      7369676E 
+ 4225      65642069 
+ 4225      6E7400
+ 4226              	.LASF54:
+ 4227 0b79 7374646F 		.string	"stdout"
+ 4227      757400
+ 4228              	.LASF127:
+ 4229 0b80 72656778 		.string	"regx86"
+ 4229      383600
+ 4230              	.LASF120:
+ 4231 0b87 63685F73 		.string	"ch_system_t"
+ 4231      79737465 
+ 4231      6D5F7400 
+ 4232              	.LASF165:
+ 4233 0b93 63686465 		.string	"chdebug_t"
+ 4233      6275675F 
+ 4233      7400
+ 4234              	.LASF25:
+ 4235 0b9d 5F494F5F 		.string	"_IO_write_ptr"
+ 4235      77726974 
+ 4235      655F7074 
+ 4235      7200
+ 4236              	.LASF223:
+ 4237 0bab 6F757470 		.string	"output_queue_t"
+ 4237      75745F71 
+ 4237      75657565 
+ 4237      5F7400
+ 4238              	.LASF152:
+ 4239 0bba 74696D65 		.string	"timesize"
+ 4239      73697A65 
+ 4239      00
+ 4240              	.LASF10:
+ 4241 0bc3 5F5F696E 		.string	"__int32_t"
+ 4241      7433325F 
+ 4241      7400
+ 4242              	.LASF233:
+ 4243 0bcd 53445F53 		.string	"SD_STOP"
+ 4243      544F5000 
+ 4244              	.LASF201:
+ 4245 0bd5 5F5F7536 		.string	"__u6_addr32"
+ 4245      5F616464 
+ 4245      72333200 
+ 4246              	.LASF179:
+ 4247 0be1 63685F6D 		.string	"ch_memcore"
+ 4247      656D636F 
+ 4247      726500
+ 4248              	.LASF161:
+ 4249 0bec 6F66665F 		.string	"off_flags"
+ 4249      666C6167 
+GAS LISTING /tmp/ccEseu02.s 			page 86
+
+
+ 4249      7300
+ 4250              	.LASF195:
+ 4251 0bf6 6D62785F 		.string	"mbx_list"
+ 4251      6C697374 
+ 4251      00
+ 4252              	.LASF171:
+ 4253 0bff 6576656E 		.string	"events"
+ 4253      747300
+ 4254              	.LASF102:
+ 4255 0c06 6E657874 		.string	"next"
+ 4255      00
+ 4256              	.LASF105:
+ 4257 0c0b 70726576 		.string	"prev"
+ 4257      00
+ 4258              	.LASF61:
+ 4259 0c10 74765F73 		.string	"tv_sec"
+ 4259      656300
+ 4260              	.LASF147:
+ 4261 0c17 6964656E 		.string	"identifier"
+ 4261      74696669 
+ 4261      657200
+ 4262              		.hidden	__stack_chk_fail_local
+ 4263              		.ident	"GCC: (Ubuntu 8.3.0-6ubuntu1) 8.3.0"
+ 4264              		.section	.note.GNU-stack,"",@progbits
+GAS LISTING /tmp/ccEseu02.s 			page 87
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 hal_lld.c
+     /tmp/ccEseu02.s:11     .text.hal_lld_init:0000000000000000 hal_lld_init
+     /tmp/ccEseu02.s:300    .text.__x86.get_pc_thunk.bx:0000000000000000 __x86.get_pc_thunk.bx
+     /tmp/ccEseu02.s:294    .bss.nextcnt:0000000000000000 nextcnt
+     /tmp/ccEseu02.s:76     .text._sim_check_for_interrupts:0000000000000000 _sim_check_for_interrupts
+     /tmp/ccEseu02.s:5      .rodata.hal_lld_init.str1.1:0000000000000000 .LC0
+
+UNDEFINED SYMBOLS
+_GLOBAL_OFFSET_TABLE_
+puts
+gettimeofday
+sd_lld_interrupt_pending
+port_isr_context_flag
+port_irq_sts
+chSysTimerHandlerI
+chSchIsPreemptionRequired
+chSchDoReschedule
+__stack_chk_fail_local

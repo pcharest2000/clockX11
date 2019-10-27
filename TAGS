@@ -1,0 +1,380 @@
+
+/home/phil/Documents/ChibiOS_18.2.1/demos/various/RT-Posix-Simulator/drawClock.h,197
+#define DRAWCLOCK_HDRAWCLOCK_H2,20
+#define CLOCKCOLONME CLOCKCOLONME10,144
+#define CLOCKROWS CLOCKROWS11,167
+#define CLOCKWIDTH CLOCKWIDTH12,194
+#define CLOCKHANDWITH CLOCKHANDWITH13,246
+
+/home/phil/Documents/ChibiOS_18.2.1/demos/various/RT-Posix-Simulator/halconf.h,2918
+#define HALCONF_HHALCONF_H29,1016
+#define _CHIBIOS_HAL_CONF__CHIBIOS_HAL_CONF_31,1037
+#define _CHIBIOS_HAL_CONF_VER_6_0__CHIBIOS_HAL_CONF_VER_6_0_32,1065
+#define HAL_USE_PAL HAL_USE_PAL40,1228
+#define HAL_USE_ADC HAL_USE_ADC47,1389
+#define HAL_USE_CAN HAL_USE_CAN54,1551
+#define HAL_USE_CRY HAL_USE_CRY61,1723
+#define HAL_USE_DAC HAL_USE_DAC68,1885
+#define HAL_USE_EXT HAL_USE_EXT75,2047
+#define HAL_USE_GPT HAL_USE_GPT82,2209
+#define HAL_USE_I2C HAL_USE_I2C89,2371
+#define HAL_USE_I2S HAL_USE_I2S96,2533
+#define HAL_USE_ICU HAL_USE_ICU103,2695
+#define HAL_USE_MAC HAL_USE_MAC110,2857
+#define HAL_USE_MMC_SPI HAL_USE_MMC_SPI117,3027
+#define HAL_USE_PWM HAL_USE_PWM124,3189
+#define HAL_USE_QSPI HAL_USE_QSPI131,3353
+#define HAL_USE_RTC HAL_USE_RTC138,3515
+#define HAL_USE_SDC HAL_USE_SDC145,3677
+#define HAL_USE_SERIAL HAL_USE_SERIAL152,3845
+#define HAL_USE_SERIAL_USB HAL_USE_SERIAL_USB159,4025
+#define HAL_USE_SPI HAL_USE_SPI166,4187
+#define HAL_USE_UART HAL_USE_UART173,4351
+#define HAL_USE_USB HAL_USE_USB180,4513
+#define HAL_USE_WDG HAL_USE_WDG187,4675
+#define PAL_USE_CALLBACKS PAL_USE_CALLBACKS199,5154
+#define PAL_USE_WAIT PAL_USE_WAIT207,5383
+#define ADC_USE_WAIT ADC_USE_WAIT219,5857
+#define ADC_USE_MUTUAL_EXCLUSION ADC_USE_MUTUAL_EXCLUSION227,6131
+#define CAN_USE_SLEEP_MODE CAN_USE_SLEEP_MODE238,6559
+#define CAN_ENFORCE_USE_CALLBACKS CAN_ENFORCE_USE_CALLBACKS245,6776
+#define HAL_CRY_USE_FALLBACK HAL_CRY_USE_FALLBACK260,7466
+#define HAL_CRY_ENFORCE_FALLBACK HAL_CRY_ENFORCE_FALLBACK267,7675
+#define DAC_USE_WAIT DAC_USE_WAIT279,8149
+#define DAC_USE_MUTUAL_EXCLUSION DAC_USE_MUTUAL_EXCLUSION287,8423
+#define I2C_USE_MUTUAL_EXCLUSION I2C_USE_MUTUAL_EXCLUSION298,8865
+#define MAC_USE_ZERO_COPY MAC_USE_ZERO_COPY309,9277
+#define MAC_USE_EVENTS MAC_USE_EVENTS316,9462
+#define MMC_NICE_WAITING MMC_NICE_WAITING332,10215
+#define QSPI_USE_WAIT QSPI_USE_WAIT344,10689
+#define QSPI_USE_MUTUAL_EXCLUSION QSPI_USE_MUTUAL_EXCLUSION352,10966
+#define SDC_INIT_RETRY SDC_INIT_RETRY364,11464
+#define SDC_MMC_SUPPORT SDC_MMC_SUPPORT373,11734
+#define SDC_NICE_WAITING SDC_NICE_WAITING383,12113
+#define SDC_INIT_OCR_V20 SDC_INIT_OCR_V20390,12295
+#define SDC_INIT_OCR SDC_INIT_OCR397,12484
+#define SERIAL_DEFAULT_BITRATE SERIAL_DEFAULT_BITRATE410,13012
+#define SERIAL_BUFFERS_SIZE SERIAL_BUFFERS_SIZE421,13421
+#define SERIAL_USB_BUFFERS_SIZE SERIAL_USB_BUFFERS_SIZE436,14070
+#define SERIAL_USB_BUFFERS_NUMBER SERIAL_USB_BUFFERS_NUMBER444,14291
+#define SPI_USE_WAIT SPI_USE_WAIT456,14761
+#define SPI_USE_CIRCULAR SPI_USE_CIRCULAR464,15000
+#define SPI_USE_MUTUAL_EXCLUSION SPI_USE_MUTUAL_EXCLUSION473,15277
+#define SPI_SELECT_MODE SPI_SELECT_MODE481,15515
+#define UART_USE_WAIT UART_USE_WAIT493,16004
+#define UART_USE_MUTUAL_EXCLUSION UART_USE_MUTUAL_EXCLUSION501,16282
+#define USB_USE_WAIT USB_USE_WAIT513,16756
+
+/home/phil/Documents/ChibiOS_18.2.1/demos/various/RT-Posix-Simulator/Makefile,1357
+  USE_OPT = -O2 -ggdb -m32USE_OPT8,194
+  USE_COPT = USE_COPT13,299
+  USE_CPPOPT = -fno-rttiUSE_CPPOPT18,395
+  USE_LINK_GC = yesUSE_LINK_GC23,524
+  USE_LDOPT =  USE_LDOPT28,606
+  USE_LTO = noUSE_LTO33,709
+  USE_VERBOSE_COMPILE = noUSE_VERBOSE_COMPILE38,830
+  USE_SMART_BUILD = yesUSE_SMART_BUILD44,1020
+PROJECT = chPROJECT64,1564
+CHIBIOS = ../../..CHIBIOS67,1615
+CSRC = $(STARTUPSRC) \CSRC85,2263
+CPPSRC =CPPSRC105,2656
+ASMSRC =ASMSRC108,2698
+ASMXSRC = $(STARTUPASM) $(PORTASM) $(OSALASM)ASMXSRC109,2708
+INCDIR = $(CHIBIOS)/os/license \INCDIR111,2757
+TRGT = TRGT125,3192
+CC   = $(TRGT)gccCC126,3201
+CPPC = $(TRGT)g++CPPC127,3220
+LD   = $(TRGT)gccLD131,3428
+CP   = $(TRGT)objcopyCP133,3467
+AS   = $(TRGT)gcc -x assembler-with-cppAS134,3490
+AR   = $(TRGT)arAR135,3531
+OD   = $(TRGT)objdumpOD136,3549
+SZ   = $(TRGT)sizeSZ137,3572
+BIN  = $(CP) -O binaryBIN138,3592
+COV  = gcovCOV139,3616
+CWARN = -Wall -Wextra -Wundef -Wstrict-prototypesCWARN142,3664
+CPPWARN = -Wall -Wextra -WundefCPPWARN145,3752
+UDEFS = -DSIMULATORUDEFS156,4056
+UADEFS =UADEFS159,4106
+UINCDIR =/usr/lib/i386-linux-gnu/UINCDIR162,4152
+ULIBDIR =-L/usr/lib/i386-linux-gnu/ULIBDIR165,4247
+ULIBS =  -lm -lX11 -lcairo -lGL -lGLU  -l glutULIBS168,4318
+RULESPATH = $(CHIBIOS)/os/common/startup/SIMIA32/compilers/GCCRULESPATH174,4476
+
+/home/phil/Documents/ChibiOS_18.2.1/demos/various/RT-Posix-Simulator/clock.h,1326
+#define CLOCK_HCLOCK_H2,16
+#define GEARRATIO GEARRATIO10,138
+#define GEARMUL	GEARMUL11,166
+#define STEPSPERREVOLUTION STEPSPERREVOLUTION12,195
+#define CLOCKRESOLUTION CLOCKRESOLUTION13,229
+#define ONETURN ONETURN14,321
+#define CLOCKCOL CLOCKCOL15,342
+#define CLOCKROW CLOCKROW16,361
+#define CL0DEG CL0DEG18,381
+#define CL45DEG CL45DEG19,398
+#define CL90DEG CL90DEG20,418
+#define CL135DEG CL135DEG21,438
+#define CL180DEG CL180DEG22,459
+#define CL225DEG CL225DEG23,481
+#define CL270DEG CL270DEG24,503
+#define CL315DEG CL315DEG25,525
+#define CL360DEG CL360DEG26,547
+	accelStepper hourStepper;hourStepper32,590
+	accelStepper minStepper;minStepper33,617
+	int32_t minPosition;		//Positions are mapped from 0-360 deg from 0-2048minPosition34,643
+	int32_t hourPosition;hourPosition35,716
+	int32_t minTarget;minTarget36,739
+	int32_t hourTarget;hourTarget37,759
+	bool targetReached;targetReached38,780
+} clockS;clockS40,802
+typedef enum StepperRunningMode {StepperRunningMode44,856
+	ACCELERATION, CONSTANTSPEEDACCELERATION45,890
+	ACCELERATION, CONSTANTSPEEDCONSTANTSPEED45,890
+} StepperRunMode_t;StepperRunMode_t46,919
+typedef enum StepperNeedle {StepperNeedle47,939
+	MINNEEDLE, HOURNEEDLEMINNEEDLE48,968
+	MINNEEDLE, HOURNEEDLEHOURNEEDLE48,968
+} clNeedle;clNeedle49,991
+
+/home/phil/Documents/ChibiOS_18.2.1/demos/various/RT-Posix-Simulator/Smalltime.c,294
+void SmallTimeGet(SmallTime *t) {SmallTimeGet3,24
+uint32_t SmallTimeGetMicroSec(void) {SmallTimeGetMicroSec15,230
+void SmallTimeSet(uint32_t hours, uint32_t minutes, uint32_t seconds) {SmallTimeSet28,410
+void SmallTimeGetDigits(SmallTime *t,SmallTimeDigits *d){SmallTimeGetDigits39,682
+
+/home/phil/Documents/ChibiOS_18.2.1/demos/various/RT-Posix-Simulator/accelStepper.h,968
+#define ACELSTEPPER_HACELSTEPPER_H2,22
+#define  OS_TICK_FREQUENCY OS_TICK_FREQUENCY7,82
+	DIRECTION_CCW = 0,  ///< Counter-ClockwiseDIRECTION_CCW11,223
+	DIRECTION_CW = 1   ///< ClockwiseDIRECTION_CW12,267
+} Direction;Direction13,302
+	int32_t _currentPos;    // Steps_currentPos17,380
+	int32_t _targetPos;     // Steps_targetPos21,609
+	float _speed;         // Steps per second_speed24,719
+	float _maxSpeed;_maxSpeed26,829
+	float _acceleration;_acceleration29,963
+	float _sqrt_twoa; // Precomputed sqrt(2*_acceleration)_sqrt_twoa30,985
+	uint16_t _stepInterval;_stepInterval33,1099
+	uint16_t _lastStepTime;_lastStepTime35,1164
+	uint8_t _stepSequence;  //The index of the step function_stepSequence36,1189
+	int8_t _direction; //This indicates the direction of the stepper_direction37,1247
+	int32_t _n;_n40,1360
+	float _c0;_c042,1412
+	float _cn;_cn45,1461
+	float _cmin; // at max speed_cmin48,1527
+} accelStepper;accelStepper50,1558
+
+/home/phil/Documents/ChibiOS_18.2.1/demos/various/RT-Posix-Simulator/drawClockX11.c,138
+cairo_surface_t *dcInitDisplayX(void) {dcInitDisplayX3,27
+void dcDrawClocksX(cairo_t *ctx, cairo_surface_t *sfc) {dcDrawClocksX34,801
+
+/home/phil/Documents/ChibiOS_18.2.1/demos/various/RT-Posix-Simulator/mcuconf.h,35
+#define MCUCONF_HMCUCONF_H18,643
+
+/home/phil/Documents/ChibiOS_18.2.1/demos/various/RT-Posix-Simulator/digits.c,670
+digitS digitAZero[2][3] = { //digitAZero3,21
+digitS digitAOne[2][3] = { //digitAOne16,222
+digitS digitATwo[2][3] = { //digitATwo27,421
+digitS digitAThree[2][3] = { //digitAThree39,610
+digitS digitAFour[2][3] = { //digitAFour50,792
+digitS digitAFive[2][3] = { //digitAFive61,986
+digitS digitASix[2][3] = { //digitASix72,1175
+digitS digitASeven[2][3] = { //digitASeven83,1367
+digitS digitAEight[2][3] = { //digitAEight95,1563
+digitS digitANine[2][3] = { //digitANine106,1754
+void diSetDigits(uint8_t position, uint8_t value) {diSetDigits119,1944
+void diSetDigitsOffset(uint8_t position, uint8_t value, int8_t turnOffset) {diSetDigitsOffset168,2847
+
+/home/phil/Documents/ChibiOS_18.2.1/demos/various/RT-Posix-Simulator/drawClock.c,426
+const GLint rectS[2] = { 0, -CLOCKHANDWITH / 2 };rectS3,24
+const GLint rectE[2] = { CLOCKWIDTH / 2 - 6, CLOCKHANDWITH / 2 };rectE4,74
+GLUquadricObj *diskClockRing;diskClockRing5,140
+void dcSetPerspective(void) {dcSetPerspective7,171
+void dcInitDisplay(int argc, char**argv) {dcInitDisplay15,422
+void dcDrawClocks(void) {dcDrawClocks26,762
+void dcDrawClock(clockS *cl, uint32_t x, uint32_t y) {dcDrawClock58,1908
+
+/home/phil/Documents/ChibiOS_18.2.1/demos/various/RT-Posix-Simulator/main.c,818
+#define cputs(cputs19,634
+thread_t *cdtp;  //The console thread pointercdtp21,682
+#define SHELL_WA_SIZE SHELL_WA_SIZE43,1178
+#define CONSOLE_WA_SIZE CONSOLE_WA_SIZE44,1234
+#define TEST_WA_SIZE TEST_WA_SIZE45,1290
+binary_semaphore_t bSemaStepperDone;bSemaStepperDone47,1347
+binary_semaphore_t bSemaStepperGo;bSemaStepperGo48,1384
+static __attribute__((noreturn)) THD_FUNCTION(Stepperthread, arg) {THD_FUNCTION54,1447
+static __attribute__((noreturn)) THD_FUNCTION(Printthread, arg) {THD_FUNCTION80,2072
+static THD_FUNCTION(drawingThread, arg) {THD_FUNCTION100,2615
+static THD_FUNCTION(animationThread, arg) {THD_FUNCTION116,2899
+static THD_FUNCTION(console_thread, arg) {THD_FUNCTION146,3898
+static evhandler_t fhandlers[] = { };fhandlers157,4137
+int main(int argc, char**argv) {main163,4406
+
+/home/phil/Documents/ChibiOS_18.2.1/demos/various/RT-Posix-Simulator/Smalltime.h,351
+#define SMALLTIME_HSMALLTIME_H2,20
+	uint32_t hours;hours10,135
+	uint32_t minutes;minutes11,152
+	uint32_t seconds;seconds12,171
+} SmallTime;SmallTime13,190
+	uint8_t hourTenth;hourTenth16,221
+	uint8_t hourDigit;hourDigit17,241
+	uint8_t minTenth;minTenth18,261
+	uint8_t minDigit;minDigit19,280
+} SmallTimeDigits;SmallTimeDigits20,299
+
+/home/phil/Documents/ChibiOS_18.2.1/demos/various/RT-Posix-Simulator/accelStepper.c,1231
+void asSetMaxSpeed(accelStepper *stepper, float speed) {asSetMaxSpeed3,27
+void asSetAcceleration(accelStepper *stepper, float acceleration) {asSetAcceleration17,494
+void asSetSpeed(accelStepper *stepper, float speed) {asSetSpeed34,1022
+float asGetSpeed(accelStepper *stepper) {asGetSpeed49,1356
+float max(float one, float two) {max54,1427
+void asMoveTo(accelStepper *stepper, int32_t absolute) {asMoveTo61,1519
+void asComputeNewSpeed(accelStepper *stepper) {asComputeNewSpeed70,1707
+void asMove(accelStepper *stepper, int32_t relative) {asMove128,3929
+int32_t asDistanceToGo(accelStepper *stepper) {asDistanceToGo132,4040
+int32_t asTargetPosition(accelStepper *stepper) {asTargetPosition136,4143
+int32_t asCurrentPosition(accelStepper *stepper) {asCurrentPosition140,4225
+void asSetCurrentPosition(accelStepper *stepper, int32_t position) {asSetCurrentPosition144,4309
+static void asStep(accelStepper *stepper, uint8_t step) {asStep197,6101
+bool asRun(accelStepper *stepper) {asRun219,6466
+bool asRunSpeedToPosition(accelStepper *stepper) {asRunSpeedToPosition236,6938
+void asRunToPosition(accelStepper *stepper) {asRunToPosition252,7349
+bool asRunSpeed(accelStepper *stepper) {asRunSpeed260,7557
+
+/home/phil/Documents/ChibiOS_18.2.1/demos/various/RT-Posix-Simulator/digits.h,187
+#define DIGITS_HDIGITS_H2,17
+	int32_t minPosition;		//Positions are mapped from 0-360 deg from 0-2048minPosition8,92
+	int32_t hourPosition;hourPosition9,165
+} digitS;digitS11,189
+
+/home/phil/Documents/ChibiOS_18.2.1/demos/various/RT-Posix-Simulator/drawClockX11.h,205
+#define DRAWCLOCKCX11_HDRAWCLOCKCX11_H2,24
+#define CLOCKCOLONME CLOCKCOLONME17,295
+#define CLOCKROWS	CLOCKROWS18,318
+#define CLOCKWIDTH CLOCKWIDTH19,339
+#define CLOCKHANDWITH CLOCKHANDWITH20,391
+
+/home/phil/Documents/ChibiOS_18.2.1/demos/various/RT-Posix-Simulator/clock.c,3377
+clockS clockA[CLOCKCOL][CLOCKROW];clockA3,20
+void (*clRunningModeFunction_ptr)(void)=&clARunToTargetAcceleration;clRunningModeFunction_ptr7,106
+void clSwitchRunningMode(StepperRunMode_t mode) {clSwitchRunningMode9,176
+void clRunSteppers(void) {clRunSteppers22,438
+void clARefractorMaxSpeed(float maxspeed) {clARefractorMaxSpeed28,625
+void clASetTargetPositions(uint8_t i, uint8_t j, int32_t minPosition, int32_t hourPosition) {clASetTargetPositions81,2513
+void clASetAllTargetpostion(int32_t minPosition, int32_t hourPosition) {clASetAllTargetpostion88,2727
+int32_t clAGetStepperPositionHour(uint8_t i, uint8_t j) {clAGetStepperPositionHour96,2962
+int32_t clAGetStepperPositionMin(uint8_t i, uint8_t j) {clAGetStepperPositionMin104,3124
+void clASetMaxSpeed(uint8_t i, uint8_t j, float minSpeed, float hourSpeed) {clASetMaxSpeed111,3283
+void clASetSpeed(uint8_t i, uint8_t j, float minSpeed, float hourSpeed) {clASetSpeed118,3467
+void clASetSpeedAll(float minSpeed, float hourSpeed) {clASetSpeedAll125,3645
+void clASetAcceleration(uint8_t i, uint8_t j, float minAcc, float hourAcc) {clASetAcceleration133,3846
+void clASetTargetPosition(uint8_t i, uint8_t j, int32_t minPosition, int32_t hourPosition) {clASetTargetPosition141,4088
+void clASetTargetRelative(uint8_t i, uint8_t j, int32_t minRelative, int32_t hourRelative) {clASetTargetRelative152,4483
+void clInit(clockS * clocks, float maxSpeed, int32_t minPosition, int32_t hourPosition) {clInit164,4877
+void clAInit(float maxSpeed, int32_t minPosition, int32_t hourPosition) {clAInit176,5375
+void clARunToTargetAcceleration(void) {clARunToTargetAcceleration189,5769
+void clARunToTargetSpeed(void) {clARunToTargetSpeed197,5949
+bool clATargetReached(uint8_t i, uint8_t j) {clATargetReached205,6115
+bool clATargetsReached(void) {clATargetsReached211,6202
+void clSetTargetPositions(clockS *clocks, int32_t minPosition, int32_t hourPosition) {clSetTargetPositions222,6411
+void clSetTargetHourPosition(clockS *clocks, int32_t hourPosition) {clSetTargetHourPosition229,6722
+void clSetTargetMinPosition(clockS *clocks, int32_t minPosition) {clSetTargetMinPosition234,6922
+void clSetSpeed(clockS *clocks, float minSpeed, float hourSpeed) {clSetSpeed240,7118
+void clSetMaxSpeed(clockS *clocks, float minSpeed, float hourSpeed) {clSetMaxSpeed246,7279
+void clRunToTargetAcceleration(clockS *clocks) {clRunToTargetAcceleration252,7449
+void clRunToTargetSpeed(clockS *clocks) {clRunToTargetSpeed264,7809
+bool clReachedTarget(clockS *clocks) {clReachedTarget276,8192
+int32_t clGetTargetMinPosition(clockS *clock) {clGetTargetMinPosition281,8266
+int32_t clGetTargetHourPosition(clockS *clock) {clGetTargetHourPosition285,8343
+int32_t clPosToSteps(int32_t pos) {clPosToSteps289,8422
+int32_t clStepstoClockPos(int32_t stepperPosition) {clStepstoClockPos294,8621
+int32_t clAGetNumberofTurnHour(uint8_t i, uint8_t j){clAGetNumberofTurnHour299,8840
+int32_t clAGetNumberofTurnMin(uint8_t i, uint8_t j){clAGetNumberofTurnMin307,9013
+int32_t clGetNumberofTurn(int32_t postion){clGetNumberofTurn315,9184
+struct SEND_DATA_STRUCTURE {SEND_DATA_STRUCTURE321,9266
+	int32_t minStepper;minStepper324,9415
+	int32_t hourStepper;hourStepper325,9436
+void clPrepareStepperArray(clockS *clock, uint8_t array[]) {clPrepareStepperArray330,9477
+void sendstuf(void) {sendstuf346,9831
+
+/home/phil/Documents/ChibiOS_18.2.1/demos/various/RT-Posix-Simulator/chconf.h,3881
+#define CHCONF_HCHCONF_H29,969
+#define _CHIBIOS_RT_CONF__CHIBIOS_RT_CONF_31,989
+#define _CHIBIOS_RT_CONF_VER_5_0__CHIBIOS_RT_CONF_VER_5_0_32,1016
+#define CH_CFG_ST_RESOLUTION CH_CFG_ST_RESOLUTION45,1369
+#define CH_CFG_ST_FREQUENCY CH_CFG_ST_FREQUENCY52,1604
+#define CH_CFG_INTERVALS_SIZE CH_CFG_INTERVALS_SIZE58,1756
+#define CH_CFG_TIME_TYPES_SIZE CH_CFG_TIME_TYPES_SIZE64,1898
+#define CH_CFG_ST_TIMEDELTA CH_CFG_ST_TIMEDELTA74,2315
+#define CH_CFG_TIME_QUANTUM CH_CFG_TIME_QUANTUM97,3252
+#define CH_CFG_MEMCORE_SIZE CH_CFG_MEMCORE_SIZE110,3823
+#define CH_CFG_NO_IDLE_THREAD CH_CFG_NO_IDLE_THREAD119,4180
+#define CH_CFG_OPTIMIZE_SPEED CH_CFG_OPTIMIZE_SPEED138,4748
+#define CH_CFG_USE_TM CH_CFG_USE_TM156,5205
+#define CH_CFG_USE_REGISTRY CH_CFG_USE_REGISTRY164,5419
+#define CH_CFG_USE_WAITEXIT CH_CFG_USE_WAITEXIT173,5662
+#define CH_CFG_USE_SEMAPHORES CH_CFG_USE_SEMAPHORES181,5872
+#define CH_CFG_USE_SEMAPHORES_PRIORITY CH_CFG_USE_SEMAPHORES_PRIORITY192,6241
+#define CH_CFG_USE_MUTEXES CH_CFG_USE_MUTEXES200,6446
+#define CH_CFG_USE_MUTEXES_RECURSIVE CH_CFG_USE_MUTEXES_RECURSIVE210,6743
+#define CH_CFG_USE_CONDVARS CH_CFG_USE_CONDVARS220,7034
+#define CH_CFG_USE_CONDVARS_TIMEOUT CH_CFG_USE_CONDVARS_TIMEOUT230,7365
+#define CH_CFG_USE_EVENTS CH_CFG_USE_EVENTS238,7578
+#define CH_CFG_USE_EVENTS_TIMEOUT CH_CFG_USE_EVENTS_TIMEOUT248,7883
+#define CH_CFG_USE_MESSAGES CH_CFG_USE_MESSAGES257,8126
+#define CH_CFG_USE_MESSAGES_PRIORITY CH_CFG_USE_MESSAGES_PRIORITY268,8484
+#define CH_CFG_USE_MAILBOXES CH_CFG_USE_MAILBOXES278,8778
+#define CH_CFG_USE_MEMCORE CH_CFG_USE_MEMCORE287,9019
+#define CH_CFG_USE_HEAP CH_CFG_USE_HEAP299,9414
+#define CH_CFG_USE_MEMPOOLS CH_CFG_USE_MEMPOOLS308,9661
+#define CH_CFG_USE_OBJ_FIFOS CH_CFG_USE_OBJ_FIFOS317,9889
+#define CH_CFG_USE_DYNAMIC CH_CFG_USE_DYNAMIC328,10249
+#define CH_CFG_USE_FACTORY CH_CFG_USE_FACTORY346,10711
+#define CH_CFG_FACTORY_MAX_NAMES_LENGTH CH_CFG_FACTORY_MAX_NAMES_LENGTH353,10957
+#define CH_CFG_FACTORY_OBJECTS_REGISTRY CH_CFG_FACTORY_OBJECTS_REGISTRY358,11070
+#define CH_CFG_FACTORY_GENERIC_BUFFERS CH_CFG_FACTORY_GENERIC_BUFFERS363,11182
+#define CH_CFG_FACTORY_SEMAPHORES CH_CFG_FACTORY_SEMAPHORES368,11289
+#define CH_CFG_FACTORY_MAILBOXES CH_CFG_FACTORY_MAILBOXES373,11395
+#define CH_CFG_FACTORY_OBJ_FIFOS CH_CFG_FACTORY_OBJ_FIFOS378,11505
+#define CH_DBG_STATISTICS CH_DBG_STATISTICS394,11873
+#define CH_DBG_SYSTEM_STATE_CHECK CH_DBG_SYSTEM_STATE_CHECK403,12127
+#define CH_DBG_ENABLE_CHECKS CH_DBG_ENABLE_CHECKS412,12384
+#define CH_DBG_ENABLE_ASSERTS CH_DBG_ENABLE_ASSERTS422,12739
+#define CH_DBG_TRACE_MASK CH_DBG_TRACE_MASK430,12966
+#define CH_DBG_TRACE_BUFFER_SIZE CH_DBG_TRACE_BUFFER_SIZE437,13219
+#define CH_DBG_ENABLE_STACK_CHECK CH_DBG_ENABLE_STACK_CHECK449,13689
+#define CH_DBG_FILL_THREADS CH_DBG_FILL_THREADS459,14044
+#define CH_DBG_THREADS_PROFILING CH_DBG_THREADS_PROFILING470,14445
+#define CH_CFG_SYSTEM_EXTRA_FIELDS CH_CFG_SYSTEM_EXTRA_FIELDS485,14841
+#define CH_CFG_SYSTEM_INIT_HOOK(CH_CFG_SYSTEM_INIT_HOOK493,15146
+#define CH_CFG_THREAD_EXTRA_FIELDS CH_CFG_THREAD_EXTRA_FIELDS501,15444
+#define CH_CFG_THREAD_INIT_HOOK(CH_CFG_THREAD_INIT_HOOK511,15821
+#define CH_CFG_THREAD_EXIT_HOOK(CH_CFG_THREAD_EXIT_HOOK519,16103
+#define CH_CFG_CONTEXT_SWITCH_HOOK(CH_CFG_CONTEXT_SWITCH_HOOK527,16383
+#define CH_CFG_IRQ_PROLOGUE_HOOK(CH_CFG_IRQ_PROLOGUE_HOOK534,16585
+#define CH_CFG_IRQ_EPILOGUE_HOOK(CH_CFG_IRQ_EPILOGUE_HOOK541,16786
+#define CH_CFG_IDLE_ENTER_HOOK(CH_CFG_IDLE_ENTER_HOOK551,17181
+#define CH_CFG_IDLE_LEAVE_HOOK(CH_CFG_IDLE_LEAVE_HOOK561,17578
+#define CH_CFG_IDLE_LOOP_HOOK(CH_CFG_IDLE_LOOP_HOOK569,17852
+#define CH_CFG_SYSTEM_TICK_HOOK(CH_CFG_SYSTEM_TICK_HOOK578,18191
+#define CH_CFG_SYSTEM_HALT_HOOK(CH_CFG_SYSTEM_HALT_HOOK587,18505
+#define CH_CFG_TRACE_HOOK(CH_CFG_TRACE_HOOK596,18805
+
+/home/phil/Documents/ChibiOS_18.2.1/demos/various/RT-Posix-Simulator/animations.c,1358
+SmallTime myTime;myTime3,25
+SmallTimeDigits myTimeDigits;myTimeDigits4,43
+void aniStandardTime(binary_semaphore_t *bSemaStepperDone, binary_semaphore_t *bSemaStepperGo) {aniStandardTime6,74
+void aniStandardTimeOff(binary_semaphore_t *bSemaStepperDone, binary_semaphore_t *bSemaStepperGo) {aniStandardTimeOff23,701
+#define cputs(cputs41,1433
+void aniCounter(binary_semaphore_t *bSemaStepperDone, binary_semaphore_t *bSemaStepperGo) {aniCounter43,1481
+void aniRotate(binary_semaphore_t *bSemaStepperDone, binary_semaphore_t *bSemaStepperGo) {aniRotate61,1937
+void aniTriangle(binary_semaphore_t *bSemaStepperDone, binary_semaphore_t *bSemaStepperGo) {aniTriangle72,2324
+void aniSpiral(binary_semaphore_t *bSemaStepperDone, binary_semaphore_t *bSemaStepperGo) {aniSpiral125,4460
+void aniDiamonds(binary_semaphore_t *bSemaStepperDone, binary_semaphore_t *bSemaStepperGo) {aniDiamonds164,5932
+void aniDiamonds2(binary_semaphore_t *bSemaStepperDone, binary_semaphore_t *bSemaStepperGo) {aniDiamonds2215,7159
+void aniSquares(binary_semaphore_t *bSemaStepperDone, binary_semaphore_t *bSemaStepperGo) {aniSquares271,8586
+void aniStairs(binary_semaphore_t *bSemaStepperDone, binary_semaphore_t *bSemaStepperGo) {aniStairs338,10244
+void aniFlower(binary_semaphore_t *bSemaStepperDone, binary_semaphore_t *bSemaStepperGo) {aniFlower391,11667
+
+/home/phil/Documents/ChibiOS_18.2.1/demos/various/RT-Posix-Simulator/animations.h,39
+#define ANIMATIONS_HANIMATIONS_H2,21
